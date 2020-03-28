@@ -1,5 +1,5 @@
-@import "themes/mint.scss";
-// @import "themes/mint-light.scss";
+// @import "themes/mint.scss";
+@import "themes/mint-light.scss";
 // @import "themes/mint-dark.scss";
 @import "partials/variables";
 @import "partials/_reset";
@@ -10,6 +10,7 @@
 @import "partials/form";
 @import "partials/grid";
 @import "style.scss";
+// @import "partials/color.scss";
 
 
 /* UTILITY */
