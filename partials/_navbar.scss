@@ -1,0 +1,77 @@
+/* NAVIGATION */
+@import "dropdown";
+
+@mixin navigation {
+    @include dropdown;
+
+        margin-top: -8px;
+        padding-top: 16px;
+        padding-bottom: 8px;
+        padding-right: 8px;
+        padding-left: 8px;
+        z-index: 1000;
+
+    a{
+        &:link{
+            all: unset;
+            text-transform: uppercase;
+            margin-left: 8px;
+            font-size: $font-medium;
+            color: $color-link-nav;
+            display: inline-block;
+            padding: 8px;
+        }
+
+        &:visited{
+            color: $color-link-nav;
+        }
+
+        &:hover{
+            cursor: pointer;
+            color: lighten($color-link-nav, 10%);
+        }
+
+        &:first-child{
+            margin-left: 0px;
+        }
+
+        &:last-child{
+            margin-right: 16px;
+        }
+    }
+}
+
+nav {
+
+    background-color: $color-primary;
+
+    img.logo{
+        font-size: 20px; 
+    }
+
+    :not(img).logo{
+        line-height: 30px;
+        font-size: 20px;
+    }
+
+    .navigation{
+        @include navigation;
+    }
+
+    .navbar-fixed{
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        background: $color-primary;
+        width: 100%;
+
+        a:last-child{
+            padding-right: 8px;
+        }
+
+        span:last-child{
+            padding-right: 16px;
+        }
+    }
+
+}

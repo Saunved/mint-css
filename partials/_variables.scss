@@ -1,0 +1,38 @@
+/* VARIABLES */
+
+$font-h1: 44px;
+$font-h2: 36px;
+$font-h3: 28px;
+$font-h4: 24px;
+$font-h5: 20px;
+$font-h6: 18px;
+$font-p: 18px;
+$font-medium: 16px;
+$font-small: 14px;
+$font-tiny: 12px;
+$base-font: 'Noto Sans JP';
+
+
+@mixin small_radius {
+    border-radius: 4px;
+}
+
+@mixin large-radius{
+    border-radius: 100px;
+}
+
+@mixin clearfix{
+    &::after {
+    content: '';
+    clear: both;
+    display: table;
+  }
+}
+
+@mixin uppercase{
+    text-transform: uppercase;
+}
+
+@mixin lowercase{
+    text-transform: lowercase;
+}

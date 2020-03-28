@@ -1,0 +1,139 @@
+@import "themes/mint.scss";
+// @import "themes/mint-light.scss";
+// @import "themes/mint-dark.scss";
+@import "partials/variables";
+@import "partials/_reset";
+@import "partials/button";
+@import "partials/fonts/base";
+@import "partials/_navbar";
+@import "partials/table";
+@import "partials/form";
+@import "partials/grid";
+@import "style.scss";
+
+
+/* UTILITY */
+
+html * {
+    font-family: $base-font;
+}
+
+code {
+    font-family: monospace;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1024px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 20px;
+    box-sizing: border-box; 
+}
+
+* {
+    outline-color: $color-accent;
+}
+
+
+/* LISTS */
+
+ul {
+    list-style-type: disc;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+ol > ul, ul > ol, ol > ol, ul > ul {
+    margin-left: 16px;
+}
+
+ul ul > li, ol ul > li{
+    list-style-type: circle;
+}
+
+ol ol > li,  ul ol > li{
+    list-style-type: lower-alpha;
+}
+
+/** BLOCKQUOTE **/
+blockquote{
+    padding: 16px;
+    background: $color-base;
+    color: $color-base-text;
+    border: 1px solid $color-base-text;
+    font-size: $font-medium;
+    border-left: 8px solid $color-base-text;
+    @include small-radius;
+}
+
+/** CARD **/
+
+.card{
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    padding: 8px;
+    // border: 1px solid lighten($color-base-text, 20%);
+}
+
+.box{
+    border: 1px solid $color-light-grey;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.hoverable:hover{
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+/** UTILITY **/
+.center{
+    margin: 60px auto;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.right-align{
+    text-align: right;
+}
+
+.left-align{
+    text-align: left;
+}
+
+.center-align{
+    text-align: center;
+}
+
+.responsive{
+    overflow-x: auto;
+}
+
+.border{
+    border: 1px solid $color-medium-gray;
+}
+
+.small-radius{
+    @include small-radius;
+}
+
+.large-radius{
+    @include large-radius;
+}
+
+.clearfix{
+    @include clearfix;
+}
+
+.uppercase{
+    @include uppercase;
+}

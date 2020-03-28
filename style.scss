@@ -1,0 +1,67 @@
+#card-demo{
+    display: grid;
+    grid-template-rows: 200px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 16px;
+}
+
+#form-block{
+    display: grid;
+    grid-template-rows: repeat(3, 70px);
+    grid-template-columns: 300px;
+}
+
+#list-block{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+}
+
+.pad-8{
+    padding: 8px;
+}
+
+.mtop-60{
+    margin-top: 60px;
+}
+
+.grid{
+    .column, .columns{
+        padding: 8px 0px;
+        background: #ddd;
+        margin-bottom: 0.5rem;
+        color: #222;
+        text-align: center;
+        border-radius: 4px;
+    }
+}
+
+i {
+    border: solid darken($color-link-nav, 10%);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-bottom: 3px;
+      
+    &.down {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+      }
+
+  }
+
+section{
+    margin-bottom: 24px;
+}
+
+.space{
+    margin-top: 8px;
+}
+
+.space-medium{
+    margin-top: 16px;
+}
+
+.space-large{
+    margin-top: 24px;
+}
