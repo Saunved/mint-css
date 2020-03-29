@@ -18,8 +18,23 @@ This size will definitely increase once cross-browser compatibility is added
 * The world has moved beyond framework-based grids. Although we have included (directly), the skeleton-css grid - you can always comment out the component from the ```main.scss``` file and use CSS Grids instead.
 
 ## Themes
-This repository contains 3 themes (mint, mint-light, mint-dark).
+
+![alt text](./themes.gif "Logo Title Text 1")
+
+This repository contains a few existing themes.
 You can easily create new themes in the ```themes``` folder. Check out the existing themes to get an idea for how the themes are implemented. If you create a new theme, remember to update the main.scss file to refer to it.
+
+### Ideas for creating themes
+You can contribute by creating multiple themes for this project. A great tool to generate themes can be found here:
+http://colormind.io/template/material-dashboard/
+
+You can use the following guidelines to make a theme:
+1) Use the center color for primary color
+2) Use the color left of center for secondary color
+3) Use the color right or extreme right of center for accent color
+4) Use the color to the extreme left for base color  
+
+Of course, you are free to mix and match as you please!
 
 ## How you can contribute
 1. Add cross-browser compatibility

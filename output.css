@@ -22,7 +22,7 @@ time, mark, audio, video {
 
 html, body, div, section, menu, summary, footer, header, article, aside, details {
   color: #111;
-  background-color: #fff; }
+  background-color: #EFE8D5; }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 8px 0px; }
@@ -62,7 +62,7 @@ a {
 
 pre {
   padding: 8px;
-  background-color: #e6e6e6;
+  background-color: #e1d4b0;
   color: #111;
   border: 1px solid #ccc;
   font-size: 14px; }
@@ -99,12 +99,12 @@ table {
 /* BUTTONS */
 .btn {
   border-radius: 4px;
-  color: #0a0808;
-  background-color: #f6f6f6;
+  color: #111;
+  background-color: #c0ad67;
   padding: 12px 22px;
   border: 1px solid #aaa; }
   .btn:hover {
-    background-color: #e7e7e7; }
+    background-color: #b7a151; }
 
 .btn-small {
   padding: 8px 18px; }
@@ -124,10 +124,10 @@ table {
     background-color: #f0f0f0; }
 
 .btn-secondary {
-  color: #fff;
-  background: #00b161; }
+  color: #111;
+  background: #82a09f; }
   .btn-secondary:hover {
-    background-color: #009250; }
+    background-color: #719392; }
 
 .btn-raise:hover {
   box-shadow: 0 5px 5px -5px #111; }
@@ -136,7 +136,7 @@ table {
 /* NAVIGATION */
 /* NAVBAR DROPDOWN */
 nav {
-  background-color: #f6f6f6; }
+  background-color: #c0ad67; }
   nav img.logo {
     font-size: 20px; }
   nav :not(img).logo {
@@ -159,14 +159,14 @@ nav {
         font-size: 16px;
         display: inline-block;
         padding: 8px;
-        color: #222;
-        background-color: #f6f6f6;
+        color: #111;
+        background-color: #c0ad67;
         padding-left: 0px;
         cursor: pointer; }
         nav .navigation .dropdown .dropdown-title:hover {
-          color: #3c3c3c; }
+          color: #2b2b2b; }
         nav .navigation .dropdown .dropdown-title i {
-          border: solid #090909;
+          border: solid black;
           border-width: 0 3px 3px 0;
           display: inline-block;
           padding: 3px;
@@ -175,7 +175,7 @@ nav {
       nav .navigation .dropdown .dropdown-content {
         display: none;
         position: absolute;
-        background-color: #00b161;
+        background-color: #a56838;
         min-width: 120px;
         transition-duration: 0.3s;
         box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
@@ -186,12 +186,12 @@ nav {
           padding: 12px 16px;
           text-decoration: none;
           display: block;
-          color: #fff;
+          color: #eee;
           margin-left: 0px;
           text-align: left;
           text-transform: initial; }
         nav .navigation .dropdown .dropdown-content a:hover {
-          background-color: #009d56; }
+          background-color: #965e33; }
         nav .navigation .dropdown .dropdown-content a:last-child {
           margin-right: 0px; }
       nav .navigation .dropdown:hover .dropdown-content {
@@ -201,14 +201,14 @@ nav {
       text-transform: uppercase;
       margin-left: 8px;
       font-size: 16px;
-      color: #222;
+      color: #111;
       display: inline-block;
       padding: 8px; }
     nav .navigation a:visited {
-      color: #222; }
+      color: #111; }
     nav .navigation a:hover {
       cursor: pointer;
-      color: #3c3c3c; }
+      color: #2b2b2b; }
     nav .navigation a:first-child {
       margin-left: 0px; }
     nav .navigation a:last-child {
@@ -217,7 +217,7 @@ nav {
     position: fixed;
     top: 0px;
     left: 0px;
-    background: #f6f6f6;
+    background: #c0ad67;
     width: 100%; }
     nav .navbar-fixed a:last-child {
       padding-right: 8px; }
@@ -238,7 +238,7 @@ table {
   table td, table th {
     padding: 8px; }
   table th {
-    background: #00b161;
+    background: #a56838;
     color: #eee; }
   table.striped tr:nth-child(odd) {
     background-color: #eee;
@@ -246,7 +246,7 @@ table {
   table.highlight tr:nth-child(odd):hover {
     background-color: #ccc; }
   table.highlight tr:nth-child(even):hover {
-    background-color: white; }
+    background-color: #f7f4eb; }
 
 /* FORM INPUTS */
 label {
@@ -263,7 +263,7 @@ input {
   font-size: 16px;
   border-radius: 4px;
   border: 1px solid #aaa;
-  background: white;
+  background: #f3eee0;
   color: #111; }
 
 textarea {
@@ -273,7 +273,7 @@ textarea {
   border: 1px solid #aaa;
   min-height: 50px;
   width: 100%;
-  background: white;
+  background: #f3eee0;
   color: #111; }
 
 select {
@@ -281,7 +281,7 @@ select {
   font-size: 16px;
   border: 1px solid #aaa;
   border-radius: 4px;
-  background: white;
+  background: #f3eee0;
   color: #111; }
 
 /*Prefix and suffix from: https://codepen.io/chamsi/pen/LavooJ*/
@@ -292,7 +292,7 @@ select {
   line-height: 1;
   color: #111;
   text-align: center;
-  background-color: whitesmoke;
+  background-color: #e9e0c6;
   border: 1px solid #ccc;
   width: 1%;
   white-space: nowrap;
@@ -500,7 +500,7 @@ select {
   border-radius: 4px; }
 
 i {
-  border: solid #090909;
+  border: solid black;
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 3px;
@@ -538,7 +538,7 @@ code {
   box-sizing: border-box; }
 
 * {
-  outline-color: #00b161; }
+  outline-color: #a56838; }
 
 /* LISTS */
 ul {
@@ -559,16 +559,16 @@ ol ol > li, ul ol > li {
 /** BLOCKQUOTE **/
 blockquote {
   padding: 16px;
-  background: #fff;
+  background: #EFE8D5;
   color: #111;
   border: 1px solid #111;
   font-size: 16px;
-  border-left: 8px solid #111;
+  border-left: 8px solid #82a09f;
   border-radius: 4px; }
 
 /** CARD **/
 .card {
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 #b49644;
   padding: 8px; }
 
 .box {
