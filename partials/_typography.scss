@@ -1,0 +1,37 @@
+h1, h2, h3, h4, h5, h6{
+    margin: 8px 0px;
+    font-weight: 400;
+}
+
+h1{ font-size: $font-h1; }
+
+h2{ font-size: $font-h2; }
+
+h3{ font-size: $font-h3; }
+
+h4{ font-size: $font-h4; }
+
+h5{ font-size: $font-h5; }
+
+h6 { font-size: $font-h6; }
+
+p{
+    margin: 8px 0px;
+    font-size: $font-p;
+    line-height: 1.4rem;
+}
+
+code {
+    font-family: monospace;
+}
+
+/** BLOCKQUOTE **/
+blockquote{
+    padding: 16px;
+    background: $color-base;
+    color: $color-base-text;
+    border: 1px solid $color-base-text;
+    font-size: $font-medium;
+    border-left: 8px solid $color-secondary;
+    @include small-radius;
+}

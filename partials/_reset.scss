@@ -25,39 +25,6 @@ html, body, div, section, menu, summary, footer, header, article, aside, details
     background-color: $color-base;
 }
 
-h1, h2, h3, h4, h5, h6{
-    margin: 8px 0px;
-}
-
-h1{
-    font-size: $font-h1;
-}
-
-h2{
-    font-size: $font-h2;
-}
-
-h3{
-    font-size: $font-h3;
-}
-
-h4{
-    font-size: $font-h4;
-}
-
-h5{
-    font-size: $font-h5;
-}
-
-h6 {
-    font-size: $font-h6;
-}
-
-p{
-    margin: 8px 0px;
-    font-size: $font-p;
-}
-
 
 button{
     all: unset;
@@ -80,7 +47,7 @@ pre{
     background-color: darken($color-base, 10%);
     color: $color-base-text;
     border: 1px solid $color-light-gray;
-    font-size: $font-small;
+    font-size: $font-medium;
 }
 
 /* HTML5 display-role reset for older browsers */

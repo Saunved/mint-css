@@ -1,25 +1,27 @@
 /* VARIABLES */
-
-$font-h1: 44px;
-$font-h2: 36px;
-$font-h3: 28px;
-$font-h4: 24px;
-$font-h5: 20px;
-$font-h6: 18px;
-$font-p: 18px;
-$font-medium: 16px;
-$font-small: 14px;
-$font-tiny: 12px;
+$font-h1: 3rem;
+$font-h2: 2.5rem;
+$font-h3: 2rem;
+$font-h4: 1.7rem;
+$font-h5: 1.4rem;
+$font-h6: 1.2rem;
+$font-p: 1.05rem;
+$font-medium: 1rem;
+$font-small: 0.9rem;
+$font-tiny: 0.8rem;
 $base-font: 'Noto Sans JP';
 
+$color-dark: #111;
+$color-light: #eee;
+$color-white: #fff;
+$color-light-gray: #ccc;
+$color-medium-gray: #aaa;
+$color-light-grey: $color-light-gray;
+$color-medium-grey: $color-light-gray;
 
-@mixin small_radius {
-    border-radius: 4px;
-}
+@mixin small_radius { border-radius: 4px; }
 
-@mixin large-radius{
-    border-radius: 100px;
-}
+@mixin large-radius{ border-radius: 100px; }
 
 @mixin clearfix{
     &::after {
@@ -29,10 +31,34 @@ $base-font: 'Noto Sans JP';
   }
 }
 
-@mixin uppercase{
-    text-transform: uppercase;
+@mixin uppercase{ text-transform: uppercase; }
+
+@mixin lowercase{ text-transform: lowercase; }
+
+@function text-contrast($color){
+    @if (lightness($color) > 52){
+        @return #111;
+    }
+    @else {
+        @return #eee;
+    }
 }
 
-@mixin lowercase{
-    text-transform: lowercase;
+
+@function get-nav-link-color($color){
+    @if(lightness($color) > 52){
+        @return #111;
+    }
+    @else {
+        @return #eee;
+    }    
+}
+
+@function get-link-color($color){
+    @if(lightness($color) > 52){
+        @return #006fcf;
+    }
+    @else {
+        @return #b3dbff;
+    }
 }

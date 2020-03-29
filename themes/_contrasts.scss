@@ -1,0 +1,8 @@
+$color-primary-text: text-contrast($color-primary);
+$color-secondary-text: text-contrast($color-secondary);
+$color-accent-text: text-contrast($color-accent);
+$color-base-text: text-contrast($color-base);
+
+$color-link: get-link-color($color-base); 
+$color-link-nav: get-nav-link-color($color-primary);
+$color-link-nav-light: $color-light;

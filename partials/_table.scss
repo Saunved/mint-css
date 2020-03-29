@@ -4,12 +4,12 @@ table{
     margin: 8px 0px;
 
     &.wrapped{
-        border: 1px solid $color-light-gray;
+        border: 1px solid $color-medium-gray;
     }
 
     &.cells{
         td, th{
-            border: 1px solid $color-light-gray;
+            border: 1px solid $color-medium-gray;
         }
     }
 
@@ -19,7 +19,7 @@ table{
 
     &.separated{
         td, th{
-            border-bottom: 1px solid $color-light-gray;
+            border-bottom: 1px solid $color-medium-gray;
         }
     }
 
@@ -34,18 +34,18 @@ table{
 
     &.striped{
         tr:nth-child(odd){
-            background-color: $color-light;
-            color: $color-dark;
+            background-color: darken($color-base, 5%);
+            color: $color-base-text;
         }
     }
 
     &.highlight{
         tr:nth-child(odd):hover{
-            background-color: $color-light-gray;
+            background-color: darken($color-base, 3%);
         }
 
         tr:nth-child(even):hover{
-            background-color: lighten($color-base, 6%);
+            background-color: darken($color-base, 3%);
         }
     }
     

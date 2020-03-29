@@ -19,15 +19,18 @@ This size will definitely increase once cross-browser compatibility is added
 
 ## Themes
 
-![alt text](./themes.gif "Logo Title Text 1")
+![alt text](./themes.gif "Themes GIF")
 
 This repository contains a few existing themes.
 You can easily create new themes in the ```themes``` folder. Check out the existing themes to get an idea for how the themes are implemented. If you create a new theme, remember to update the main.scss file to refer to it.
 
 ### Ideas for creating themes
-You can contribute by creating multiple themes for this project. A great tool to generate themes can be found here:
-http://colormind.io/template/material-dashboard/
+You can contribute by creating multiple themes for this project.
 
+You have to specify 4 colors in the theme file. The rest of the colors are calculated directly in the ```themes/_contrasts.scss``` file based on the lightness (HSL) values of the specified colors.
+
+A great tool to generate themes can be found here:
+http://colormind.io/template/material-dashboard/  
 You can use the following guidelines to make a theme:
 1) Use the center color for primary color
 2) Use the color left of center for secondary color

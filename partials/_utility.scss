@@ -1,0 +1,25 @@
+/** UTILITY **/
+
+.center{ margin: 60px auto; }
+
+.left{ float: left; }
+
+.right{ float: right; }
+
+.right-align{ text-align: right; }
+
+.left-align{ text-align: left; }
+
+.center-align{ text-align: center;}
+
+.responsive{ overflow-x: auto; }
+
+.border{ border: 1px solid $color-medium-gray; }
+
+.small-radius{ @include small-radius;}
+
+.large-radius{ @include large-radius; }
+
+.clearfix{ @include clearfix; }
+
+.uppercase{ @include uppercase; }

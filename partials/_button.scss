@@ -48,3 +48,7 @@
         box-shadow: 0 5px 5px -5px #111;
     }
 }
+
+.btn-rounded{
+    @include large-radius;
+}
