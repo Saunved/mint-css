@@ -7,8 +7,9 @@
 
 #form-block{
     display: grid;
-    grid-template-rows: repeat(3, 70px);
-    grid-template-columns: 300px;
+    grid-template-rows: auto 70px auto 70px auto 70px;
+    grid-template-columns: 60vw;
+    row-gap: 8px;
 }
 
 #list-block{

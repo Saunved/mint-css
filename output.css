@@ -1,4 +1,5 @@
 /* VARIABLES */
+/* VARIABLES */
 /* MEYER RESET + BASE EXTENSIONS */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
 html, body, div, span, applet, object, iframe,
@@ -21,8 +22,8 @@ time, mark, audio, video {
   vertical-align: baseline; }
 
 html, body, div, section, menu, summary, footer, header, article, aside, details {
-  color: #eee;
-  background-color: #111; }
+  color: #111;
+  background-color: #FAF8F7; }
 
 button {
   all: unset;
@@ -31,14 +32,14 @@ button {
 a {
   text-decoration: none; }
   a:link, a:visited {
-    color: #b3dbff; }
+    color: #006fcf; }
   a:link:hover, a:visited:hover {
-    color: #80c3ff; }
+    color: #00549c; }
 
 pre {
   padding: 8px;
-  background-color: black;
-  color: #eee;
+  background-color: #e6ddd8;
+  color: #111;
   border: 1px solid #ccc;
   font-size: 1rem; }
 
@@ -104,11 +105,11 @@ code {
 /** BLOCKQUOTE **/
 blockquote {
   padding: 16px;
-  background: #111;
-  color: #eee;
-  border: 1px solid #eee;
+  background: #FAF8F7;
+  color: #111;
+  border: 1px solid #111;
   font-size: 1rem;
-  border-left: 8px solid #7A5E79;
+  border-left: 8px solid #00b161;
   border-radius: 4px; }
 
 /* SKELETON CSS GRID */
@@ -256,11 +257,11 @@ blockquote {
 .btn {
   border-radius: 4px;
   color: #eee;
-  background-color: #080808;
+  background-color: #4388a3;
   padding: 12px 22px;
   border: 1px solid #aaa; }
   .btn:hover {
-    background-color: black; }
+    background-color: #3a768d; }
 
 .btn-small {
   padding: 8px 18px; }
@@ -281,9 +282,9 @@ blockquote {
 
 .btn-secondary {
   color: #eee;
-  background: #7A5E79; }
+  background: #00b161; }
   .btn-secondary:hover {
-    background-color: #695168; }
+    background-color: #009250; }
 
 .btn-raise:hover {
   box-shadow: 0 5px 5px -5px #111; }
@@ -292,7 +293,7 @@ blockquote {
   border-radius: 100px; }
 
 * {
-  outline-color: #897495; }
+  outline-color: #576785; }
 
 html * {
   font-family: "Noto Sans JP"; }
@@ -301,7 +302,7 @@ html * {
 /* NAVIGATION */
 /* NAVBAR DROPDOWN */
 nav {
-  background-color: #080808; }
+  background-color: #4388a3; }
   nav img.logo {
     font-size: 20px; }
   nav :not(img).logo {
@@ -325,7 +326,7 @@ nav {
         display: inline-block;
         padding: 8px;
         color: #eee;
-        background-color: #080808;
+        background-color: #4388a3;
         padding-left: 0px;
         cursor: pointer; }
         nav .navigation .dropdown .dropdown-title:hover {
@@ -340,7 +341,7 @@ nav {
       nav .navigation .dropdown .dropdown-content {
         display: none;
         position: absolute;
-        background-color: #897495;
+        background-color: #576785;
         min-width: 120px;
         transition-duration: 0.3s;
         box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
@@ -356,7 +357,7 @@ nav {
           text-align: left;
           text-transform: initial; }
         nav .navigation .dropdown .dropdown-content a:hover {
-          background-color: #7f6a8b; }
+          background-color: #4f5d79; }
         nav .navigation .dropdown .dropdown-content a:last-child {
           margin-right: 0px; }
       nav .navigation .dropdown:hover .dropdown-content {
@@ -382,7 +383,7 @@ nav {
     position: fixed;
     top: 0px;
     left: 0px;
-    background: #080808;
+    background: #4388a3;
     width: 100%; }
     nav .navbar-fixed a:last-child {
       padding-right: 8px; }
@@ -403,15 +404,15 @@ table {
   table td, table th {
     padding: 8px; }
   table th {
-    background: #897495;
+    background: #576785;
     color: #eee; }
   table.striped tr:nth-child(odd) {
-    background-color: #040404;
-    color: #eee; }
+    background-color: #f0eae7;
+    color: #111; }
   table.highlight tr:nth-child(odd):hover {
-    background-color: #090909; }
+    background-color: #f4f0ee; }
   table.highlight tr:nth-child(even):hover {
-    background-color: #090909; }
+    background-color: #f4f0ee; }
 
 /* FORM INPUTS */
 label {
@@ -428,8 +429,8 @@ input {
   font-size: 1rem;
   border-radius: 4px;
   border: 1px solid #aaa;
-  background: #191919;
-  color: #eee; }
+  background: white;
+  color: #111; }
 
 textarea {
   padding: 6px 8px;
@@ -438,16 +439,16 @@ textarea {
   border: 1px solid #aaa;
   min-height: 50px;
   width: 100%;
-  background: #191919;
-  color: #eee; }
+  background: white;
+  color: #111; }
 
 select {
   padding: 4px 0px;
   font-size: 16px;
   border: 1px solid #aaa;
   border-radius: 4px;
-  background: #191919;
-  color: #eee; }
+  background: white;
+  color: #111; }
 
 /*Prefix and suffix from: https://codepen.io/chamsi/pen/LavooJ*/
 .input-group-addon {
@@ -455,9 +456,9 @@ select {
   font-size: 14px;
   font-weight: 400;
   line-height: 1;
-  color: #eee;
+  color: #111;
   text-align: center;
-  background-color: #070707;
+  background-color: #f2edea;
   border: 1px solid #ccc;
   width: 1%;
   white-space: nowrap;
@@ -565,9 +566,9 @@ ol ol > li, ul ol > li {
 
 /** CARD **/
 .card {
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 black;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 #e6ddd8;
   padding: 8px;
-  background-color: #161616; }
+  background-color: #fefdfd; }
 
 .box {
   border: 1px solid #ccc;
@@ -584,8 +585,9 @@ ol ol > li, ul ol > li {
 
 #form-block {
   display: grid;
-  grid-template-rows: repeat(3, 70px);
-  grid-template-columns: 300px; }
+  grid-template-rows: auto 70px auto 70px auto 70px;
+  grid-template-columns: 60vw;
+  row-gap: 8px; }
 
 #list-block {
   display: grid;

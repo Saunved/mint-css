@@ -89,46 +89,77 @@
 
         <section>
             <h4>Small buttons</h4>
+            <pre><code>class="btn btn-small"</code></pre>
+            <div class="space-medium">
             <button class="btn btn-small">Register</button>
             <button class="btn btn-small btn-secondary">Register</button>
             <button class="btn btn-light btn-small">Register</button>
             <button class="btn btn-light btn-float btn-small">Register</button>
             <button class="btn btn-float btn-small">Register</button>
+        </div>
         </section>
 
         <section>
             <h4>Normal buttons</h4>
+            <pre><code>class="btn"</code></pre>
+            <div class="space-medium">
             <button class="btn">Register</button>
             <button class="btn btn-secondary">Register</button>
             <button class="btn btn-light">Register</button>
             <button class="btn btn-light btn-float">Register</button>
             <button class="btn btn-float">Register</button>
+        </div>
         </section>
 
         <section>
             <h4>Large buttons</h4>
+            <pre><code>class="btn btn-large"</code></pre>
+            <div class="space-medium">
             <button class="btn btn-large">Register</button>
             <button class="btn btn-large btn-secondary">Register</button>
             <button class="btn btn-light btn-large">Register</button>
             <button class="btn btn-light btn-float btn-large">Register</button>
             <button class="btn btn-float btn-large">Register</button>
+            </div>
         </section>
 
         <section>
             <h4>Raise on hover buttons</h4>
+            <pre><code>class="btn btn-raise"</code></pre>
+            <div class="space-medium">
             <button class="btn btn-raise">Register</button>
             <button class="btn btn-light btn-raise btn-secondary">Register</button>
             <button class="btn btn-light btn-raise">Register</button>
+            </div>
         </section>
 
         <section>
             <h4>Rounded buttons</h4>
+            <pre><code>class="btn btn-rounded"</code></pre>
+            <div class="space-medium">
             <button class="btn btn-rounded btn-small">Register</button>
             <button class="btn btn-secondary btn-rounded btn-small">Register</button>
             <button class="btn btn-light btn-rounded btn-small">Register</button>
             <button class="btn btn-light btn-float btn-rounded btn-small">Register</button>
             <button class="btn btn-float btn-rounded btn-small">Register</button>
             <button class="btn btn-raise btn-rounded btn-small">Register</button>
+            </div>
+        </section>
+
+        <section>
+            <h4>Secondary background color buttons</h4>
+            <pre><code>class="btn btn-secondary"</code></pre>
+            <div class="space-medium">
+            <button class="btn btn-secondary">Register</button>
+            </div>
+        </section>
+
+        <section>
+            <h4>Light background color buttons</h4>
+            <pre><code>class="btn btn-light"</code></pre>
+            <div class="space-medium">
+            <button class="btn btn-light">Register</button>
+            </div>
         </section>
 
 
@@ -136,15 +167,20 @@
         <section>
 
             <h4>Code block</h4>
-
+            <p>You can write code by wrapping a code block with pre tags like so: &lt;pre&gt;&lt;code&gt;{ some code here }&lt;/code&gt;&lt;/pre&gt;</p>
+            <div class="space-medium">
             <pre><code>while(true){
         console.log("Print forever")
 }
 </code></pre>
+</div>
         </section>
 
         <section>
             <h4>Tables</h4>
+
+            <p>Wrap the table class with a &lt;div class="responsive"&gt; to make the table scrollable horizontally on small screens.</p>
+
             <div class="responsive">
                 <pre><code> class="striped"</code></pre>
                 <table class="striped">
@@ -267,14 +303,26 @@
 
         <section>
             <h4>Cards</h4>
+            <pre><code>class="card"</code></pre>
+            <div class="space-medium">
             <div id="card-demo">
                 <div class="card border">
                     This is a card
                 </div>
+            </div>
+        </div>
+        </section>
+
+        <section>
+            <h4>Hoverable box</h4>
+            <pre><code>class="box hoverable"</code></pre>
+            <div class="space-medium">
+            <div id="card-demo">
                     <div class="box hoverable border">
                         This is a hoverable box
                     </div>
             </div>
+        </div>
         </section>
 
         <section>
@@ -304,22 +352,36 @@
                             href="https://codepen.io/chamsi/pen/LavooJ">https://codepen.io/chamsi/pen/LavooJ</a></p>
 
                     <div id="form-block">
+                        <!-- <h5>Prefix</h5> -->
+                        <pre><code><b>Prefix<br><br></b>&#x3C;div class=&#x22;input-group prefix&#x22;&#x3E;
+        &#x3C;span class=&#x22;input-group-addon&#x22;&#x3E;Dr.&#x3C;/span&#x3E;
+        &#x3C;input id=&#x22;mobile&#x22; type=&#x22;text&#x22; name=&#x22;input&#x22;&#x3E;
+&#x3C;/div&#x3E;</code></pre>
                         <div>
-                            <label style="display: block;" for="mobile">Doctor's name</label>
+                            <!-- <label style="display: block;" for="mobile">Doctor's name</label> -->
                             <div class="input-group prefix">
                                 <span class="input-group-addon">Dr.</span>
                                 <input id="mobile" type="text" name="input">
                             </div>
                         </div>
+                        <pre><code><b>Suffix<br><br></b>&#x3C;div class=&#x22;input-group suffix&#x22;&#x3E;
+        &#x3C;input type=&#x22;text&#x22; name=&#x22;input&#x22;&#x3E;
+        &#x3C;span class=&#x22;input-group-addon &#x22;&#x3E;kg&#x3C;/span&#x3E;
+&#x3C;/div&#x3E;</code></pre>                        
                         <div>
-                            <label for="">Weight</label>
+                            <!-- <label for="">Weight</label> -->
                             <div class="input-group suffix">
                                 <input type="text" name="input">
                                 <span class="input-group-addon ">kg</span>
                             </div>
                         </div>
+                        <pre><code><b>Prefix and suffix<br><br></b> &#x3C;div class=&#x22;input-group presuffix&#x22;&#x3E;
+        &#x3C;span class=&#x22;input-group-addon prefix&#x22;&#x3E;$&#x3C;/span&#x3E;
+        &#x3C;input type=&#x22;text&#x22; name=&#x22;input&#x22;&#x3E;
+        &#x3C;span class=&#x22;input-group-addon suffix&#x22;&#x3E;.00&#x3C;/span&#x3E;
+&#x3C;/div&#x3E;</code></pre>                         
                         <div>
-                            <label for="">Amount in dollars</label>
+                            <!-- <label for="">Amount in dollars</label> -->
                             <div class="input-group presuffix">
                                 <span class="input-group-addon prefix">$</span>
                                 <input type="text" name="input">
