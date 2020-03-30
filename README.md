@@ -30,7 +30,7 @@ You can easily create new themes in the ```themes``` folder. Check out the exist
 ### Ideas for creating themes
 You can contribute by creating multiple themes for this project.
 
-You have to specify 4 colors in the theme file. The rest of the colors are calculated directly in the ```themes/_contrasts.scss``` file based on the lightness (HSL) values of the specified colors.
+**You have to specify only 4 colors in the theme file.** The rest of the colors are calculated directly in the ```themes/_contrasts.scss``` file based on the lightness (HSL) values of the specified colors.
 
 A great tool to generate themes can be found here:
 http://colormind.io/template/material-dashboard/  
