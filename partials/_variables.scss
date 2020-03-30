@@ -21,7 +21,7 @@ $color-medium-grey: $color-light-gray;
 
 @mixin small_radius { border-radius: 4px; }
 
-@mixin large-radius{ border-radius: 100px; }
+@mixin large-radius{ border-radius: 16px; }
 
 @mixin clearfix{
     &::after {
@@ -35,8 +35,20 @@ $color-medium-grey: $color-light-gray;
 
 @mixin lowercase{ text-transform: lowercase; }
 
+@mixin capitalize { text-transform: capitalize; }
+
+
+@function is-dark($color){
+    @if(lightness($color) > 52){
+        @return false;
+    }
+    @else {
+        @return true;
+    }
+}
+
 @function text-contrast($color){
-    @if (lightness($color) > 52){
+    @if (not is-dark($color)){
         @return #111;
     }
     @else {
@@ -46,7 +58,7 @@ $color-medium-grey: $color-light-gray;
 
 
 @function get-nav-link-color($color){
-    @if(lightness($color) > 52){
+    @if(not is-dark($color)){
         @return #111;
     }
     @else {
@@ -55,7 +67,7 @@ $color-medium-grey: $color-light-gray;
 }
 
 @function get-link-color($color){
-    @if(lightness($color) > 52){
+    @if(not is-dark($color)){
         @return #006fcf;
     }
     @else {

@@ -1,6 +1,6 @@
 /** UTILITY **/
 
-.center{ margin: 60px auto; }
+// .center{ margin: 0px auto; }
 
 .left{ float: left; }
 
@@ -10,7 +10,7 @@
 
 .left-align{ text-align: left; }
 
-.center-align{ text-align: center;}
+.center{ text-align: center; vertical-align: middle; }
 
 .responsive{ overflow-x: auto; }
 
@@ -23,3 +23,7 @@
 .clearfix{ @include clearfix; }
 
 .uppercase{ @include uppercase; }
+
+.lowercase {@include lowercase; }
+
+.capitalize {@include capitalize; }

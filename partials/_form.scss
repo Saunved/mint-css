@@ -3,12 +3,12 @@
 label{
     display: block;
     margin-bottom: 4px;
-    font-weight: bold;
+    font-weight: 600;
 
     &.inline{
         display: inline-block;
         margin-right: 4px;
-        font-weight: bold;
+        font-weight: 600;
     }
 }
 
@@ -101,3 +101,103 @@ select{
     border-radius: 0px 4px 4px 0px;
     border-left: 0;
 }
+
+
+/* RADIO BUTTONS AND CHECKBOXES - DERIVED FROM W3CSS */
+/* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_checkbox */
+/* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_radio */
+
+label.cover{
+    font-weight: 400;
+}
+
+.cover {
+    display: block;
+    position: relative;
+    padding-left: $font-p*1.5;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: $font-p;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default radio button */
+  .cover input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .dot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: $font-p;
+    width: $font-p;
+    background-color: #ddd;
+    border-radius: 50%;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: $font-p;
+    width: $font-p;
+    background-color: #ddd;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .cover:hover input ~ .dot, .cover:hover input ~ .checkmark {
+      @if(is-dark($color-base)){
+        background-color: lighten($color-base, 50%);      
+      }
+      @else{
+        background-color: darken($color-base, 20%);
+      }
+
+    // background-color: lighten($color-secondary, 30%);
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .cover input:checked ~ .dot, .cover input:checked ~ .checkmark {
+    background-color: $color-secondary;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .dot:after, .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .cover input:checked ~ .dot:after, .cover input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  .cover .checkmark:after {
+    left: $font-p/3.2;
+    top: $font-p/7;
+    width: $font-p/4;
+    height: $font-p/2;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  
+  /* Style the indicator (dot/circle) */
+//   .cover .checkmark:after {
+//        top: 9px;
+//       left: 9px;
+//       width: 8px;
+//       height: 8px;
+//       border-radius: 50%;
+//       background: white;
+//   }

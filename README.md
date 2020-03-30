@@ -1,3 +1,7 @@
+## Intro
+mint-css is boilerplate CSS that you can use for prototyping, theming, or even use directly in your projects.  
+It comes with full support for dark themes and contrast-conscious typography.
+
 ## Get started
 1. Start by installing Sass on your computer from [here](https://github.com/sass/dart-sass/releases/tag/1.26.3). *Feel free to read up on Sass if you are unfamiliar with it.*
 2. Clone this repository
@@ -7,9 +11,8 @@
 
 This will create an output.css file each time you make any changes to the referred partials or the main.scss file. Open the index.html file to see the results. I recommend creating a local server that automatically updates whenever any files in the folder are changed.
 
-Current output.css file size is 12.5kb (**9.1kb minified**)  
-Without the skeleton-css grid, the minified file size is **7.3kb**  
-This size will definitely increase once cross-browser compatibility is added
+Current output.css file size with all components (except Materialize colors) included is **14.7kb**.
+This size will definitely increase once full cross-browser compatibility is added
 
 ## Why this project?
 **This project is inspired by skeleton-css and Materialize CSS and looks to combine the best of both** to create a boilerplate CSS that can be extended in a variety of ways. 
