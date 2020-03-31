@@ -1,6 +1,10 @@
 ## Intro
 mint-css is boilerplate CSS that you can use for prototyping, theming, or even use directly in your projects.  
-It comes with **full support for dark themes and contrast-conscious typography**.
+
+## Keep the themes coming!
+Specify just 4 colors in your theme file, and you're ready to go! **Full support for dark themes and contrast-conscious typography**.  
+
+![alt text](./themes.gif "Themes GIF")
 
 ## Quickstart (for designers or non-web developers)
 1. Clone (download) this repository
