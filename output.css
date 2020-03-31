@@ -272,6 +272,13 @@ blockquote {
   .btn:hover {
     background-color: #ad9747; }
 
+.btn.btn-outline {
+  background-color: #fff;
+  color: #64582a;
+  border: 1px solid #c0ad67; }
+  .btn.btn-outline:hover {
+    background-color: whitesmoke; }
+
 .btn-small {
   padding: 8px 18px; }
 
@@ -294,6 +301,26 @@ blockquote {
   background: #82a09f; }
   .btn-secondary:hover {
     background-color: #719392; }
+
+.btn-secondary.btn-outline {
+  background-color: #fff;
+  color: #3b4e4d;
+  border: 1px solid #82a09f; }
+  .btn-secondary.btn-outline:hover {
+    background-color: whitesmoke; }
+
+.btn-accent {
+  color: #eee;
+  background: #a56838; }
+  .btn-accent:hover {
+    background-color: #bc7640; }
+
+.btn-accent.btn-outline {
+  background-color: #fff;
+  color: #332011;
+  border: 1px solid #a56838; }
+  .btn-accent.btn-outline:hover {
+    background-color: whitesmoke; }
 
 .btn-raise:hover {
   box-shadow: 0 5px 5px -5px #111; }
