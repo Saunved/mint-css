@@ -561,11 +561,12 @@ label.cover {
 .dot:after, .checkmark:after {
   content: "";
   position: absolute;
-  display: none; }
+  opacity: 0;
+  transition-duration: 0.2s; }
 
 /* Show the indicator (dot/circle) when checked */
 .cover input:checked ~ .dot:after, .cover input:checked ~ .checkmark:after {
-  display: block; }
+  opacity: 1; }
 
 .cover .checkmark:after {
   left: 0.328125rem;
@@ -579,6 +580,14 @@ label.cover {
   transform: rotate(45deg); }
 
 /* Style the indicator (dot/circle) */
+.cover .dot:after {
+  top: 6px;
+  left: 6px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #82a09f; }
+
 /** UTILITY **/
 .left {
   float: left; }

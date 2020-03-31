@@ -176,12 +176,13 @@ label.cover{
   .dot:after, .checkmark:after {
     content: "";
     position: absolute;
-    display: none;
+    opacity: 0;
+    transition-duration: 0.2s;
   }
   
   /* Show the indicator (dot/circle) when checked */
   .cover input:checked ~ .dot:after, .cover input:checked ~ .checkmark:after {
-    display: block;
+    opacity: 1;
   }
 
   .cover .checkmark:after {
@@ -197,11 +198,11 @@ label.cover{
   }
   
   /* Style the indicator (dot/circle) */
-//   .cover .checkmark:after {
-//        top: 9px;
-//       left: 9px;
-//       width: 8px;
-//       height: 8px;
-//       border-radius: 50%;
-//       background: white;
-//   }
+  .cover .dot:after {
+      top: 6px;
+      left: 6px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: $color-secondary;
+  }
