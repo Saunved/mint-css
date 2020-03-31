@@ -1,9 +1,11 @@
 class SN{
+    static sidenavs = [];
 
     init(){
         for(let i=0; i < arguments.length; i++){
             this.setup(arguments[i]);
         }
+        this.esc();
     }
 
     setup(id){
@@ -36,6 +38,18 @@ class SN{
             })
         }
     }
+
+    esc(){
+        document.onkeyup = function(e){
+            if(e.which==27){
+                var elems = document.getElementsByClassName('sidenav');
+                for(let i=0; i<elems.length; i++){
+                    elems[i].classList.remove('active');
+                }
+            }
+        }
+    }
+
 }
 
 const Sidenav = new SN();
