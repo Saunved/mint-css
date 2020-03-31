@@ -20,7 +20,7 @@ time, mark, audio, video {
     vertical-align: baseline;
 }
 
-html, body, div, section, menu, summary, footer, header, article, aside, details{
+html, body, section, menu, summary, footer, header, article, aside, details{
     color: $color-base-text;
     background-color: $color-base;
 }
@@ -49,6 +49,7 @@ pre{
     border: 1px solid $color-light-gray;
     font-size: $font-medium;
     margin: 8px 0px;
+    white-space: pre-wrap;
 }
 
 /* HTML5 display-role reset for older browsers */

@@ -13,16 +13,23 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="./assets/js/highlight/styles/gruvbox-dark.css">
+    <script src="./assets/js/highlight/highlight.pack.js"></script>
+    <script src="./assets/CodeViewer/code-viewer.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 </head>
 
 <body>
 
+    <template id="sidenav-template">
+
+    </template>
 
     <nav>
-        <div class="navigation center navbar-fixed card">
+        <div class="navigation center navbar-fixed card no-small">
             <!-- <span><img class="logo left" src="http://via.placeholder.com/150x30/FFFFFF/000000?text=LOGO" alt=""></span> -->
             <!-- <span class="logo left">Hello</span> -->
-            <a style="display:inline-block" href="#" class="">Home</a>
+            <a href="#" class="">Home</a>
             <a href="#">Hello</a>
             <a href="#">About us</a>
             <a href="#">Contact us</a>
@@ -37,9 +44,22 @@
         </div>
     </nav>
 
-    <div class="container mtop-60">
+    <div class="container">
+
+        <div class="mtop-60 no-small">
+
+        </div>
 
         <section>
+            <section>
+                <div class="clearfix">
+
+<a class="github-button" href="https://github.com/Saunved/mint-css" data-icon="octicon-star" data-size="large" aria-label="Star Saunved/mint-css on GitHub">Star</a>
+<a class="github-button" href="https://github.com/Saunved/mint-css/archive/master.zip" data-icon="octicon-cloud-download" data-size="large" aria-label="Download Saunved/mint-css on GitHub">Download</a>
+<a class="github-button" href="https://github.com/Saunved/mint-css/fork" data-icon="octicon-repo-forked" data-size="large" aria-label="Fork Saunved/mint-css on GitHub">Fork</a>
+                </div>
+                    </section>
+
             <h1>Heading 1</h1>
             <h2>Heading 2</h2>
             <h3>Heading 3</h3>
@@ -89,46 +109,176 @@
                 </div>
             </div>
         </section>
-
+<hr>
         <section>
-            <h4>Small buttons</h4>
-            <pre><code>class="btn btn-small"</code></pre>
+
+            <h4>Sidenavs</h4>
+            <p>Wrap sidenavs in a div with an ID of your choice. Sidenavs should contain:</p>
+                <ol>
+                    <li>An open trigger with class="trigger"</li>
+                    <li>A sidenav div with class="sidenav"</li>
+                    <li>A close trigger with class="close-trigger"</li>
+                </ol>
+            <p>To use sidenavs, simply ensure that the Sidenav component is included in the script:</p>
+            <pre><code><&#8203;script src="/path/to/sidenav.js"><&#8203;script></code></pre>
+            <p>Then initialize the sidenav with:</p>
+            <pre><code>Sidenav.init('your-id')</code></pre>
+            <p>To initialize multiple sidenavs at once:</p>
+            <pre><code>Sidenav.init('your-id1','your-id2','your-id3')</code></pre>
+            <p>You can utilize the 'sidenav' as an overlay and can have as many sidenavs on a page as you want, as long as their wrapping div ID is unique.</p>
+
+            <code-viewer title="Slide from left sidenav" content='<&#8203;div id="sidenav1">
+<&#8203;button class="trigger" style="display: inline-block; margin-top: 8px">Tap to open (you can include an icon here)<&#8203;/button>
+    <&#8203;div class="sidenav slide-left">
+        <&#8203;a class="center" href="#">Link 1<&#8203;/a>
+        <&#8203;a class="center" href="#">Link 1<&#8203;/a>
+        <&#8203;a class="center" href="#">Link 1<&#8203;/a>
+        <&#8203;a class="center" href="#">Link 1<&#8203;/a>
+    <&#8203;div class="center">
+            <&#8203;button class="close-trigger btn btn-rounded btn-small btn-light"><&#8203;h6>Close<&#8203;/h6><&#8203;/button>  
+    <&#8203;/div>
+<&#8203;/div>
+<&#8203;/div>'></code-viewer>
+
+            <div id="sidenav1">
+                <button class="trigger btn btn-light btn-small" style="display: inline-block; margin-top: 8px">Tap to open</button>
+                    <div class="sidenav slide-left">
+                    <a class="center" href="#">Link 1</a>
+                    <a class="center" href="#">Link 1</a>
+                    <a class="center" href="#">Link 1</a>
+                    <a class="center" href="#">Link 1</a>
+                        <div class="center">
+                        <button class="close-trigger btn btn-rounded btn-small btn-light"><h6>Close</h6></button>  
+                    </div>
+                </div>
+            </div>
+
+            <code-viewer title="Rise from below sidenav" content='<&#8203;div id="sidenav2">
+<&#8203;button class="trigger" style="display: inline-block; margin-top: 8px">Tap to open (you can include an icon here)<&#8203;/button>
+    <&#8203;div class="sidenav slide-left">
+        <&#8203;a class="center" href="#">Link 1<&#8203;/a>
+        <&#8203;a class="center" href="#">Link 1<&#8203;/a>
+        <&#8203;a class="center" href="#">Link 1<&#8203;/a>
+        <&#8203;a class="center" href="#">Link 1<&#8203;/a>
+    <&#8203;div class="center">
+            <&#8203;button class="close-trigger btn btn-rounded btn-small btn-light"><&#8203;h6>Close<&#8203;/h6><&#8203;/button>  
+    <&#8203;/div>
+<&#8203;/div>
+<&#8203;/div>'></code-viewer>
+                <div id="sidenav2">
+                    <button class="trigger btn btn-light btn-small" style="display: inline-block; margin-top: 8px">Tap to open</button>
+                        <div class="sidenav rise">
+                        <a class="center" href="#">Link 1</a>
+                        <a class="center" href="#">Link 1</a>
+                        <a class="center" href="#">Link 1</a>
+                        <a class="center" href="#">Link 1</a>
+                            <div class="center">
+                            <button class="close-trigger btn btn-rounded btn-small btn-light"><h6>Close</h6></button>  
+                        </div>
+                    </div>
+                    </div>
+
+                    <code-viewer title="Slide from right sidenav" content='<&#8203;div id="sidenav3">
+<&#8203;button class="trigger" style="display: inline-block; margin-top: 8px">Tap to open (you can include an icon here)<&#8203;/button>
+    <&#8203;div class="sidenav slide-left">
+        <&#8203;a class="center" href="#">Link 1<&#8203;/a>
+        <&#8203;a class="center" href="#">Link 1<&#8203;/a>
+        <&#8203;a class="center" href="#">Link 1<&#8203;/a>
+        <&#8203;a class="center" href="#">Link 1<&#8203;/a>
+    <&#8203;div class="center">
+            <&#8203;button class="close-trigger btn btn-rounded btn-small btn-light"><&#8203;h6>Close<&#8203;/h6><&#8203;/button>  
+    <&#8203;/div>
+<&#8203;/div>
+<&#8203;/div>'></code-viewer>
+                    <div id="sidenav3">
+                        <button class="trigger btn btn-light btn-small" style="display: inline-block; margin-top: 8px">Tap to open</button>
+                            <div class="sidenav slide-right">
+                            <a class="center" href="#">Link 1</a>
+                            <a class="center" href="#">Link 1</a>
+                            <a class="center" href="#">Link 1</a>
+                            <a class="center" href="#">Link 1</a>
+                                <div class="center">
+                                <button class="close-trigger btn btn-rounded btn-small btn-light"><h6>Close</h6></button>  
+                            </div>
+                        </div>
+                        </div>
+       <code-viewer title="Drop from above sidenav" content='<&#8203;div id="sidenav4">
+<&#8203;button class="trigger" style="display: inline-block; margin-top: 8px">Tap to open (you can include an icon here)<&#8203;/button>
+    <&#8203;div class="sidenav drop">
+        <&#8203;a class="center" href="#">Link 1<&#8203;/a>
+        <&#8203;a class="center" href="#">Link 1<&#8203;/a>
+        <&#8203;a class="center" href="#">Link 1<&#8203;/a>
+        <&#8203;a class="center" href="#">Link 1<&#8203;/a>
+    <&#8203;div class="center">
+            <&#8203;button class="close-trigger btn btn-rounded btn-small btn-light"><&#8203;h6>Close<&#8203;/h6><&#8203;/button>  
+    <&#8203;/div>
+<&#8203;/div>
+<&#8203;/div>'></code-viewer>
+
+                    <div id="sidenav4">
+                        <button class="trigger btn btn-light btn-small" style="display: inline-block; margin-top: 8px">Tap to open</button>
+                            <div class="sidenav drop">
+                            <a class="center" href="#">Link 1</a>
+                            <a class="center" href="#">Link 1</a>
+                            <a class="center" href="#">Link 1</a>
+                            <a class="center" href="#">Link 1</a>
+                                <div class="center">
+                                <button class="close-trigger btn btn-rounded btn-small btn-light"><h6>Close</h6></button>  
+                            </div>
+                        </div>
+                        </div>
+
+                        <code-viewer title="Overlay sidenav" content='<&#8203;div id="sidenav5">
+<&#8203;button class="trigger" style="display: inline-block; margin-top: 8px">Tap to open (you can include an icon here)<&#8203;/button>
+    <&#8203;div class="sidenav">
+        <&#8203;a class="center" href="#">Link 1<&#8203;/a>
+        <&#8203;a class="center" href="#">Link 1<&#8203;/a>
+        <&#8203;a class="center" href="#">Link 1<&#8203;/a>
+        <&#8203;a class="center" href="#">Link 1<&#8203;/a>
+    <&#8203;div class="center">
+            <&#8203;button class="close-trigger btn btn-rounded btn-small btn-light"><&#8203;h6>Close<&#8203;/h6><&#8203;/button>  
+    <&#8203;/div>
+<&#8203;/div>
+<&#8203;/div>'></code-viewer>
+                        <div id="sidenav5">
+                            <button class="trigger btn btn-light btn-small" style="display: inline-block; margin-top: 8px">Tap to open</button>
+                                <div class="sidenav">
+                                <a class="center" href="#">Link 1</a>
+                                <a class="center" href="#">Link 1</a>
+                                <a class="center" href="#">Link 1</a>
+                                <a class="center" href="#">Link 1</a>
+                                    <div class="center">
+                                    <button class="close-trigger btn btn-rounded btn-small btn-light"><h6>Close</h6></button>  
+                                </div>
+                            </div>
+                            </div>
+        </section>
+<hr>
+        <section>
+            <h4>Buttons</h4>
+            <code-viewer title="Small button" content='<&#8203;button class="btn btn-small">Register<&#8203;/button>'></code-viewer>
+
             <div class="space-medium">
                 <button class="btn btn-small">Register</button>
-                <button class="btn btn-small btn-secondary">Register</button>
-                <button class="btn btn-light btn-small">Register</button>
-                <button class="btn btn-light btn-float btn-small">Register</button>
-                <button class="btn btn-float btn-small">Register</button>
             </div>
         </section>
 
         <section>
-            <h4>Normal buttons</h4>
-            <pre><code>class="btn"</code></pre>
+            <code-viewer title="Normal button" content='<&#8203;button class="btn">Register<&#8203;/button>'></code-viewer>
             <div class="space-medium">
                 <button class="btn">Register</button>
-                <button class="btn btn-secondary">Register</button>
-                <button class="btn btn-light">Register</button>
-                <button class="btn btn-light btn-float">Register</button>
-                <button class="btn btn-float">Register</button>
             </div>
         </section>
 
         <section>
-            <h4>Large buttons</h4>
-            <pre><code>class="btn btn-large"</code></pre>
+            <code-viewer title="Large button" content='<&#8203;button class="btn btn-large">Register<&#8203;/button>'></code-viewer>
             <div class="space-medium">
                 <button class="btn btn-large">Register</button>
-                <button class="btn btn-large btn-secondary">Register</button>
-                <button class="btn btn-light btn-large">Register</button>
-                <button class="btn btn-light btn-float btn-large">Register</button>
-                <button class="btn btn-float btn-large">Register</button>
             </div>
         </section>
 
         <section>
-            <h4>Raise on hover buttons</h4>
-            <pre><code>class="btn btn-raise"</code></pre>
+            <code-viewer title="Raise on hover button" content='class="btn btn-raise"'></code-viewer>
             <div class="space-medium">
                 <button class="btn btn-raise">Register</button>
                 <button class="btn btn-light btn-raise btn-secondary">Register</button>
@@ -137,43 +287,34 @@
         </section>
 
         <section>
-            <h4>Rounded buttons</h4>
-            <pre><code>class="btn btn-rounded"</code></pre>
+            <code-viewer title="Rounded button" content='<&#8203;button class="btn btn-rounded btn-small">Register<&#8203;/button>'></code-viewer>
             <div class="space-medium">
                 <button class="btn btn-rounded btn-small">Register</button>
-                <button class="btn btn-secondary btn-rounded btn-small">Register</button>
-                <button class="btn btn-light btn-rounded btn-small">Register</button>
-                <button class="btn btn-light btn-float btn-rounded btn-small">Register</button>
-                <button class="btn btn-float btn-rounded btn-small">Register</button>
-                <button class="btn btn-raise btn-rounded btn-small">Register</button>
             </div>
         </section>
 
         <section>
-            <h4>Secondary background color buttons</h4>
-            <pre><code>class="btn btn-secondary"</code></pre>
+            <code-viewer title="Secondary background color buttons" content='<&#8203;button class="btn btn-secondary">Register<&#8203;/button>'></code-viewer>
             <div class="space-medium">
                 <button class="btn btn-secondary">Register</button>
             </div>
         </section>
 
         <section>
-            <h4>Light background color buttons</h4>
-            <pre><code>class="btn btn-light"</code></pre>
+            <code-viewer title="Light background color buttons" content='<&#8203;button class="btn btn-light">Register<&#8203;/button>'></code-viewer>
             <div class="space-medium">
                 <button class="btn btn-light">Register</button>
             </div>
         </section>
 
-
-
         <section>
-
             <h4>Code block</h4>
-            <p>You can write code by wrapping a code block with pre tags like so: &lt;pre&gt;&lt;code&gt;{ some code
-                here }&lt;/code&gt;&lt;/pre&gt;</p>
+            <code-viewer title="" content='<&#8203;pre&#8203;><&#8203;code&#8203;>while(true){
+                console.log("Print forever")
+                }
+<&#8203;/code&#8203;><&#8203;/pre&#8203;>'></code-viewer>
             <div class="space-medium">
-                <pre><code>while(true){
+                <pre style="padding: 8px"><code class="nohighlight">while(true){
         console.log("Print forever")
 }
 </code></pre>
@@ -186,8 +327,8 @@
             <p>Wrap the table class with a &lt;div class="responsive"&gt; to make the table scrollable horizontally on
                 small screens.</p>
 
+           <code-viewer title="Striped table" content='<&#8203;table class="striped">'></code-viewer>
             <div class="responsive">
-                <pre><code> class="striped"</code></pre>
                 <table class="striped">
                     <thead>
                         <th>Hello</th>
@@ -221,9 +362,10 @@
                 </table>
             </div>
 
+
             <div class="responsive">
-                <pre><code> class="striped cells"</code></pre>
-                <table class="striped highlight cells">
+            <code-viewer title="Table with cells and row highlighting" content='<&#8203;table class="highlight cells">'></code-viewer>
+                <table class="highlight cells">
                     <thead>
                         <th>Hello</th>
                         <th>Hello</th>
@@ -258,7 +400,7 @@
 
 
             <div class="responsive">
-                <pre><code> class="separated highlight"</code></pre>
+                <code-viewer title="Single border at the bottom of the cell and highlighting" content='<&#8203;table class="separated highlight">'></code-viewer>
                 <table class="separated highlight">
                     <thead>
                         <th>Hello</th>
@@ -294,7 +436,7 @@
 
         </section>
 
-
+<hr>
         <section>
             <h4>Blockquote</h4>
             <div>
@@ -305,10 +447,11 @@
                 </blockquote>
             </div>
         </section>
-
+<hr>
         <section>
-            <h4>Cards</h4>
-            <pre><code>class="card"</code></pre>
+            <code-viewer title="Cards" content='<&#8203;div class="card border">
+    This is a card
+<&#8203;/div>'></code-viewer>
             <div class="space-medium">
                 <div id="card-demo">
                     <div class="card border">
@@ -317,10 +460,11 @@
                 </div>
             </div>
         </section>
-
+<hr>
         <section>
-            <h4>Hoverable box</h4>
-            <pre><code>class="box hoverable"</code></pre>
+            <code-viewer title="Hoverable box" content='<&#8203;div class="box hoverable border">
+    This is a hoverable box
+<&#8203;/div>'></code-viewer>
             <div class="space-medium">
                 <div id="card-demo">
                     <div class="box hoverable border">
@@ -329,27 +473,24 @@
                 </div>
             </div>
         </section>
-
+<hr>
         <section>
             <h4>Form elements</h4>
-            <h6>Label above the form input</h6>
+            <code-viewer title="Normal label" content='<&#8203;label for="name">First name<&#8203;/label>
+<&#8203;input type="text" id="name">'></code-viewer>
             <div class="space-medium">
                 <label for="one">First name</label>
-                <input type="text" name="" id="one">
+                <input type="text" id="one">
             </div>
 
             <div class="space-medium">
-                <label for="two">Last name</label>
-                <input type="text" name="" id="two">
-            </div>
-
-            <div class="space-medium">
-                <h6>Label inline</h6>
-                <pre><code>label class="inline"</code></pre>
+                <code-viewer title="Inline label" content='<&#8203;label class="inline" for="phone">Mobile<&#8203;/label>
+<&#8203;input type="number" id="phone">'></code-viewer>
                 <div class="space">
-                    <label class="inline" for="two">Mobile</label>
-                    <input type="number" name="" id="two">
+                    <label class="inline" for="phone">Mobile</label>
+                    <input type="number" id="phone">
                 </div>
+            </div>
 
                 <div class="space-medium">
                     <h4>Prefix and suffix</h4>
@@ -357,36 +498,36 @@
                             href="https://codepen.io/chamsi/pen/LavooJ">https://codepen.io/chamsi/pen/LavooJ</a></p>
 
                     <div id="form-block">
-                        <!-- <h5>Prefix</h5> -->
-                        <pre><code><b>Prefix<br><br></b>&#x3C;div class=&#x22;input-group prefix&#x22;&#x3E;
-        &#x3C;span class=&#x22;input-group-addon&#x22;&#x3E;Dr.&#x3C;/span&#x3E;
-        &#x3C;input id=&#x22;mobile&#x22; type=&#x22;text&#x22; name=&#x22;input&#x22;&#x3E;
-&#x3C;/div&#x3E;</code></pre>
+                        <code-viewer title="Prefix" content='<&#8203;div class=&#x22;input-group prefix&#x22;&#8203;>
+    <&#8203;span class=&#x22;input-group-addon&#x22;&#8203;>Dr.<&#8203;/span&#8203;>
+    <&#8203;input id=&#x22;dr&#x22; type=&#x22;text&#x22; name=&#x22;input&#x22;&#8203;>
+<&#8203;/div&#8203;>'></code-viewer>
                         <div>
-                            <!-- <label style="display: block;" for="mobile">Doctor's name</label> -->
                             <div class="input-group prefix">
                                 <span class="input-group-addon">Dr.</span>
-                                <input id="mobile" type="text" name="input">
+                                <input id="dr" type="text" name="input">
                             </div>
                         </div>
-                        <pre><code><b>Suffix<br><br></b>&#x3C;div class=&#x22;input-group suffix&#x22;&#x3E;
-        &#x3C;input type=&#x22;text&#x22; name=&#x22;input&#x22;&#x3E;
-        &#x3C;span class=&#x22;input-group-addon &#x22;&#x3E;kg&#x3C;/span&#x3E;
-&#x3C;/div&#x3E;</code></pre>
+
+                        <code-viewer title="Suffix" content='<&#8203;div class=&#x22;input-group suffix&#x22;&#8203;>
+    <&#8203;input type=&#x22;text&#x22; name=&#x22;input&#x22;&#8203;
+    <&#8203;span class=&#x22;input-group-addon &#x22;&#8203;>kg<&#8203;/span&#8203;>
+<&#8203;/div&#8203;>'></code-viewer>
+
                         <div>
-                            <!-- <label for="">Weight</label> -->
                             <div class="input-group suffix">
                                 <input type="text" name="input">
                                 <span class="input-group-addon ">kg</span>
                             </div>
                         </div>
-                        <pre><code><b>Prefix and suffix<br><br></b> &#x3C;div class=&#x22;input-group presuffix&#x22;&#x3E;
-        &#x3C;span class=&#x22;input-group-addon prefix&#x22;&#x3E;$&#x3C;/span&#x3E;
-        &#x3C;input type=&#x22;text&#x22; name=&#x22;input&#x22;&#x3E;
-        &#x3C;span class=&#x22;input-group-addon suffix&#x22;&#x3E;.00&#x3C;/span&#x3E;
-&#x3C;/div&#x3E;</code></pre>
+
+                        <code-viewer title="Prefix and suffix" content='<&#8203;div class=&#x22;input-group presuffix&#x22&#8203;>
+    <&#8203;span class=&#x22;input-group-addon prefix&#x22&#8203;>$<&#8203;/span&#x3E;
+    <&#8203;input type=&#x22;text&#x22; name=&#x22;input&#x22&#8203;>
+    <&#8203;span class=&#x22;input-group-addon suffix&#x22&#8203;>.00<&#8203;/span&#x3E;
+<&#8203;/div&#x3E;'></code-viewer>
+
                         <div>
-                            <!-- <label for="">Amount in dollars</label> -->
                             <div class="input-group presuffix">
                                 <span class="input-group-addon prefix">$</span>
                                 <input type="text" name="input">
@@ -420,8 +561,27 @@
             </div>
 
             <div class="space-large">
-                <h4>Radios and checboxes</h4>
-                <p>Classes documentation pending</p>
+                <code-viewer title="Radio buttons" content='<&#8203;label class="cover">
+    <&#8203;input type="radio" checked="checked" name="radio">
+    <&#8203;span class="dot"><&#8203;/span>
+    One
+<&#8203;/label>
+<&#8203;label class="cover">
+    <&#8203;input type="radio" name="radio">
+    <&#8203;span class="dot"><&#8203;/span>
+    Two
+<&#8203;/label>
+<&#8203;label class="cover">
+    <&#8203;input type="radio" name="radio">
+    <&#8203;span class="dot"><&#8203;/span>
+    Three
+<&#8203;/label>
+<&#8203;label class="cover">
+    <&#8203;input type="radio" name="radio">
+    <&#8203;span class="dot"><&#8203;/span>
+    Four
+<&#8203;/label>'></code-viewer>
+<div class="space">
                 <label class="cover">
                     <input type="radio" checked="checked" name="radio">
                     <span class="dot"></span>
@@ -442,10 +602,35 @@
                     <span class="dot"></span>
                     Four
                   </label>
+                </div>
                   
             </div>
 <hr>
             <div class="space">
+                <code-viewer title="Checkboxes" content='<&#8203;label class="cover">
+    <&#8203;input type="checkbox" checked="checked">
+    <&#8203;span class="checkmark"><&#8203;/span>
+    One
+<&#8203;/label>
+                  
+<&#8203;label class="cover">
+    <&#8203;input type="checkbox">
+    <&#8203;span class="checkmark"><&#8203;/span>
+    Two
+<&#8203;/label>
+                  
+<&#8203;label class="cover">
+    <&#8203;input type="checkbox">
+    <&#8203;span class="checkmark"><&#8203;/span>
+    Three
+<&#8203;/label>
+                  
+<&#8203;label class="cover">
+    <&#8203;input type="checkbox">
+    <&#8203;span class="checkmark"><&#8203;/span>
+    Four
+<&#8203;/label>'></code-viewer>
+                <div class="space">
                 <label class="cover">
                     <input type="checkbox" checked="checked">
                     <span class="checkmark"></span>
@@ -470,85 +655,98 @@
                     Four
                   </label>
             </div>
-            </div>
+        </div>
 
         </section>
-
+<hr>
         <section>
             <h4>Utility classes</h4>
 
+            <code-viewer title="Center some content" content='<&#8203;div class="center">
+    <&#8203;img src="http://via.placeholder.com/150/bbaacc/ffffff" alt="">
+<&#8203;/div>'></code-viewer>
             <div class="center">
-                <h5 class="">Center some content</h5>
-                <pre><code>class="center" on the wrapping div</code></pre>
                 <img src="http://via.placeholder.com/150/bbaacc/ffffff" alt="">
             </div>
 
-            <div class="left-align">
-                <h5 class="">Left align some content</h5>
-                <pre><code>class="left-align" on the wrapping div</code></pre>
+            <code-viewer title="Left align content" content='<&#8203;div class="left-align">
+    <&#8203;img src="http://via.placeholder.com/150/bbaacc/ffffff" alt="">
+<&#8203;/div>'></code-viewer>
+
+            <div class="left-align space">
                 <img src="http://via.placeholder.com/150/bbaacc/ffffff" alt="">
             </div>
 
-            <div class="right-align">
-                <h5 class="">Right align some content</h5>
-                <pre><code>class="right-align" on the wrapping div</code></pre>
+            <code-viewer title="Right align content" content='<&#8203;div class="right-align">
+    <&#8203;img src="http://via.placeholder.com/150/bbaacc/ffffff" alt="">
+<&#8203;/div>'></code-viewer>
+            <div class="right-align space">
                 <img src="http://via.placeholder.com/150/bbaacc/ffffff" alt="">
             </div>
 
+            <code-viewer title="Right float" content='<&#8203;div class="clearfix">
+    <&#8203;img class="right" src="http://via.placeholder.com/150/bbaacc/ffffff" alt="">
+<&#8203;/div>'></code-viewer>           
             <div class="clearfix">
-                <h5 class="">Left float</h5>
-                <pre><code>class="left"</code></pre>
-                <p>Use  <code>class="clearfix"</code> on the wrapping div to add clearfix!</p>
-                <img class="left" src="http://via.placeholder.com/150/bbaacc/ffffff" alt="">
-            </div>
-
-            <div class="clearfix">
-                <h5 class="">Right float</h5>
-                <pre><code>class="right"</code></pre>
-                <p>Use  <code>class="clearfix"</code> on the wrapping div to add clearfix!</p>
                 <img class="right" src="http://via.placeholder.com/150/bbaacc/ffffff" alt="">
             </div>
 
-            <div class="">
-                <h5 class="">Add a border around anything</h5>
-                <pre><code>class="border"</code></pre>
+            <code-viewer title="Left float" content='<&#8203;div class="clearfix">
+    <&#8203;img class="left" src="http://via.placeholder.com/150/bbaacc/ffffff" alt="">
+<&#8203;/div>'></code-viewer>           
+                        <div class="clearfix space">
+                            <img class="left" src="http://via.placeholder.com/150/bbaacc/ffffff" alt="">
+                        </div>
+
+            <code-viewer title="Clearfix a float" content='<&#8203;div class="<b>clearfix</b>">
+    <&#8203;img class="right" src="http://via.placeholder.com/150/bbaacc/ffffff" alt="">
+<&#8203;/div>'></code-viewer>
+            <div class="clearfix space">
+                <img class="right" src="http://via.placeholder.com/150/bbaacc/ffffff" alt="">
+            </div>
+
+            <code-viewer title="General border around elements" content='<&#8203;div>
+    <&#8203;img class="border" src="http://via.placeholder.com/150/ffffff/000000" alt="">
+<&#8203;/div>'></code-viewer>
+            <div class="space">
                 <img class="border" src="http://via.placeholder.com/150/ffffff/000000" alt="">
             </div>
 
-            <div class="">
-                <h5 class="">Small border radius on edges</h5>
-                <pre><code>class="small-radius"</code></pre>
+
+            <code-viewer title="Small border radius" content='<&#8203;div>
+    <&#8203;img class="small-radius border" src="http://via.placeholder.com/150/bbaacc/ffffff" alt="">
+<&#8203;/div>'></code-viewer>
+            <div class="space">
                 <img class="small-radius border" src="http://via.placeholder.com/150/bbaacc/ffffff" alt="">
             </div>
 
-            <div class="">
-                <h5 class="">Large border radius on edges</h5>
-                <pre><code>class="large-radius"</code></pre>
+            <code-viewer title="Large border radius" content='<&#8203;div class="">
+                <&#8203;img class="large-radius border" src="http://via.placeholder.com/150/bbaacc/ffffff" alt="">
+            <&#8203;/div>'></code-viewer>
+            <div class="space">
                 <img class="large-radius border" src="http://via.placeholder.com/150/bbaacc/ffffff" alt="">
             </div>
 
-            <h5>Clearfix floats</h5>
-            <p>Clear any floats</p>
-            <pre><code>class="clearfix"</code></pre>
-
-            <h5>Text transform to uppercase</h5>
-            <pre><code>class="uppercase"</code></pre>
+            <code-viewer title="Transform text to uppercase" content='<&#8203;p class="uppercase">This is uppercased<&#8203;/p>'>
+            </code-viewer>
             <p class="uppercase">This is uppercased</p>
 
-            <h5>Text transform to lowercase</h5>
-            <pre><code>class="lowercase"</code></pre>
+            <code-viewer title="Transform text to lowercase" content='<&#8203;p class="lowercase">This is lowercased<&#8203;/p>'>
+            </code-viewer>
             <p class="lowercase">This is lowercased</p>
 
-            <h5>Text transform to capitalize</h5>
-            <pre><code>class="capitalize"</code></pre>
+            <code-viewer title="Capitalize text" content='<&#8203;p class="capitalize">This is capitalized<&#8203;/p>'>
+            </code-viewer>
             <p class="capitalize">This is capitalized</p>
 
         </section>
 
     </div>
-
+</div>
+<hr>
     <div class="container grid">
         <h4>Grid from skeleton-css</h4>
+        <p>Find out how to configure the grid here: <a target="_blank" href="http://getskeleton.com/">skeleton-css</a></p>
         <div class="row">
             <div class="one column">One</div>
             <div class="eleven columns">Eleven</div>
@@ -598,6 +796,11 @@
         </div>
     </div>
 
+    <section>
+<div class="center">
+<a class="github-button" href="https://github.com/Saunved/mint-css/fork" data-size="large" aria-label="Fork Saunved/mint-css on GitHub">Fork me on GitHub</a>
+</div>
+    </section>
     <script>
 
         //https://stephanwagner.me/auto-resizing-textarea-with-vanilla-javascript
@@ -617,6 +820,13 @@
             });
         }
     </script>
+    <script src="./components/sidenav/sidenav.js"></script>
+    <script>
+        Sidenav.init('sidenav1', 'sidenav2', 'sidenav3', 'sidenav4', 'sidenav5');
+    </script>
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
 </body>
 
 </html>

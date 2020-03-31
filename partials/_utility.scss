@@ -16,14 +16,38 @@
 
 .border{ border: 1px solid $color-medium-gray; }
 
+.no-border {border: none; }
+
 .small-radius{ @include small-radius;}
 
 .large-radius{ @include large-radius; }
 
 .clearfix{ @include clearfix; }
 
+.inline {display: inline-block; }
+
 .uppercase{ @include uppercase; }
 
 .lowercase {@include lowercase; }
 
 .capitalize {@include capitalize; }
+
+.transparent {background-color: unset;}
+
+    .no-small{
+        @media (min-width: $wearable) and (max-width: $phone){
+            display: none;
+        }
+    }
+
+    .no-medium{
+        @media (min-width: $phone) and (max-width: $tablet){
+            display: none;
+        }
+    }
+
+    .no-large{
+        @media (min-width: $tablet) and (max-width: $laptop){
+            display: none;
+        }
+    }

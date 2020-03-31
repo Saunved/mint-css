@@ -7,7 +7,12 @@
     border: 1px solid $color-medium-gray;
 
     &:hover{
-        background-color: darken($color-primary, 6%);
+        @if(is-dark($color-base)){
+            background-color: lighten($color-primary, 10%);
+        }
+        @else{
+            background-color: darken($color-primary, 10%);
+        }
     }
 }
 

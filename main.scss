@@ -1,4 +1,7 @@
+/* DO NOT REMOVE */
 @import "partials/variables";
+
+/* THEME IMPORT */
 @import "themes/mint.scss";
 // @import "themes/mint-light.scss";
 // @import "themes/mint-dark.scss";
@@ -6,8 +9,12 @@
 // @import "themes/metal.scss";
 // @import "themes/antique.scss";
 @import "themes/contrasts";
-@import "partials/_reset";
+
+/* BASE */
 @import "partials/base";
+@import "partials/_reset";
+
+/* PARTIALS (modify as you please) */
 @import "partials/typography";
 @import "partials/grid";
 @import "partials/button";
@@ -18,5 +25,11 @@
 @import "partials/utility";
 @import "partials/list";
 @import "partials/card";
-@import "style.scss";
 // @import "partials/color.scss";
+
+/* JS-BASED COMPONENTS */
+@import "components/sidenav/sidenav.scss";
+
+/* PROJECT-SPECIFIC FILES */
+@import "./assets/CodeViewer/code-viewer.scss";
+@import "style.scss";
