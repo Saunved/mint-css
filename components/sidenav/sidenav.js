@@ -1,5 +1,4 @@
 class SN{
-    static sidenavs = [];
 
     init(){
         for(let i=0; i < arguments.length; i++){
@@ -13,7 +12,6 @@ class SN{
         const sidenav = document.querySelector(`#${id} .sidenav`);
         const closeTrigger = document.querySelector(`#${id} .close-trigger`);
 
-        console.log(sidenav.classList);
         if(!sidenav.classList.contains('slide-left') && !sidenav.classList.contains('slide-right') && !sidenav.classList.contains('rise') && !sidenav.classList.contains('drop')){
             sidenav.classList.add('plain');
         }
