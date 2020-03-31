@@ -57,12 +57,12 @@ Of course, you are free to mix and match as you please!
 4. Improve the index.html file to add documentation
 
 ## Work on existing code
-You can work on the existing code in ant of the following folders:  
+You can work on the existing code in any of the following folders:  
 ```partials```  
 ```components```  
 ```themes```
 
-The following files/folders are used only in the index.html file for demonstration purposes. You can edit these files/folders if you are working on the index.html file to add documentation:  
+The following files/folders are used only in the index.html file for demonstration purposes. You can edit these files/folders if you are working on the index.html file to add documentation:
 ```assets```  
 ```style.scss```  
 
