@@ -1,7 +1,7 @@
 /* BASE */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
 * {
-  outline-color: #a56838; }
+  outline-color: #1C1B27; }
 
 html * {
   font-family: "Noto Sans JP"; }
@@ -28,7 +28,7 @@ time, mark, audio, video {
 
 html, body, section, menu, summary, footer, header, article, aside, details {
   color: #111;
-  background-color: #EFE8D5; }
+  background-color: #FBF9FA; }
 
 button {
   all: unset;
@@ -43,7 +43,7 @@ a {
 
 pre {
   padding: 8px;
-  background-color: #e1d4b0;
+  background-color: #e7dae1;
   color: #111;
   border: 1px solid #ccc;
   font-size: 1rem;
@@ -114,11 +114,11 @@ code {
 /** BLOCKQUOTE **/
 blockquote {
   padding: 16px;
-  background: #EFE8D5;
+  background: #FBF9FA;
   color: #111;
   border: 1px solid #111;
   font-size: 1rem;
-  border-left: 8px solid #82a09f;
+  border-left: 8px solid #60BCCA;
   border-radius: 4px; }
 
 /* SKELETON CSS GRID */
@@ -265,17 +265,17 @@ blockquote {
 /* BUTTONS */
 .btn {
   border-radius: 4px;
-  color: #111;
-  background-color: #c0ad67;
+  color: #eee;
+  background-color: #00B161;
   padding: 12px 22px;
-  border: 1px solid #aaa; }
+  border: 1px solid #bbb; }
   .btn:hover {
-    background-color: #ad9747; }
+    background-color: #007e45; }
 
 .btn.btn-outline {
   background-color: #fff;
-  color: #64582a;
-  border: 1px solid #c0ad67; }
+  color: black;
+  border: 1px solid #00B161; }
   .btn.btn-outline:hover {
     background-color: whitesmoke; }
 
@@ -298,27 +298,27 @@ blockquote {
 
 .btn-secondary {
   color: #111;
-  background: #82a09f; }
+  background: #60BCCA; }
   .btn-secondary:hover {
-    background-color: #719392; }
+    background-color: #49b2c2; }
 
 .btn-secondary.btn-outline {
   background-color: #fff;
-  color: #3b4e4d;
-  border: 1px solid #82a09f; }
+  color: #24636d;
+  border: 1px solid #60BCCA; }
   .btn-secondary.btn-outline:hover {
     background-color: whitesmoke; }
 
 .btn-accent {
   color: #eee;
-  background: #a56838; }
+  background: #1C1B27; }
   .btn-accent:hover {
-    background-color: #bc7640; }
+    background-color: #292839; }
 
 .btn-accent.btn-outline {
   background-color: #fff;
-  color: #332011;
-  border: 1px solid #a56838; }
+  color: black;
+  border: 1px solid #1C1B27; }
   .btn-accent.btn-outline:hover {
     background-color: whitesmoke; }
 
@@ -330,7 +330,7 @@ blockquote {
 
 /* NAVIGATION */
 nav {
-  background-color: #c0ad67; }
+  background-color: #00B161; }
   nav img.logo {
     font-size: 20px; }
   nav :not(img).logo {
@@ -352,14 +352,14 @@ nav {
         font-size: 1rem;
         display: inline-block;
         padding: 8px;
-        color: #111;
-        background-color: #c0ad67;
+        color: #eee;
+        background-color: #00B161;
         padding-left: 0px;
         cursor: pointer; }
         nav .navigation .dropdown .dropdown-title:hover {
-          color: #2b2b2b; }
+          color: white; }
         nav .navigation .dropdown .dropdown-title i {
-          border: solid black;
+          border: solid #d5d5d5;
           border-width: 0 3px 3px 0;
           display: inline-block;
           padding: 3px;
@@ -368,7 +368,7 @@ nav {
       nav .navigation .dropdown .dropdown-content {
         display: none;
         position: absolute;
-        background-color: #a56838;
+        background-color: #1C1B27;
         min-width: 120px;
         transition-duration: 0.3s;
         box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
@@ -384,7 +384,7 @@ nav {
           text-align: left;
           text-transform: initial; }
         nav .navigation .dropdown .dropdown-content a:hover {
-          background-color: #965e33; }
+          background-color: #13131b; }
         nav .navigation .dropdown .dropdown-content a:last-child {
           margin-right: 0px; }
       nav .navigation .dropdown:hover .dropdown-content {
@@ -394,14 +394,14 @@ nav {
       text-transform: uppercase;
       margin-left: 8px;
       font-size: 1rem;
-      color: #111;
+      color: #eee;
       display: inline-block;
       padding: 8px; }
     nav .navigation a:visited {
-      color: #111; }
+      color: #eee; }
     nav .navigation a:hover {
       cursor: pointer;
-      color: #2b2b2b; }
+      color: white; }
     nav .navigation a:first-child {
       margin-left: 0px; }
     nav .navigation a:last-child {
@@ -410,7 +410,7 @@ nav {
     position: fixed;
     top: 0px;
     left: 0px;
-    background: #c0ad67;
+    background: #00B161;
     width: 100%; }
     nav .navbar-fixed a:last-child {
       padding-right: 8px; }
@@ -431,15 +431,15 @@ table {
   table td, table th {
     padding: 8px; }
   table th {
-    background: #a56838;
+    background: #1C1B27;
     color: #eee; }
   table.striped tr:nth-child(odd) {
-    background-color: #e8dec3;
+    background-color: #f1eaed;
     color: #111; }
   table.highlight tr:nth-child(odd):hover {
-    background-color: #ebe2ca; }
+    background-color: #f5f0f2; }
   table.highlight tr:nth-child(even):hover {
-    background-color: #ebe2ca; }
+    background-color: #f5f0f2; }
 
 /* FORM INPUTS */
 label {
@@ -456,7 +456,7 @@ input {
   font-size: 1rem;
   border-radius: 4px;
   border: 1px solid #aaa;
-  background: #f3eee0;
+  background: white;
   color: #111;
   min-width: 100px;
   max-width: 200px;
@@ -469,7 +469,7 @@ textarea {
   border: 1px solid #aaa;
   min-height: 50px;
   max-width: 90%;
-  background: #f3eee0;
+  background: white;
   color: #111; }
 
 select {
@@ -477,7 +477,7 @@ select {
   font-size: 16px;
   border: 1px solid #aaa;
   border-radius: 4px;
-  background: #f3eee0;
+  background: white;
   color: #111;
   max-width: 90%; }
 
@@ -489,7 +489,7 @@ select {
   line-height: 1;
   color: #111;
   text-align: center;
-  background-color: #e9e0c6;
+  background-color: #f3edf0;
   border: 1px solid #ccc;
   width: 1%;
   white-space: nowrap;
@@ -578,11 +578,11 @@ label.cover {
 
 /* On mouse-over, add a grey background color */
 .cover:hover input ~ .dot, .cover:hover input ~ .checkmark {
-  background-color: #d3c08b; }
+  background-color: #d2bcc7; }
 
 /* When the radio button is checked, add a blue background */
 .cover input:checked ~ .dot, .cover input:checked ~ .checkmark {
-  background-color: #82a09f; }
+  background-color: #60BCCA; }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
 .dot:after, .checkmark:after {
@@ -613,7 +613,7 @@ label.cover {
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: #82a09f; }
+  background: #60BCCA; }
 
 /** UTILITY **/
 .left {
@@ -668,22 +668,22 @@ label.cover {
   background-color: unset; }
 
 .primary {
-  background-color: #c0ad67; }
+  background-color: #00B161; }
 
 .secondary {
-  background-color: #82a09f; }
+  background-color: #60BCCA; }
 
 .accent {
-  background-color: #a56838; }
+  background-color: #1C1B27; }
 
 .primary-text {
-  color: #c0ad67; }
+  color: #00B161; }
 
 .secondary-text {
-  color: #82a09f; }
+  color: #60BCCA; }
 
 .accent-text {
-  color: #a56838; }
+  color: #1C1B27; }
 
 @media (min-width: 600px) {
   .only-phone {
@@ -741,9 +741,9 @@ ol ol > li, ul ol > li {
 
 /** CARD **/
 .card {
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 #e1d4b0;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 #e7dae1;
   padding: 8px;
-  background-color: #f2ecdc; }
+  background-color: white; }
 
 .box {
   border: 1px solid #ccc;
@@ -754,22 +754,22 @@ ol ol > li, ul ol > li {
 
 /* JS-BASED COMPONENTS */
 .sidenav {
-  background: #c7b779;
+  background: #009853;
   position: fixed;
   padding: 24px;
   opacity: 0;
   transition-duration: 0.25s;
   height: 100%;
-  color: #111; }
+  color: #eee; }
   .sidenav a {
-    color: #111;
+    color: #eee;
     font-size: 1.4rem;
     text-transform: uppercase;
     line-height: 3.5rem;
     display: block;
     font-weight: 300; }
     .sidenav a:hover {
-      color: #2b2b2b; }
+      color: white; }
 
 .sidenav.active {
   opacity: 1; }
@@ -871,7 +871,7 @@ code-viewer.btn {
   border-radius: 4px; }
 
 i {
-  border: solid black;
+  border: solid #d5d5d5;
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 3px;
@@ -901,11 +901,11 @@ section {
 .tiny {
   font-size: 14px;
   vertical-align: middle;
-  background-color: #daca9e;
+  background-color: #dccbd4;
   color: #111;
   border: none; }
   .tiny:hover {
-    background-color: #d3c08b; }
+    background-color: #d2bcc7; }
 
 pre {
   padding: 0px; }

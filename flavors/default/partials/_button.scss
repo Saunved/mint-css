@@ -4,7 +4,12 @@
     color: $color-primary-text;
     background-color: $color-primary;
     padding: 12px 22px;
-    border: 1px solid $color-medium-gray;
+    @if(is-dark($color-base)){
+        border: 1px solid #555;
+    }
+    @else{
+        border: 1px solid #bbb;
+    }
 
     &:hover{
         @if(is-dark($color-base)){
@@ -19,11 +24,11 @@
 .btn.btn-outline{
     @if(is-dark($color-base)){
         background-color: $color-dark;
-        color: lighten($color-primary, 30%);
+        color: lighten($color-primary, 50%);
     }
     @else{
         background-color: $color-white;
-        color: darken($color-primary, 30%);
+        color: darken($color-primary, 50%);
     }
     border: 1px solid $color-primary;
 
