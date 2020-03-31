@@ -41,6 +41,10 @@
 .secondary-text {color: $color-secondary;}
 .accent-text {color: $color-accent;}
 
+.shadow{
+    box-shadow: 0px 4px 8px -2px darken($color-base, 30%);
+}
+
     .only-phone{
         @media (min-width: $tablet-portrait-above) {
             display: none;

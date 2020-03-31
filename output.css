@@ -685,6 +685,9 @@ label.cover {
 .accent-text {
   color: #1C1B27; }
 
+.shadow {
+  box-shadow: 0px 4px 8px -2px #be9dae; }
+
 @media (min-width: 600px) {
   .only-phone {
     display: none; } }
