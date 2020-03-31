@@ -21,6 +21,7 @@ This size will increase slightly once full cross-browser compatibility is added.
 ## Why this project?
 **This project is inspired by skeleton-css and Materialize CSS and looks to combine the best of both** to create a boilerplate CSS that can be extended in a variety of ways. 
 * The focus is on being able to make different themes quickly for prototyping. This is super useful for designers and front-end devs to check how different color combinations might look before implementing them in their existing projects.
+* **Allowing people to spin up a good-looking website in record time with all the essential elements styled**
 * Another important idea is to make the CSS as extensible as possible by keeping components decoupled. For example, if you don't require a dropdown in the navbar, you can simply comment out the ```partials/dropdown``` line in ```main.scss```. The same applies for all other components.
 * The world has moved beyond framework-based grids. Although we have included (directly), the skeleton-css grid - you can always comment out the component from the ```main.scss``` file and use CSS Grids instead.
 
