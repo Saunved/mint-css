@@ -14,7 +14,9 @@ That's it! If you wish to change themes or play with the code files, keep readin
 
 ## Going in-depth
 1. Start by installing Sass on your computer from [here](https://github.com/sass/dart-sass/releases/tag/1.26.3). *Feel free to read up on Sass if you are unfamiliar with it.*
-2. You can add/remove/edit partials in the main.scss file and compile the output using  
+2. The ```flavors``` folder contains the ```default``` folder, which in turn contains the default  ```partials``` and ```components```. One can create another folder inside flavors and create their own suite of partials and components
+3. All partials and components are referred in the main.scss file. So if you create any new flavors or components, please ensure that they are referred to in the main.scss file.
+4. You can simply run the command below to start compiling the sass output while you make any changes  
 ```sass --watch main.scss:output.css```
 
 This will create an output.css file each time you make any changes to the referred partials or the main.scss file. Open the index.html file to see the results. I recommend creating a local server that automatically updates whenever any files in the folder are changed.
@@ -63,22 +65,28 @@ Of course, you are free to mix and match as you please!
 
 ## Work on existing code
 You can work on the existing code in any of the following folders:  
-```partials```  
-```components```  
+```flavors/flavor-name/partials```  
+```flavors/flavor-name/components```  
 ```themes```
 
 The following files/folders are used only in the index.html file for demonstration purposes. You can edit these files/folders if you are working on the index.html file to add documentation:    
 ```assets```  
 ```style.scss```  
 
+# Add new code
 ## To create partials
-1. Create a new file in the ```partials``` folder called ```your-partial-name.scss```
+1. Create a new file in the ```flavors/flavor-name/partials``` folder called ```your-partial-name.scss```
 2. Link this partial in the ```main.scss``` file
 
 ## To create JS-based components
-1. Create a new folder in ```components``` called ```your-component-name```
+1. Create a new folder in ```flavors/flavor-name/components``` called ```your-component-name```
 2. Create a scss file in the folder and link it in ```main.scss```
 3. Create a js file in the folder and link it in ```index.html``` 
+
+## What are flavors?
+A flavor is a type of UI. E.g. "Material design" is a flavor, or "Flat" is a flavor. I decided not to call it a theme, since that term is used to define the color themes in this project. Flavors contain partials (css code for different UI elements) and components (Javascript-based UI + functionality).
+
+You can create your own flavors. You can even copy and modify some partials and components from the existing flavors if you wish to. This project (currently) contains only one flavor: "default".
 
 ## Create documentation
 You can add documentation for your created partials or components by creating a section for them inside the index.html file. You can refer to the existing documentation code to get an idea for how to use the CodeViewer helper component.

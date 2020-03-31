@@ -1,32 +1,32 @@
-@import "partials/variables";
+@import "flavors/default/partials/variables";
 
-@import "themes/mint.scss";
+// @import "themes/mint.scss";
 // @import "themes/mint-light.scss";
-// @import "themes/mint-dark.scss";
+@import "themes/mint-dark.scss";
 // @import "themes/amber.scss";
 // @import "themes/metal.scss";
 // @import "themes/antique.scss";
 @import "themes/contrasts";
 
 /* BASE */
-@import "partials/base";
-@import "partials/_reset";
+@import "flavors/default/partials/base";
+@import "flavors/default/partials/_reset";
 
 /* PARTIALS (keep the ones you need) */
-@import "partials/typography";
-@import "partials/grid";
-@import "partials/button";
-@import "partials/fonts/base";
-@import "partials/_navbar";
-@import "partials/table";
-@import "partials/form";
-@import "partials/utility";
-@import "partials/list";
-@import "partials/card";
+@import "flavors/default/partials/typography";
+@import "flavors/default/partials/grid";
+@import "flavors/default/partials/button";
+@import "flavors/default/partials/fonts/base";
+@import "flavors/default/partials/_navbar";
+@import "flavors/default/partials/table";
+@import "flavors/default/partials/form";
+@import "flavors/default/partials/utility";
+@import "flavors/default/partials/list";
+@import "flavors/default/partials/card";
 // @import "partials/color.scss";
 
 /* JS-BASED COMPONENTS */
-@import "components/sidenav/sidenav.scss";
+@import "flavors/default/components/sidenav/sidenav.scss";
 
 /* PROJECT-SPECIFIC FILES */
 @import "./assets/CodeViewer/code-viewer.scss";

@@ -13,7 +13,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="output.css">
-    <link rel="stylesheet" href="./assets/js/highlight/styles/gruvbox-dark.css">
+    <link rel="stylesheet" href="./assets/js/highlight/styles/codepen-embed.css">
     <script src="./assets/js/highlight/highlight.pack.js"></script>
     <script src="./assets/CodeViewer/code-viewer.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
@@ -26,7 +26,7 @@
     </template>
 
     <nav>
-        <div class="navigation center navbar-fixed card no-small">
+        <div class="navigation center navbar-fixed card from-tablet-portrait">
             <!-- <span><img class="logo left" src="http://via.placeholder.com/150x30/FFFFFF/000000?text=LOGO" alt=""></span> -->
             <!-- <span class="logo left">Hello</span> -->
             <a href="#" class="">Home</a>
@@ -110,6 +110,45 @@
             </div>
         </section>
 <hr>
+
+<section>
+    <h4>Navbars</h4>
+
+    <code-viewer title="Standard navbar" content='<&#8203;nav>
+    <&#8203;div class="navigation left-align">
+        <&#8203;span><&#8203;img class="logo right" src="http://via.placeholder.com/150x30/FFFFFF/000000?text=LOGO" alt="Logo placeholder"><&#8203;/span>
+        <&#8203;a href="#" class="">Home<&#8203;/a>
+        <&#8203;a href="#">About us<&#8203;/a>
+        <&#8203;span class="dropdown">
+            <&#8203;span class="dropdown-title">Dropdown<&#8203;i class="arrow down"><&#8203;/i><&#8203;/span>
+            <&#8203;div class="dropdown-content">
+                <&#8203;a href="#">Link 1<&#8203;/a>
+                <&#8203;a href="#">Link 2<&#8203;/a>
+                <&#8203;a href="#">Link 3<&#8203;/a>
+            <&#8203;/div>
+        <&#8203;/span>
+    <&#8203;/div>
+<&#8203;/nav>'></code-viewer>
+    <nav class="space-medium">
+        <div class="navigation left-align">
+               <span><img class="logo right" src="http://via.placeholder.com/150x30/FFFFFF/000000?text=LOGO" alt=""></span>
+            <a href="#" class="">Home</a>
+            <a href="#">About us</a>
+            <span class="dropdown">
+                <span class="dropdown-title">Dropdown<i class="arrow down"></i></span>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </span>
+        </div>
+    </nav>
+
+    <p>You can also have <code class="inline">class="navigation right-align"</code> or <code class="inline">class="navigation center"</code> instead of the current <code class="inline">class="navigation left-align"</code> </p>
+    <p>To fix a navbar to the top of the page, just add <code class="inline">class="navigation navbar-fixed"</code></p>
+    
+</section>
         <section>
 
             <h4>Sidenavs</h4>
@@ -127,6 +166,7 @@
             <pre><code>Sidenav.init('your-id1','your-id2','your-id3')</code></pre>
             <p>You can utilize the 'sidenav' as an overlay and can have as many sidenavs on a page as you want, as long as their wrapping div ID is unique.</p>
 
+            <div class="space-medium">
             <code-viewer title="Slide from left sidenav" content='<&#8203;div id="sidenav1">
 <&#8203;button class="trigger" style="display: inline-block; margin-top: 8px">Tap to open (you can include an icon here)<&#8203;/button>
     <&#8203;div class="sidenav slide-left">
@@ -152,6 +192,9 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="space-large">
 
             <code-viewer title="Rise from below sidenav" content='<&#8203;div id="sidenav2">
 <&#8203;button class="trigger" style="display: inline-block; margin-top: 8px">Tap to open (you can include an icon here)<&#8203;/button>
@@ -177,7 +220,9 @@
                         </div>
                     </div>
                     </div>
+                </div>
 
+                <div class="space-large">
                     <code-viewer title="Slide from right sidenav" content='<&#8203;div id="sidenav3">
 <&#8203;button class="trigger" style="display: inline-block; margin-top: 8px">Tap to open (you can include an icon here)<&#8203;/button>
     <&#8203;div class="sidenav slide-left">
@@ -202,6 +247,10 @@
                             </div>
                         </div>
                         </div>
+
+                    </div>
+
+                    <div class="space-large">
        <code-viewer title="Drop from above sidenav" content='<&#8203;div id="sidenav4">
 <&#8203;button class="trigger" style="display: inline-block; margin-top: 8px">Tap to open (you can include an icon here)<&#8203;/button>
     <&#8203;div class="sidenav drop">
@@ -227,6 +276,9 @@
                             </div>
                         </div>
                         </div>
+                    </div>
+
+                    <div class="space-large">
 
                         <code-viewer title="Overlay sidenav" content='<&#8203;div id="sidenav5">
 <&#8203;button class="trigger" style="display: inline-block; margin-top: 8px">Tap to open (you can include an icon here)<&#8203;/button>
@@ -252,6 +304,7 @@
                                 </div>
                             </div>
                             </div>
+                        </div>
         </section>
 <hr>
         <section>
@@ -741,6 +794,78 @@
 
         </section>
 
+        <section>
+            <hr>
+            <h4>Responsive helpers</h4>
+
+            <p>Responsive breakpoints are defined as follows:</p>
+            <ol>
+                <li>Phone: Below 600px</li>
+                <li>Tablet portrait from: 600px</li>
+                <li>Tablet landscape: 900px</li>
+                <li>Desktop from: 1200px</li>
+                <li>Large desktop from: 1800px</li>
+            </ol>
+
+            <p>If you are wondering why these breakpoints are chosen instead of the "standard" 768px, 1024px points, this is the article these breakpoints are based on:
+                <a href="https://www.freecodecamp.org/news/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862/">The 100% correct way to do css breakpoints</a>
+            </p>
+
+            <p>Using these breakpoints, a total of 8 helper classes are created:</p>
+            <div class="responsive">
+                <table class="cells">
+                    <thead>
+                        <tr>
+                            <th>Class</th>
+                            <th>Meaning</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>.only-phone</td>
+                        <td>Visible at or below 599px</td>
+                    </tr>
+                    <tr>
+                        <td>.below-tablet-landscape</td>
+                        <td>Visible at or below 899px</td>
+                    </tr>
+                    <tr>
+                        <td>.below-desktop</td>
+                        <td>Visible at or below 1199px</td>
+                    </tr>
+                    <tr>
+                        <td>.below-large-desktop</td>
+                        <td>Visible at or below 1799px</td>
+                    </tr>
+                    <tr>
+                        <td>.from-tablet-portrait</td>
+                        <td>Visible at or above 600px</td>
+                    </tr>
+                    <tr>
+                        <td>.from-tablet-landscape</td>
+                        <td>Visible at or above 900px</td>
+                    </tr>
+                    <tr>
+                        <td>.from-desktop</td>
+                        <td>Visible at or above 1200px</td>
+                    </tr>
+                    <tr>
+                        <td>.from-desktop-large</td>
+                        <td>Visible at or above 1800px</td>
+                    </tr>
+                </table>
+            </div>
+
+            <p>Resize your screen to see these breakpoints in action:</p>
+            <p class="only-phone">I am visible only on the phone</p>
+            <p class="below-tablet-landscape">I am visible only below 899px</p>
+            <p class="below-desktop">I am visible only below 1199px</p>
+            <p class="below-desktop-large">I am visible only below 1799px</p>
+            <p class="from-tablet-portrait">I am visible above 600px</p>
+            <p class="from-tablet-landscape">I am visible above 900px</p>
+            <p class="from-desktop">I am visible above 1200px</p>
+            <p class="from-desktop-large">I am visibile above 1800px</p>
+
+        </section>
     </div>
 </div>
 <hr>
@@ -797,9 +922,6 @@
     </div>
 
     <section>
-<div class="center">
-<a class="github-button" href="https://github.com/Saunved/mint-css/fork" data-size="large" aria-label="Fork Saunved/mint-css on GitHub">Fork me on GitHub</a>
-</div>
     </section>
     <script>
 
@@ -820,7 +942,7 @@
             });
         }
     </script>
-    <script src="./components/sidenav/sidenav.js"></script>
+    <script src="./flavors/default/components/sidenav/sidenav.js"></script>
     <script>
         Sidenav.init('sidenav1', 'sidenav2', 'sidenav3', 'sidenav4', 'sidenav5');
     </script>

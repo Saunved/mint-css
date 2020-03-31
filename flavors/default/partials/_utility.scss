@@ -1,0 +1,90 @@
+/** UTILITY **/
+
+// .center{ margin: 0px auto; }
+
+.left{ float: left; }
+
+.right{ float: right; }
+
+.right-align{ text-align: right; }
+
+.left-align{ text-align: left; }
+
+.center{ text-align: center; vertical-align: middle; }
+
+.responsive{ overflow-x: auto; }
+
+.border{ border: 1px solid $color-medium-gray; }
+
+.no-border {border: none; }
+
+.small-radius{ @include small-radius;}
+
+.large-radius{ @include large-radius; }
+
+.clearfix{ @include clearfix; }
+
+.inline {display: inline-block; }
+
+.uppercase{ @include uppercase; }
+
+.lowercase {@include lowercase; }
+
+.capitalize {@include capitalize; }
+
+.transparent {background-color: unset;}
+
+.primary {background-color: $color-primary;}
+.secondary {background-color: $color-secondary;}
+.accent {background-color: $color-accent;}
+.primary-text {color: $color-primary;}
+.secondary-text {color: $color-secondary;}
+.accent-text {color: $color-accent;}
+
+    .only-phone{
+        @media (min-width: $tablet-portrait-above) {
+            display: none;
+        }
+    }
+
+    .from-tablet-portrait{
+        @media (max-width: ($tablet-portrait-above)+(-1)){
+            display: none;
+        }
+    }
+
+    .below-tablet-landscape{
+        @media (min-width: ($tablet-landscape-above)){
+            display: none;
+        } 
+    }
+
+    .from-tablet-landscape{
+        @media(max-width: ($tablet-landscape-above)+(-1)){
+            display: none;
+        }
+    }
+
+    .below-desktop{
+        @media (min-width: ($desktop-above)){
+            display: none;
+        } 
+    }
+
+    .from-desktop{
+        @media(max-width: ($desktop-above)+(-1)){
+            display: none;
+        }
+    }
+
+    .below-desktop-large{
+        @media (min-width: ($desktop-large-above)){
+            display: none;
+        } 
+    }
+
+    .from-desktop-large{
+        @media(max-width: ($desktop-large-above)+(-1)){
+            display: none;
+        }
+    }
