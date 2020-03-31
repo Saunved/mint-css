@@ -56,6 +56,28 @@ Of course, you are free to mix and match as you please!
     etc.
 4. Improve the index.html file to add documentation
 
+## Work on existing code
+You can work on the existing code in ant of the following folders:  
+```partials```  
+```components```  
+```themes```
+
+The following files/folders are used only in the index.html file for demonstration purposes. You can edit these files/folders if you are working on the index.html file to add documentation:  
+```assets```  
+```style.scss```  
+
+## To create partials
+1. Create a new file in the ```partials``` folder called ```your-partial-name.scss```
+2. Link this partial in the ```main.scss``` file
+
+## To create JS-based components
+1. Create a new folder in ```components``` called ```your-component-name```
+2. Create a scss file in the folder and link it in ```main.scss```
+3. Create a js file in the folder and link it in ```index.html``` 
+
+## Create documentation
+You can add documentation for your created partials or components by creating a section for them inside the index.html file. You can refer to the existing documentation code to get an idea for how to use the CodeViewer helper component.
+
 ## Credits
 * This project is inspired by **skeleton-css**. The grid used is taken directly from [SkeletonCSS Github](https://github.com/dhg/Skeleton.)
 * A color file is included along with this project, taken from the **Materialize CSS** project found [here](https://github.com/Dogfalo/materialize). To use the color classes, simply add this to the main.scss file:  
