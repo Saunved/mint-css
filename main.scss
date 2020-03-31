@@ -2,10 +2,10 @@
 
 // @import "themes/mint.scss";
 // @import "themes/mint-light.scss";
-@import "themes/mint-dark.scss";
+// @import "themes/mint-dark.scss";
 // @import "themes/amber.scss";
 // @import "themes/metal.scss";
-// @import "themes/antique.scss";
+@import "themes/antique.scss";
 @import "themes/contrasts";
 
 /* BASE */
@@ -16,7 +16,7 @@
 @import "flavors/default/partials/typography";
 @import "flavors/default/partials/grid";
 @import "flavors/default/partials/button";
-@import "flavors/default/partials/fonts/base";
+@import "flavors/default/partials/font";
 @import "flavors/default/partials/_navbar";
 @import "flavors/default/partials/table";
 @import "flavors/default/partials/form";

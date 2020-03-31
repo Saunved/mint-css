@@ -1,7 +1,6 @@
 /* BASE */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
 * {
-  outline-color: #897495; }
+  outline-color: #a56838; }
 
 html * {
   font-family: "Noto Sans JP"; }
@@ -27,8 +26,8 @@ time, mark, audio, video {
   vertical-align: baseline; }
 
 html, body, section, menu, summary, footer, header, article, aside, details {
-  color: #eee;
-  background-color: #1a1a1b; }
+  color: #111;
+  background-color: #EFE8D5; }
 
 button {
   all: unset;
@@ -37,14 +36,14 @@ button {
 a {
   text-decoration: none; }
   a:link, a:visited {
-    color: #b3dbff; }
+    color: #006fcf; }
   a:link:hover, a:visited:hover {
-    color: #80c3ff; }
+    color: #00549c; }
 
 pre {
   padding: 8px;
-  background-color: #010101;
-  color: #eee;
+  background-color: #e1d4b0;
+  color: #111;
   border: 1px solid #ccc;
   font-size: 1rem;
   margin: 8px 0px;
@@ -114,11 +113,11 @@ code {
 /** BLOCKQUOTE **/
 blockquote {
   padding: 16px;
-  background: #1a1a1b;
-  color: #eee;
-  border: 1px solid #eee;
+  background: #EFE8D5;
+  color: #111;
+  border: 1px solid #111;
   font-size: 1rem;
-  border-left: 8px solid #7A5E79;
+  border-left: 8px solid #82a09f;
   border-radius: 4px; }
 
 /* SKELETON CSS GRID */
@@ -265,12 +264,12 @@ blockquote {
 /* BUTTONS */
 .btn {
   border-radius: 4px;
-  color: #eee;
-  background-color: #080808;
+  color: #111;
+  background-color: #c0ad67;
   padding: 12px 22px;
   border: 1px solid #aaa; }
   .btn:hover {
-    background-color: #222222; }
+    background-color: #ad9747; }
 
 .btn-small {
   padding: 8px 18px; }
@@ -290,10 +289,10 @@ blockquote {
     background-color: #f0f0f0; }
 
 .btn-secondary {
-  color: #eee;
-  background: #7A5E79; }
+  color: #111;
+  background: #82a09f; }
   .btn-secondary:hover {
-    background-color: #695168; }
+    background-color: #719392; }
 
 .btn-raise:hover {
   box-shadow: 0 5px 5px -5px #111; }
@@ -303,7 +302,7 @@ blockquote {
 
 /* NAVIGATION */
 nav {
-  background-color: #080808; }
+  background-color: #c0ad67; }
   nav img.logo {
     font-size: 20px; }
   nav :not(img).logo {
@@ -320,20 +319,20 @@ nav {
       position: relative;
       display: inline-block;
       margin-left: 16px;
-      z-index: 1000; }
+      z-index: 1; }
       nav .navigation .dropdown .dropdown-title {
         text-transform: uppercase;
         font-size: 1rem;
         display: inline-block;
         padding: 8px;
-        color: #eee;
-        background-color: #080808;
+        color: #111;
+        background-color: #c0ad67;
         padding-left: 0px;
         cursor: pointer; }
         nav .navigation .dropdown .dropdown-title:hover {
-          color: white; }
+          color: #2b2b2b; }
         nav .navigation .dropdown .dropdown-title i {
-          border: solid #d5d5d5;
+          border: solid black;
           border-width: 0 3px 3px 0;
           display: inline-block;
           padding: 3px;
@@ -342,7 +341,7 @@ nav {
       nav .navigation .dropdown .dropdown-content {
         display: none;
         position: absolute;
-        background-color: #897495;
+        background-color: #a56838;
         min-width: 120px;
         transition-duration: 0.3s;
         box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
@@ -358,7 +357,7 @@ nav {
           text-align: left;
           text-transform: initial; }
         nav .navigation .dropdown .dropdown-content a:hover {
-          background-color: #7f6a8b; }
+          background-color: #965e33; }
         nav .navigation .dropdown .dropdown-content a:last-child {
           margin-right: 0px; }
       nav .navigation .dropdown:hover .dropdown-content {
@@ -368,14 +367,14 @@ nav {
       text-transform: uppercase;
       margin-left: 8px;
       font-size: 1rem;
-      color: #eee;
+      color: #111;
       display: inline-block;
       padding: 8px; }
     nav .navigation a:visited {
-      color: #eee; }
+      color: #111; }
     nav .navigation a:hover {
       cursor: pointer;
-      color: white; }
+      color: #2b2b2b; }
     nav .navigation a:first-child {
       margin-left: 0px; }
     nav .navigation a:last-child {
@@ -384,7 +383,7 @@ nav {
     position: fixed;
     top: 0px;
     left: 0px;
-    background: #080808;
+    background: #c0ad67;
     width: 100%; }
     nav .navbar-fixed a:last-child {
       padding-right: 8px; }
@@ -405,15 +404,15 @@ table {
   table td, table th {
     padding: 8px; }
   table th {
-    background: #897495;
+    background: #a56838;
     color: #eee; }
   table.striped tr:nth-child(odd) {
-    background-color: #0d0d0e;
-    color: #eee; }
+    background-color: #e8dec3;
+    color: #111; }
   table.highlight tr:nth-child(odd):hover {
-    background-color: #121213; }
+    background-color: #ebe2ca; }
   table.highlight tr:nth-child(even):hover {
-    background-color: #121213; }
+    background-color: #ebe2ca; }
 
 /* FORM INPUTS */
 label {
@@ -430,8 +429,8 @@ input {
   font-size: 1rem;
   border-radius: 4px;
   border: 1px solid #aaa;
-  background: #222223;
-  color: #eee;
+  background: #f3eee0;
+  color: #111;
   min-width: 100px;
   max-width: 200px;
   width: auto; }
@@ -443,16 +442,16 @@ textarea {
   border: 1px solid #aaa;
   min-height: 50px;
   max-width: 90%;
-  background: #222223;
-  color: #eee; }
+  background: #f3eee0;
+  color: #111; }
 
 select {
   padding: 4px 0px;
   font-size: 16px;
   border: 1px solid #aaa;
   border-radius: 4px;
-  background: #222223;
-  color: #eee;
+  background: #f3eee0;
+  color: #111;
   max-width: 90%; }
 
 /*Prefix and suffix from: https://codepen.io/chamsi/pen/LavooJ*/
@@ -461,9 +460,9 @@ select {
   font-size: 14px;
   font-weight: 400;
   line-height: 1;
-  color: #eee;
+  color: #111;
   text-align: center;
-  background-color: #101011;
+  background-color: #e9e0c6;
   border: 1px solid #ccc;
   width: 1%;
   white-space: nowrap;
@@ -552,11 +551,11 @@ label.cover {
 
 /* On mouse-over, add a grey background color */
 .cover:hover input ~ .dot, .cover:hover input ~ .checkmark {
-  background-color: #98989c; }
+  background-color: #d3c08b; }
 
 /* When the radio button is checked, add a blue background */
 .cover input:checked ~ .dot, .cover input:checked ~ .checkmark {
-  background-color: #7A5E79; }
+  background-color: #82a09f; }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
 .dot:after, .checkmark:after {
@@ -633,22 +632,22 @@ label.cover {
   background-color: unset; }
 
 .primary {
-  background-color: #080808; }
+  background-color: #c0ad67; }
 
 .secondary {
-  background-color: #7A5E79; }
+  background-color: #82a09f; }
 
 .accent {
-  background-color: #897495; }
+  background-color: #a56838; }
 
 .primary-text {
-  color: #080808; }
+  color: #c0ad67; }
 
 .secondary-text {
-  color: #7A5E79; }
+  color: #82a09f; }
 
 .accent-text {
-  color: #897495; }
+  color: #a56838; }
 
 @media (min-width: 600px) {
   .only-phone {
@@ -706,9 +705,9 @@ ol ol > li, ul ol > li {
 
 /** CARD **/
 .card {
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 #010101;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 #e1d4b0;
   padding: 8px;
-  background-color: #1f1f20; }
+  background-color: #f2ecdc; }
 
 .box {
   border: 1px solid #ccc;
@@ -719,22 +718,22 @@ ol ol > li, ul ol > li {
 
 /* JS-BASED COMPONENTS */
 .sidenav {
-  background: black;
+  background: #c7b779;
   position: fixed;
   padding: 24px;
   opacity: 0;
   transition-duration: 0.25s;
   height: 100%;
-  color: #eee; }
+  color: #111; }
   .sidenav a {
-    color: #eee;
+    color: #111;
     font-size: 1.4rem;
     text-transform: uppercase;
     line-height: 3.5rem;
     display: block;
     font-weight: 300; }
     .sidenav a:hover {
-      color: white; }
+      color: #2b2b2b; }
 
 .sidenav.active {
   opacity: 1; }
@@ -836,7 +835,7 @@ code-viewer.btn {
   border-radius: 4px; }
 
 i {
-  border: solid #d5d5d5;
+  border: solid black;
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 3px;
@@ -860,17 +859,17 @@ section {
 .menu-icon {
   width: 35px;
   height: 3px;
-  background-color: #eee;
+  background-color: #111;
   margin: 7px 0; }
 
 .tiny {
   font-size: 14px;
   vertical-align: middle;
-  background-color: black;
-  color: #eee;
+  background-color: #daca9e;
+  color: #111;
   border: none; }
   .tiny:hover {
-    background-color: #333335; }
+    background-color: #d3c08b; }
 
 pre {
   padding: 0px; }
