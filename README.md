@@ -65,33 +65,7 @@ You can use the following guidelines to make a theme based on the colors given b
 Of course, you are free to mix and match as you please!
 
 ## How you can contribute
-1. Add cross-browser compatibility
-2. Improve the existing code
-2. Remove redundancies in the existing code
-3. Add more partials
-    - Sidenav
-    - Accordions
-    etc.
-4. Improve the index.html file to add documentation
-
-## Work on existing code
-You can work on the existing code in any of the following folders:  
-```src/flavors/flavor-name/partials```  
-```src/flavors/flavor-name/components```  
-```src/themes```
-
-The following files/folders are used only in the index.html file for demonstration purposes. You can edit these files/folders if you are working on the index.html file to add documentation:    
-```demo/assets```
-
-# Add new code
-## To create partials
-1. Create a new file in the ```src/flavors/flavor-name/partials``` folder called ```your-partial-name.scss```
-2. Link this partial in the ```src/main.scss``` file
-
-## To create JS-based components
-1. Create a new folder in ```src/flavors/flavor-name/components``` called ```your-component-name```
-2. Create a scss file in the folder and link it in ```src/main.scss```
-3. Create a js file in the folder and link it in ```src/index.html``` 
+Refer to the [CONTRIBUTING.md file](https://github.com/Saunved/mint-css/blob/master/CONTRIBUTING.md)
 
 ## What are flavors?
 A flavor is a type of UI. E.g. "Material design" is a flavor, or "Flat" is a flavor. I decided not to call it a theme, since that term is used to define the color themes in this project. Flavors contain partials (css code for different UI elements) and components (Javascript-based UI + functionality).
@@ -99,9 +73,6 @@ A flavor is a type of UI. E.g. "Material design" is a flavor, or "Flat" is a fla
 You can create your own flavors. You can even copy and modify some partials and components from the existing flavors if you wish to. This project (currently) contains only one flavor: "default".
 
 A list of class names that you should ideally retain for consistency is provided in this file: [docs/class-list.md](./docs/class-list.md).
-
-## Create documentation
-You can add documentation for your created partials or components by creating a section for them inside the index.html file. You can refer to the existing documentation code to get an idea for how to use the CodeViewer helper component.
 
 ## Credits
 * This project is inspired by **skeleton-css**. The grid used is taken directly from [SkeletonCSS Github](https://github.com/dhg/Skeleton.)
