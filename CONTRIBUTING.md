@@ -29,7 +29,7 @@ Thank you for taking the time to contribute to this project!
 ## Help required with
 1. Adding cross-browser compatibility
 2. Improving the existing code (optimizations and removing redundancies)
-3. Create new flavors or improve existing flavors
+3. Creating new flavors
 
 You can work on the existing code in any of the following folders:  
 ```src/flavors/flavor-name/partials```  
