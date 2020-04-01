@@ -12,23 +12,26 @@ Specify just 4 colors in your theme file, and you're ready to go! **Full support
 
 That's it! If you wish to change themes or play with the code files, keep reading.
 
-## Going in-depth
+## Changing themes
 1. Start by installing Sass on your computer from [here](https://github.com/sass/dart-sass/releases/tag/1.26.3). *Feel free to read up on Sass if you are unfamiliar with it.*
-2. The ```flavors``` folder contains the ```default``` folder, which in turn contains the default  ```partials``` and ```components```. One can create another folder inside flavors and create their own suite of partials and components
-3. All partials and components are referred in the main.scss file. So if you create any new flavors or components, please ensure that they are referred to in the main.scss file.
-4. You can simply run the command below to start compiling the sass output while you make any changes  
+2. Open a terminal in the current directory and run ```sass --watch main.scss:output.css```
+3. Open the ```main.scss``` file and uncomment the theme you wish to keep. Save the file.
+4. Open the ```index.html``` file in Chrome/Firefox to check if the theme has changed
+
+## Modifying and adding things
+1. The ```flavors/default``` folder contains the default flavor of ```partials``` and ```components```. One can create another folder inside ```flavors``` and create their own suite of partials and components
+2. All partials and components are referred in the ```main.scss``` file. So if you create any new flavors or components, please ensure that they are referred to in the main.scss file.
+3. You can simply run the command below to start compiling the sass output while you make any changes  
 ```sass --watch main.scss:output.css```
 
-This will create an output.css file each time you make any changes to the referred partials or the main.scss file. Open the index.html file to see the results. I recommend creating a local server that automatically updates whenever any files in the folder are changed.
-
-Current output.css file size with all components (except Materialize colors) included is **17.1kb**.
-This size will increase slightly once full cross-browser compatibility is added.
+The sass command will create an ```output.css``` file each time you make any changes to the referred partials or the main.scss file. Open the index.html file to see the results. I recommend creating a local server that automatically updates whenever any files in the folder are changed.
 
 ## Why this project?
 **This project is inspired by skeleton-css and Materialize CSS and looks to combine the best of both** to create a boilerplate CSS that can be extended in a variety of ways. 
 * The focus is on being able to make different themes quickly for prototyping. This is super useful for designers and front-end devs to check how different color combinations might look before implementing them in their existing projects.
 * **Allowing people to spin up a good-looking website in record time with all the essential elements styled**
 * Another important idea is to make the CSS as extensible as possible by keeping components decoupled. For example, if you aren't going to use any forms, you can simply comment out the ```partials/form``` line in ```main.scss```. The same applies for all other components.
+* The biggest problem with frameworks is that they get in the way of uniqueness. Nobody wants to keep making websites that look and feel the same, but everybody wants to use the same framework due to its familiarity. Flavors allow people to create unique "UI kits" while retaining most class names and reusing existing partials and components where required. 
 * The world has moved beyond framework-based grids. Although we have included (directly), the skeleton-css grid - you can always comment out the component from the ```main.scss``` file and use CSS Grids instead.
 
 ## Themes
@@ -87,6 +90,8 @@ The following files/folders are used only in the index.html file for demonstrati
 A flavor is a type of UI. E.g. "Material design" is a flavor, or "Flat" is a flavor. I decided not to call it a theme, since that term is used to define the color themes in this project. Flavors contain partials (css code for different UI elements) and components (Javascript-based UI + functionality).
 
 You can create your own flavors. You can even copy and modify some partials and components from the existing flavors if you wish to. This project (currently) contains only one flavor: "default".
+
+A list of class names that you should ideally retain for consistency is provided in this file: (this is a work in progress)!
 
 ## Create documentation
 You can add documentation for your created partials or components by creating a section for them inside the index.html file. You can refer to the existing documentation code to get an idea for how to use the CodeViewer helper component.
