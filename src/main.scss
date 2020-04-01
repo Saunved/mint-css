@@ -1,11 +1,11 @@
 @import "flavors/default/partials/variables";
 
-// @import "themes/mint.scss";
+@import "themes/mint.scss";
 // @import "themes/mint-light.scss";
 // @import "themes/mint-dark.scss";
 // @import "themes/amber.scss";
 // @import "themes/metal.scss";
-@import "themes/antique.scss";
+// @import "themes/antique.scss";
 @import "themes/contrasts";
 
 /* BASE */
@@ -29,5 +29,5 @@
 @import "flavors/default/components/sidenav/sidenav.scss";
 
 /* PROJECT-SPECIFIC FILES */
-@import "./assets/CodeViewer/code-viewer.scss";
-@import "./assets/css/style.scss";
+@import "../demo/assets/CodeViewer/code-viewer.scss";
+@import "../demo/assets/css/style.scss";
