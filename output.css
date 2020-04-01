@@ -335,7 +335,7 @@ nav {
     font-size: 20px; }
   nav :not(img).logo {
     line-height: 30px;
-    font-size: 20px;
+    font-size: 24px;
     color: #eee; }
   nav .navigation {
     padding-top: 0.6rem;
@@ -694,7 +694,7 @@ label.cover {
     display: none; } }
 
 @media (max-width: 599px) {
-  .from-tablet-portrait {
+  .above-tablet-portrait {
     display: none; } }
 
 @media (min-width: 900px) {
@@ -702,7 +702,7 @@ label.cover {
     display: none; } }
 
 @media (max-width: 899px) {
-  .from-tablet-landscape {
+  .above-tablet-landscape {
     display: none; } }
 
 @media (min-width: 1440px) {
@@ -710,7 +710,7 @@ label.cover {
     display: none; } }
 
 @media (max-width: 1439px) {
-  .from-desktop {
+  .above-desktop {
     display: none; } }
 
 @media (min-width: 1800px) {
@@ -718,7 +718,7 @@ label.cover {
     display: none; } }
 
 @media (max-width: 1799px) {
-  .from-desktop-large {
+  .above-desktop-large {
     display: none; } }
 
 /* LISTS */

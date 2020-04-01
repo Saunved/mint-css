@@ -51,7 +51,7 @@
         }
     }
 
-    .from-tablet-portrait{
+    .above-tablet-portrait{
         @media (max-width: ($tablet-portrait-above)+(-1)){
             display: none;
         }
@@ -63,7 +63,7 @@
         } 
     }
 
-    .from-tablet-landscape{
+    .above-tablet-landscape{
         @media(max-width: ($tablet-landscape-above)+(-1)){
             display: none;
         }
@@ -75,7 +75,7 @@
         } 
     }
 
-    .from-desktop{
+    .above-desktop{
         @media(max-width: ($desktop-above)+(-1)){
             display: none;
         }
@@ -87,7 +87,7 @@
         } 
     }
 
-    .from-desktop-large{
+    .above-desktop-large{
         @media(max-width: ($desktop-large-above)+(-1)){
             display: none;
         }

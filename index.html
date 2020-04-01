@@ -26,7 +26,7 @@
     </template>
 
     <nav>
-        <div class="navigation right-align navbar-fixed shadow from-tablet-landscape">
+        <div class="navigation right-align navbar-fixed shadow above-tablet-landscape">
             <!-- <span><img class="logo left" src="http://via.placeholder.com/150x30/FFFFFF/000000?text=LOGO" alt=""></span> -->
             <span class="logo left">mint-css</span>
             <a href="#" class="">Home</a>
@@ -46,7 +46,7 @@
 
     <nav>
         <div class="navigation center navbar-fixed shadow below-tablet-landscape">
-            <span class="logo center">mint-css</span>
+            <span class="logo center" style="font-size: 24px">mint-css</span>
         </div>
     </nav>
 
@@ -70,7 +70,7 @@
                         <p>mint-css is a boilerplate, customizable, themable CSS for prototyping and creating simple websites fast.
                         <br><b>Boilerplate</b> means that the minimum required styles are provided and the rest is up to you.
                         <br><b>Customizable</b> means that you can extend the code however you wish to by adding or modifying flavors.
-                        <br><b>Themable</b> means that you can test out themes (both light and dark), and the page will adapt accordingly.</p>
+                        <br><b>Themable</b> means that you can test out themes by specifying just 4 colors (primary, secondary, accent, and base). The page will adapt for dark and light colors equally well.</p>
                         <p>Whether you are a web designer, a web developer, or just someone who needs to create a website and get done with it quickly, mint-css should help you achieve that goal.</p>
                         <p>To start using the base theme immediately, simply copy and refer to the <code class="inline" style="padding: 0px !important">output.css</code> file in your own html file and start hacking away! Refer back to this file for documentation where needed.</p>
                     </section>
@@ -931,10 +931,10 @@
             <p>Responsive breakpoints are defined as follows:</p>
             <ol>
                 <li>Phone: Below 600px</li>
-                <li>Tablet portrait from: 600px</li>
-                <li>Tablet landscape: 900px</li>
-                <li>Desktop from: 1200px</li>
-                <li>Large desktop from: 1800px</li>
+                <li>Tablet portrait: Above 600px</li>
+                <li>Tablet landscape: Above 900px</li>
+                <li>Desktop: Above 1200px</li>
+                <li>Large desktop: Above 1800px</li>
             </ol>
 
             <p>If you are wondering why these breakpoints are chosen instead of the "standard" 768px, 1024px points, this is the article these breakpoints are based on:
@@ -967,19 +967,19 @@
                         <td>Visible at or below 1799px</td>
                     </tr>
                     <tr>
-                        <td>.from-tablet-portrait</td>
+                        <td>.above-tablet-portrait</td>
                         <td>Visible at or above 600px</td>
                     </tr>
                     <tr>
-                        <td>.from-tablet-landscape</td>
+                        <td>.above-tablet-landscape</td>
                         <td>Visible at or above 900px</td>
                     </tr>
                     <tr>
-                        <td>.from-desktop</td>
+                        <td>.above-desktop</td>
                         <td>Visible at or above 1200px</td>
                     </tr>
                     <tr>
-                        <td>.from-desktop-large</td>
+                        <td>.above-desktop-large</td>
                         <td>Visible at or above 1800px</td>
                     </tr>
                 </table>
@@ -990,10 +990,10 @@
             <p class="below-tablet-landscape">I am visible only below 899px</p>
             <p class="below-desktop">I am visible only below 1199px</p>
             <p class="below-desktop-large">I am visible only below 1799px</p>
-            <p class="from-tablet-portrait">I am visible above 600px</p>
-            <p class="from-tablet-landscape">I am visible above 900px</p>
-            <p class="from-desktop">I am visible above 1200px</p>
-            <p class="from-desktop-large">I am visibile above 1800px</p>
+            <p class="above-tablet-portrait">I am visible above 600px</p>
+            <p class="above-tablet-landscape">I am visible above 900px</p>
+            <p class="above-desktop">I am visible above 1200px</p>
+            <p class="above-desktop-large">I am visibile above 1800px</p>
 
         </section>
     </div>
