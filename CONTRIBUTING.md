@@ -21,7 +21,7 @@ Thank you for taking the time to contribute to this project!
 * If you have an idea or you are a designer who wants to implement a flavor, please create a new flavor request [here](https://github.com/Saunved/mint-css/issues/new/choose)
 
 ## Suggesting an enhancement
-* If you are designers or you think certain styles can be improved in existing flavors, you can suggest enhancement [here](https://github.com/Saunved/mint-css/issues/new/choose)
+* If you are a designer or you think certain styles can be improved in existing flavors, you can suggest enhancement [here](https://github.com/Saunved/mint-css/issues/new/choose)
 
 ## Contributing to documentation
 * *Still working on how to structure the documentation!*
