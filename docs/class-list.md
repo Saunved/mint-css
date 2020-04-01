@@ -5,7 +5,7 @@ This file contains a list of CSS classes used in this repository along with info
 ## Buttons
 class name | purpose
 -----------|-----------
-.btn | defines a button filled with a primary background color
+.btn | defines a button
 .btn-outline | defines a button with an outline
 .btn-small | defines a small button
 .btn-large | defines a large button
