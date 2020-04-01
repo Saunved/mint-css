@@ -28,12 +28,19 @@ That's it! If you wish to change themes or play with the code files, keep readin
 The sass command will create an ```build/output.css``` file each time you make any changes to the referred partials or the main.scss file. Open the index.html file to see the results. I recommend creating a local server that automatically updates whenever any files in the folder are changed.
 
 ## Why this project?
-**This project is inspired by skeleton-css and Materialize CSS and looks to combine the best of both** to create a boilerplate CSS that can be extended in a variety of ways. 
-* The focus is on being able to make different themes quickly for prototyping. This is super useful for designers and front-end devs to check how different color combinations might look before implementing them in their existing projects.
-* **Allowing people to spin up a good-looking website in record time with all the essential elements styled**
-* Another important idea is to make the CSS as extensible as possible by keeping components decoupled. For example, if you aren't going to use any forms, you can simply comment out the ```partials/form``` line in ```src/main.scss```. The same applies for all other components.
-* The biggest problem with frameworks is that they get in the way of uniqueness. Nobody wants to keep making websites that look and feel the same, but everybody wants to use the same framework due to its familiarity. Flavors allow people to create unique "UI kits" while retaining most class names and reusing existing partials and components where required. 
-* The world has moved beyond framework-based grids. Although we have included (directly), the skeleton-css grid - you can always comment out the component from the ```./src/main.scss``` file and use CSS Grids instead.
+* The focus is on being able to make different themes based on various color palettes for prototyping. This is super useful for designers and front-end devs to check how different color combinations might look before implementing them in their existing projects.
+
+* A problem with CSS frameworks is that they get in the way of uniqueness with respect to design, and switching over to a new framework or design style requires constantly going back and forth between the documentation and the code. The idea of flavors will allow people to create unique "UI kits" while retaining most class names and reusing existing partials and components where required.
+
+* Most CSS frameworks (and boilerplates) do not come with good support for dark themes or contrast-conscious typography. These have to be hand-written. This is taken care of by a few if/else statements in sass to check for lightness (HSL) values.
+
+* Allowing people to spin up a good-looking website in record time with all the essential elements styled and a small CSS file size was always an aim.
+
+* Another important idea is to make the CSS as extensible as possible by keeping components decoupled. For example, if you aren't going to use any forms, you can simply comment out the partials/form line in src/main.scss. This is already available in existing frameworks like Bootstrap and Materialize.
+
+* A consistent class naming system will allow various flavors to be interchangeable, giving us the ability to adapt to new flavors quickly. Although this cannot be enforced, we can take good care to use the ```docs/class-list``` file for any classes that we might require.
+
+* The world has moved beyond framework-based grids. I have included the skeleton-css grid directly in the project, but you can always comment out the component from the ```./src/main.scss``` file and use CSS Grids instead.
 
 ## Themes
 
