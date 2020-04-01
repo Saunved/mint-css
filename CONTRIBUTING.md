@@ -13,6 +13,9 @@ Thank you for taking the time to contribute to this project!
 * You can create new themes under ```src/themes``` and open a pull request for the same
 * You can refer to the following website to quickly create theme colors: [Colormind](http://colormind.io/template/material-dashboard/)
 * Modifications for existing themes will usually not be accepted
+* **You have to specify only 4 colors in the theme file.** The rest of the colors are calculated directly in the ```src/themes/_contrasts.scss``` file based on the lightness (HSL) values of the specified colors.
+* Refer to any existing themes to get an idea for how they are implemented
+* Fefer to the theme file in ```src/main.scss``` to view your changes once you are done
 
 ## Adding new flavors
 * You can create your own flavors under ```src``` and add your own ```partials``` and ```components```
