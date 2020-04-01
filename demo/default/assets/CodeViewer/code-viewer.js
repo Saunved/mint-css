@@ -6,7 +6,7 @@ class CodeViewer extends HTMLElement {
 
     connectedCallback() {
         var id = Date.now()+Math.floor(Math.random()*9999).toString();
-        var template =`<div class="clearfix"><h5 style="max-width:70%">${this.title}</h5><button id="button-${id}" class="btn btn-small btn-dark tiny large-radius">View code</button><pre id="pre-${id}" style="margin-top: 8px"><code>${this.content}</pre></code></div>`;
+        var template =`<div class="clearfix"><h5 style="max-width:70%">${this.title}</h5><button id="button-${id}" class="btn btn-small btn-dark tiny btn-rounded">View code</button><pre id="pre-${id}" style="margin-top: 8px"><code>${this.content}</pre></code></div>`;
         this.innerHTML = template;
         var pre = document.getElementById(`pre-${id}`);
         pre.style.display = 'none';

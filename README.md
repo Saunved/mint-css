@@ -9,15 +9,15 @@ Specify just 4 colors in your theme file and you're ready to go! **Full support 
 ## Quickstart (for designers or non-web developers)
 *src = source code, build = final output, demo = demo webpage and documentation*
 1. Download the latest release [here](https://github.com/Saunved/mint-css/releases)
-2. Open the ```demo/index.html``` file in Chrome/Firefox to view the project in its default state
+2. Open the ```demo/default/index.html``` file in Chrome/Firefox to view the project in its default state
 
 That's it! If you wish to change themes or play with the code files, keep reading.
 
 ## Changing themes
 1. Start by installing Sass on your computer from [here](https://github.com/sass/dart-sass/releases/tag/1.26.3). *Feel free to read up on Sass if you are unfamiliar with it.*
-2. Open a terminal in the current directory and run ```sass --watch ./src/main.scss:./build/output.css```
+2. Open a terminal in the current directory and run ```sass --watch ./src/main.scss:./demo/default/output.css```
 3. Open the ```src/main.scss``` file and uncomment the theme you wish to keep. Save the file.
-4. Open the ```demo/index.html``` file in Chrome/Firefox to check if the theme has changed
+4. Open the ```demo/default/index.html``` file in Chrome/Firefox to check if the theme has changed
 
 ## Why this project?
 * The focus is on being able to make different themes based on various color palettes for prototyping. This is super useful for designers and front-end devs to check how different color combinations might look before implementing them in their existing projects.

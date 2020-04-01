@@ -24,10 +24,6 @@ $color-medium-gray: #aaa;
 $color-light-grey: $color-light-gray;
 $color-medium-grey: $color-light-gray;
 
-@mixin small_radius { border-radius: 4px; }
-
-@mixin large-radius{ border-radius: 16px; }
-
 @mixin clearfix{
     &::after {
     content: '';
@@ -52,16 +48,6 @@ $color-medium-grey: $color-light-gray;
     @else {
         @return #eee;
     }
-}
-
-
-@function get-nav-link-color($color){
-    @if(not is-dark($color)){
-        @return #111;
-    }
-    @else {
-        @return #eee;
-    }    
 }
 
 @function get-link-color($color){

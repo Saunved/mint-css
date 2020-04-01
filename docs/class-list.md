@@ -62,8 +62,6 @@ class name | purpose
 .left-align | text align to the left
 .right-align | text align to the right
 .center | text-align to the center, vertical align to middle
-.small-radius | indicates a small border-radius
-.large-radius | indicates a large border-radius
 .shadow | indicates a bottom shadow on an element
 .clearfix | indicates float clearfix
 .inline | indicates ```display:inline-block```

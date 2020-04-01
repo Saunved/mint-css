@@ -34,5 +34,5 @@ blockquote{
     border: 1px solid $color-base-text;
     font-size: $font-medium;
     border-left: 8px solid $color-secondary;
-    @include small-radius;
+    border-radius: 4px;
 }

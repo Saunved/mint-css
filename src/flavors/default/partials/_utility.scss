@@ -12,10 +12,6 @@
 
 .responsive{ overflow-x: auto; }
 
-.small-radius{ @include small-radius;}
-
-.large-radius{ @include large-radius; }
-
 .clearfix{ @include clearfix; }
 
 .inline {display: inline-block; }

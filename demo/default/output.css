@@ -815,10 +815,6 @@ ol ol > li, ul ol > li {
   margin: 16px; }
 
 /* PROJECT-SPECIFIC FILES */
-code-viewer.btn {
-  background-color: #111 !important;
-  color: #fff !important; }
-
 #card-demo {
   display: grid;
   grid-template-rows: 200px;
@@ -886,8 +882,7 @@ section {
   vertical-align: middle;
   background-color: #dccbd4;
   color: #111;
-  border: none;
-  border-radius: 100px !important; }
+  border: none; }
   .tiny:hover {
     background-color: #d2bcc7; }
 
