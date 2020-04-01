@@ -20,36 +20,10 @@ time, mark, audio, video {
     vertical-align: baseline;
 }
 
-html, body, section, menu, summary, footer, header, article, aside, details{
-    color: $color-base-text;
-    background-color: $color-base;
-}
-
 
 button{
     all: unset;
     cursor: pointer;
-}
-
-a{
-    text-decoration: none;
-    &:link, &:visited{
-        color: $color-link;
-    }
-
-    &:link:hover, &:visited:hover{
-        color: darken($color-link, 10%);
-    }
-}
-
-pre{
-    padding: 8px;
-    background-color: darken($color-base, 10%);
-    color: $color-base-text;
-    border: 1px solid $color-light-gray;
-    font-size: $font-medium;
-    margin: 8px 0px;
-    white-space: pre-wrap;
 }
 
 /* HTML5 display-role reset for older browsers */

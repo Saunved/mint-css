@@ -6,6 +6,26 @@
 html * {
   font-family: "Noto Sans JP"; }
 
+html, body, section, menu, summary, footer, header, article, aside, details {
+  color: #111;
+  background-color: #FBF9FA; }
+
+a {
+  text-decoration: none; }
+  a:link, a:visited {
+    color: #006fcf; }
+  a:link:hover, a:visited:hover {
+    color: #00549c; }
+
+pre {
+  padding: 8px;
+  background-color: #e7dae1;
+  color: #111;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  margin: 8px 0px;
+  white-space: pre-wrap; }
+
 /* MEYER RESET + BASE EXTENSIONS */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -26,29 +46,9 @@ time, mark, audio, video {
   font-family: sans-serif;
   vertical-align: baseline; }
 
-html, body, section, menu, summary, footer, header, article, aside, details {
-  color: #111;
-  background-color: #FBF9FA; }
-
 button {
   all: unset;
   cursor: pointer; }
-
-a {
-  text-decoration: none; }
-  a:link, a:visited {
-    color: #006fcf; }
-  a:link:hover, a:visited:hover {
-    color: #00549c; }
-
-pre {
-  padding: 8px;
-  background-color: #e7dae1;
-  color: #111;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-  margin: 8px 0px;
-  white-space: pre-wrap; }
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
