@@ -1,6 +1,17 @@
 # Contributing to mint-css
 Thank you for taking the time to contribute to this project!
 
+## Table of contents
+
+* [Reporting bugs](#reporting-bugs)
+* [Fixing bugs](#fixing-bugs)
+* [Adding new themes](#adding-new-themes)
+* [Adding new flavors](#adding-new-flavors)
+* [Suggesting an enhancement](#suggesting-an-enhancement)
+* [Contributing to documentation](#contributing-to-documentation)
+* [Help required with](#help-required-with)
+* [Quick how-to](#quick-how-to)
+
 ## Reporting bugs
 * Check if the bug was reported previously by searching under [Issues](https://github.com/Saunved/mint-css/issues) on Github
 * If the bug isn't reported please report it [here](https://github.com/Saunved/mint-css/issues/new/choose)
@@ -18,8 +29,8 @@ Thank you for taking the time to contribute to this project!
 * Fefer to the theme file in ```src/main.scss``` to view your changes once you are done
 
 ## Adding new flavors
-* You can create your own flavors under ```src``` and add your own ```partials``` and ```components```
-* If you are reusing components, you can either link to them (in which case you have to ensure dependencies are maintained) or create a separate copy (in which you have to ensure that bug fixes and modifications in the original are reflected manually).
+* Create new flavors quickly by simply creating a copy of the ```src/flavors/blueprint``` folder and renaming it to ```your-flavor-name```
+* If you are reusing components from existing flavors, you can either link to them (in which case we have to ensure dependencies are maintained across version changes) or create a separate copy (in which case we have to ensure that bug fixes and modifications in the original are reflected manually).
 * Open a pull request when you are ready to add your flavor
 * If you have an idea or you are a designer who wants to implement a flavor, please create a new flavor request [here](https://github.com/Saunved/mint-css/issues/new/choose)
 
@@ -34,6 +45,7 @@ Thank you for taking the time to contribute to this project!
 2. Improving the existing code (optimizations and removing redundancies)
 3. Creating new flavors
 
+## Quick how-to
 You can work on the existing code in any of the following folders:  
 ```src/flavors/flavor-name/partials```  
 ```src/flavors/flavor-name/components```  

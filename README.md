@@ -1,12 +1,27 @@
 ## Intro
-mint-css is boilerplate CSS that you can use for prototyping, theming, or even use directly in your projects. It is inspired by skeleton-css and materialize-css.
+mint-css is boilerplate CSS that you can use for prototyping, theming, or even use directly in your projects. 
+It is useful for web designers as well as developers.
 
-## Focus on themes and theme-based components
-Specify just 4 colors in your theme file and you're ready to go! **Full support for dark themes and contrast-conscious typography**.  
+## Table of contents
+
+* [Themes and flavors](#themes-and-flavors)
+* [Quickstart](#quickstart)
+* [Changing themes](#changing-themes)
+* [Why this project?](#why-this-project)
+* [What are flavors?](#what-are-flavors)
+* [How you can contribute](#how-you-can-contribute)
+* [Credits](#credits)
+
+## Themes and flavors
+
+Specify just 4 colors in your theme file and you're ready to go!  
+Full support for dark themes and contrast-conscious typography.  
 
 ![alt text](./themes.gif "Themes GIF")
 
-## Quickstart (for designers or non-web developers)
+**Flavors** allow us to create UI-kits while retaining a consistent class-naming system. Read more about flavors [here](#what-are-flavors).
+
+## Quickstart
 *src = source code, build = final output, demo = demo webpage and documentation*
 1. Download the latest release [here](https://github.com/Saunved/mint-css/releases)
 2. Open the ```demo/default/index.html``` file in Chrome/Firefox to view the project in its default state
@@ -22,7 +37,7 @@ That's it! If you wish to change themes or play with the code files, keep readin
 ## Why this project?
 * The focus is on being able to make different themes based on various color palettes for prototyping. This is super useful for designers and front-end devs to check how different color combinations might look before implementing them in their existing projects.
 
-* A problem with CSS frameworks is that they get in the way of uniqueness with respect to design, and switching over to a new framework or design style requires constantly going back and forth between the documentation and the code. The idea of flavors will allow people to create unique "UI kits" while retaining most class names and reusing existing partials and components where required.
+* Ever gotten *tired* of the way a framework looks and want to spice things up by changing the UI? Switching over to a new framework or design style requires constantly going back and forth between the documentation and the code and renaming classes and fixing dependencies. **Flavors** will allow people to create unique "UI kits" while retaining most class names and reusing partials and components across flavors.
 
 * Most CSS frameworks (and boilerplates) do not come with good support for dark themes or contrast-conscious typography. These have to be hand-written. This is taken care of by a few if/else statements in sass to check for lightness (HSL) values.
 
@@ -34,15 +49,15 @@ That's it! If you wish to change themes or play with the code files, keep readin
 
 * The world has moved beyond framework-based grids. I have included the skeleton-css grid directly in the project, but you can always comment out the component from the ```./src/main.scss``` file and use CSS Grids instead.
 
-## How you can contribute
-Refer to the [CONTRIBUTING.md file](https://github.com/Saunved/mint-css/blob/master/CONTRIBUTING.md)
-
 ## What are flavors?
 A flavor is a type of UI. E.g. "Material design" is a flavor, or "Flat" is a flavor. I decided not to call it a theme, since that term is used to define the color themes in this project. Flavors contain partials (css code for different UI elements) and components (Javascript-based UI + functionality).
 
-You can create your own flavors. You can even copy and modify some partials and components from the existing flavors if you wish to. This project (currently) contains only one flavor: "default".
+You can create your own flavors. You can even copy and modify some partials and components from the existing flavors if you wish to. To start creating flavors quickly, you can create a copy of the existing ```blueprint``` flavor, and modify it however you wish to. You can refer to the ```default``` flavor to get an idea of the implementation.
 
 A list of class names that you should ideally retain for consistency is provided in this file: [docs/class-list.md](./docs/class-list.md).
+
+## How you can contribute
+Refer to the [CONTRIBUTING.md file](https://github.com/Saunved/mint-css/blob/master/CONTRIBUTING.md)
 
 ## Credits
 * This project is inspired by **skeleton-css**. The grid used is taken directly from [SkeletonCSS Github](https://github.com/dhg/Skeleton.)
