@@ -19,14 +19,6 @@ That's it! If you wish to change themes or play with the code files, keep readin
 3. Open the ```src/main.scss``` file and uncomment the theme you wish to keep. Save the file.
 4. Open the ```demo/index.html``` file in Chrome/Firefox to check if the theme has changed
 
-## Modifying and adding things
-1. The ```flavors/default``` folder contains the default flavor of ```partials``` and ```components```. One can create another folder inside ```flavors``` and create their own suite of partials and components
-2. All partials and components are referred in the ```src/main.scss``` file. So if you create any new flavors or components, please ensure that they are referred to in the main.scss file.
-3. You can simply run the command below to start compiling the sass output while you make any changes  
-```sass --watch ./src/main.scss:./build/output.css```
-
-The sass command will create an ```build/output.css``` file each time you make any changes to the referred partials or the main.scss file. Open the index.html file to see the results. I recommend creating a local server that automatically updates whenever any files in the folder are changed.
-
 ## Why this project?
 * The focus is on being able to make different themes based on various color palettes for prototyping. This is super useful for designers and front-end devs to check how different color combinations might look before implementing them in their existing projects.
 
@@ -41,28 +33,6 @@ The sass command will create an ```build/output.css``` file each time you make a
 * A consistent class naming system will allow various flavors to be interchangeable, giving us the ability to adapt to new flavors quickly. Although this cannot be enforced, we can take good care to use the ```docs/class-list``` file for any classes that we might require.
 
 * The world has moved beyond framework-based grids. I have included the skeleton-css grid directly in the project, but you can always comment out the component from the ```./src/main.scss``` file and use CSS Grids instead.
-
-## Themes
-
-![alt text](./themes.gif "Themes GIF")
-
-This repository contains a few existing themes.
-You can easily create new themes in the ```src/themes``` folder. Check out the existing themes to get an idea for how the themes are implemented. If you create a new theme, remember to update the main.scss file to refer to it.
-
-### Ideas for creating themes
-You can contribute by creating multiple themes for this project.
-
-**You have to specify only 4 colors in the theme file.** The rest of the colors are calculated directly in the ```src/themes/_contrasts.scss``` file based on the lightness (HSL) values of the specified colors.
-
-A great tool to generate themes can be found here:
-http://colormind.io/template/material-dashboard/
-You can use the following guidelines to make a theme based on the colors given by the tool above:
-1) Use the center color for primary color
-2) Use the color left of center for secondary color
-3) Use the color right or extreme right of center for accent color
-4) Use the color to the extreme left for base color  
-
-Of course, you are free to mix and match as you please!
 
 ## How you can contribute
 Refer to the [CONTRIBUTING.md file](https://github.com/Saunved/mint-css/blob/master/CONTRIBUTING.md)
