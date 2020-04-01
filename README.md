@@ -91,7 +91,7 @@ A flavor is a type of UI. E.g. "Material design" is a flavor, or "Flat" is a fla
 
 You can create your own flavors. You can even copy and modify some partials and components from the existing flavors if you wish to. This project (currently) contains only one flavor: "default".
 
-A list of class names that you should ideally retain for consistency is provided in this file: (this is a work in progress)!
+A list of class names that you should ideally retain for consistency is provided in this file: [docs/class-list.md](./docs/class-list.md).
 
 ## Create documentation
 You can add documentation for your created partials or components by creating a section for them inside the index.html file. You can refer to the existing documentation code to get an idea for how to use the CodeViewer helper component.
