@@ -62,16 +62,11 @@ class name | purpose
 .left-align | text align to the left
 .right-align | text align to the right
 .center | text-align to the center, vertical align to middle
-.border | indicates a border around an element
-.no-border | removes the border from an element
 .small-radius | indicates a small border-radius
 .large-radius | indicates a large border-radius
 .shadow | indicates a bottom shadow on an element
 .clearfix | indicates float clearfix
 .inline | indicates ```display:inline-block```
-.uppercase | converts text to uppercase
-.lowercase | converts text to lowercase
-.capitalize | converts text to capitalized form
 .transparent | unsets the background color
 .primary | primary background color
 .secondary | secondary background color

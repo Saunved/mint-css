@@ -36,13 +36,6 @@ $color-medium-grey: $color-light-gray;
   }
 }
 
-@mixin uppercase{ text-transform: uppercase; }
-
-@mixin lowercase{ text-transform: lowercase; }
-
-@mixin capitalize { text-transform: capitalize; }
-
-
 @function is-dark($color){
     @if(lightness($color) > 52){
         @return false;

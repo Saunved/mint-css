@@ -636,12 +636,6 @@ label.cover {
 .responsive {
   overflow-x: auto; }
 
-.border {
-  border: 1px solid #aaa; }
-
-.no-border {
-  border: none; }
-
 .small-radius {
   border-radius: 4px; }
 
@@ -655,15 +649,6 @@ label.cover {
 
 .inline {
   display: inline-block; }
-
-.uppercase {
-  text-transform: uppercase; }
-
-.lowercase {
-  text-transform: lowercase; }
-
-.capitalize {
-  text-transform: capitalize; }
 
 .transparent {
   background-color: unset; }
@@ -916,5 +901,8 @@ pre {
 
 code {
   padding: 12px !important; }
+
+.border {
+  border: 1px solid #aaa; }
 
 /*# sourceMappingURL=output.css.map */

@@ -16,7 +16,7 @@
     a{
         color: $color-primary-text;
         font-size: $font-h5;
-        @include uppercase;
+        text-transform: uppercase;
         line-height: $font-h5*2.5;
         display: block;
         font-weight: 300;

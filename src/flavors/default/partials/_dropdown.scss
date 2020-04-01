@@ -6,7 +6,7 @@
         z-index: 1;
     
         .dropdown-title{
-            @include uppercase;
+            text-transform: uppercase;
             font-size: $font-medium;
             display: inline-block;
             padding: 8px;
