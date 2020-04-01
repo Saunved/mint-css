@@ -6,8 +6,8 @@
 
         padding-top: 0.6rem;
         padding-bottom: 0.4rem;
-        padding-right: 8px;
-        padding-left: 8px;
+        padding-right: 2rem;
+        padding-left: 2rem;
         z-index: 1000;
 
     a{
@@ -51,6 +51,7 @@ nav {
     :not(img).logo{
         line-height: 30px;
         font-size: 20px;
+        color: $color-primary-text;
     }
 
     .navigation{

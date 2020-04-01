@@ -335,12 +335,13 @@ nav {
     font-size: 20px; }
   nav :not(img).logo {
     line-height: 30px;
-    font-size: 20px; }
+    font-size: 20px;
+    color: #eee; }
   nav .navigation {
     padding-top: 0.6rem;
     padding-bottom: 0.4rem;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 2rem;
+    padding-left: 2rem;
     z-index: 1000; }
     nav .navigation .dropdown {
       position: relative;

@@ -26,9 +26,9 @@
     </template>
 
     <nav>
-        <div class="navigation center navbar-fixed shadow from-tablet-portrait">
+        <div class="navigation right-align navbar-fixed shadow from-tablet-landscape">
             <!-- <span><img class="logo left" src="http://via.placeholder.com/150x30/FFFFFF/000000?text=LOGO" alt=""></span> -->
-            <!-- <span class="logo left">Hello</span> -->
+            <span class="logo left">mint-css</span>
             <a href="#" class="">Home</a>
             <a href="#">Hello</a>
             <a href="#">About us</a>
@@ -44,21 +44,38 @@
         </div>
     </nav>
 
+    <nav>
+        <div class="navigation center navbar-fixed shadow below-tablet-landscape">
+            <span class="logo center">mint-css</span>
+        </div>
+    </nav>
+
     <div class="container">
 
-        <div class="mtop-60 no-small">
+        <div class="mtop-60">
 
         </div>
 
-        <section>
-            <section>
-                <div class="clearfix">
-
-<a class="github-button" href="https://github.com/Saunved/mint-css" data-icon="octicon-star" data-size="large" aria-label="Star Saunved/mint-css on GitHub">Star</a>
-<a class="github-button" href="https://github.com/Saunved/mint-css/archive/master.zip" data-icon="octicon-cloud-download" data-size="large" aria-label="Download Saunved/mint-css on GitHub">Download</a>
-<a class="github-button" href="https://github.com/Saunved/mint-css/fork" data-icon="octicon-repo-forked" data-size="large" aria-label="Fork Saunved/mint-css on GitHub">Fork</a>
-                </div>
+                    <section>
+                        <h1>mint-css</h1>
+                        <section>
+                            <div class="clearfix space">
+            
+            <a class="github-button" href="https://github.com/Saunved/mint-css" data-icon="octicon-star" data-size="large" aria-label="Star Saunved/mint-css on GitHub">Star</a>
+            <a class="github-button" href="https://github.com/Saunved/mint-css/archive/master.zip" data-icon="octicon-cloud-download" data-size="large" aria-label="Download Saunved/mint-css on GitHub">Download</a>
+            <a class="github-button" href="https://github.com/Saunved/mint-css/fork" data-icon="octicon-repo-forked" data-size="large" aria-label="Fork Saunved/mint-css on GitHub">Fork</a>
+                            </div>
+                                </section>
+            
+                        <p>mint-css is a boilerplate, customizable, themable CSS for prototyping and creating simple websites fast.
+                        <br><b>Boilerplate</b> means that the minimum required styles are provided and the rest is up to you.
+                        <br><b>Customizable</b> means that you can extend the code however you wish to by adding or modifying flavors.
+                        <br><b>Themable</b> means that you can test out themes (both light and dark), and the page will adapt accordingly.</p>
+                        <p>Whether you are a web designer, a web developer, or just someone who needs to create a website and get done with it quickly, mint-css should help you achieve that goal.</p>
+                        <p>To start using the base theme immediately, simply copy and refer to the <code class="inline" style="padding: 0px !important">output.css</code> file in your own html file and start hacking away! Refer back to this file for documentation where needed.</p>
                     </section>
+
+            <section>
 
             <h1>Heading 1</h1>
             <h2>Heading 2</h2>
@@ -145,8 +162,8 @@
         </div>
     </nav>
 
-    <p>You can also have <code class="inline">class="navigation right-align"</code> or <code class="inline">class="navigation center"</code> instead of the current <code class="inline">class="navigation left-align"</code> </p>
-    <p>To fix a navbar to the top of the page, just add <code class="inline">class="navigation navbar-fixed"</code></p>
+    <p>You can also have <code class="inline" style="padding: 0px !important">class="navigation right-align"</code> or <code class="inline" style="padding: 0px !important">class="navigation center"</code> instead of the current <code class="inline" style="padding: 0px !important">class="navigation left-align"</code> to align the items right or center respectively.</p>
+    <p>To fix the navbar to the top of the page, just add <code class="inline" style="padding: 0px !important">class="navigation navbar-fixed"</code></p>
     
 </section>
         <section>
@@ -398,7 +415,39 @@
             <p>Wrap the table class with a &lt;div class="responsive"&gt; to make the table scrollable horizontally on
                 small screens.</p>
 
-           <code-viewer title="Striped table" content='<&#8203;table class="striped">'></code-viewer>
+           <code-viewer title="Striped table" content='<&#8203;div class="responsive">
+    <&#8203;table class="striped">
+            <&#8203;thead>
+                <&#8203;th>Hello<&#8203;/th>
+                <&#8203;th>Hello<&#8203;/th>
+            <&#8203;/thead>
+            <&#8203;tr>
+                <&#8203;td>One<&#8203;/td>
+                <&#8203;td>One<&#8203;/td>
+
+            <&#8203;/tr>
+            <&#8203;tr>
+                <&#8203;td>Two<&#8203;/td>
+                <&#8203;td>Two<&#8203;/td>
+            <&#8203;/tr>
+            <&#8203;tr>
+                <&#8203;td>Three<&#8203;/td>
+                <&#8203;td>Three<&#8203;/td>
+            <&#8203;/tr>
+            <&#8203;tr>
+                <&#8203;td>Four<&#8203;/td>
+                <&#8203;td>Four<&#8203;/td>
+            <&#8203;/tr>
+            <&#8203;tr>
+                <&#8203;td>Five<&#8203;/td>
+                <&#8203;td>Five<&#8203;/td>
+            <&#8203;/tr>
+            <&#8203;tr>
+                <&#8203;td>Six<&#8203;/td>
+                <&#8203;td>Six<&#8203;/td>
+            <&#8203;/tr>
+    <&#8203;/table>
+<&#8203;/div>'></code-viewer>
             <div class="responsive">
                 <table class="striped">
                     <thead>
@@ -434,8 +483,40 @@
             </div>
 
 
+<code-viewer title="Table with cells and row highlighting" content='<&#8203;div class="responsive">
+    <&#8203;table class="highlight cells">
+        <&#8203;thead>
+            <&#8203;th>Hello<&#8203;/th>
+            <&#8203;th>Hello<&#8203;/th>
+        <&#8203;/thead>
+        <&#8203;tr>
+            <&#8203;td>One<&#8203;/td>
+            <&#8203;td>One<&#8203;/td>
+
+        <&#8203;/tr>
+        <&#8203;tr>
+            <&#8203;td>Two<&#8203;/td>
+            <&#8203;td>Two<&#8203;/td>
+        <&#8203;/tr>
+        <&#8203;tr>
+            <&#8203;td>Three<&#8203;/td>
+            <&#8203;td>Three<&#8203;/td>
+        <&#8203;/tr>
+        <&#8203;tr>
+            <&#8203;td>Four<&#8203;/td>
+            <&#8203;td>Four<&#8203;/td>
+        <&#8203;/tr>
+        <&#8203;tr>
+            <&#8203;td>Five<&#8203;/td>
+            <&#8203;td>Five<&#8203;/td>
+        <&#8203;/tr>
+        <&#8203;tr>
+            <&#8203;td>Six<&#8203;/td>
+            <&#8203;td>Six<&#8203;/td>
+        <&#8203;/tr>
+    <&#8203;/table>
+<&#8203;/div>'></code-viewer>
             <div class="responsive">
-            <code-viewer title="Table with cells and row highlighting" content='<&#8203;table class="highlight cells">'></code-viewer>
                 <table class="highlight cells">
                     <thead>
                         <th>Hello</th>
@@ -469,9 +550,40 @@
                 </table>
             </div>
 
+<code-viewer title="Single border at the bottom of the cell and highlighting" content='<&#8203;div class="responsive">
+    <&#8203;table class="separated highlight">
+        <&#8203;thead>
+            <&#8203;th>Hello<&#8203;/th>
+            <&#8203;th>Hello<&#8203;/th>
+        <&#8203;/thead>
+        <&#8203;tr>
+            <&#8203;td>One<&#8203;/td>
+            <&#8203;td>One<&#8203;/td>
 
+        <&#8203;/tr>
+        <&#8203;tr>
+            <&#8203;td>Two<&#8203;/td>
+            <&#8203;td>Two<&#8203;/td>
+        <&#8203;/tr>
+        <&#8203;tr>
+            <&#8203;td>Three<&#8203;/td>
+            <&#8203;td>Three<&#8203;/td>
+        <&#8203;/tr>
+        <&#8203;tr>
+            <&#8203;td>Four<&#8203;/td>
+            <&#8203;td>Four<&#8203;/td>
+        <&#8203;/tr>
+        <&#8203;tr>
+            <&#8203;td>Five<&#8203;/td>
+            <&#8203;td>Five<&#8203;/td>
+        <&#8203;/tr>
+        <&#8203;tr>
+            <&#8203;td>Six<&#8203;/td>
+            <&#8203;td>Six<&#8203;/td>
+        <&#8203;/tr>
+    <&#8203;/table>
+<&#8203;/div>'></code-viewer>
             <div class="responsive">
-                <code-viewer title="Single border at the bottom of the cell and highlighting" content='<&#8203;table class="separated highlight">'></code-viewer>
                 <table class="separated highlight">
                     <thead>
                         <th>Hello</th>
