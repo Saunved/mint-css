@@ -1,8 +1,8 @@
 ## Intro
-mint-css is boilerplate CSS that you can use for prototyping, theming, or even use directly in your projects.  
+mint-css is boilerplate CSS that you can use for prototyping, theming, or even use directly in your projects. It is inspired by skeleton-css and materialize-css.
 
-## Keep the themes coming!
-Specify just 4 colors in your theme file, and you're ready to go! **Full support for dark themes and contrast-conscious typography**.  
+## Focus on themes and theme-based components
+Specify just 4 colors in your theme file and you're ready to go! **Full support for dark themes and contrast-conscious typography**.  
 
 ![alt text](./themes.gif "Themes GIF")
 
