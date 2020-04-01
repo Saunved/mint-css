@@ -1,0 +1,53 @@
+/* NAVIGATION */
+@mixin navigation {
+
+    a{
+        &:link{
+
+        }
+
+        &:visited{
+        }
+
+        &:hover{
+            cursor: pointer;
+        }
+
+        &:first-child{
+        }
+
+        &:last-child{
+        }
+    }
+}
+
+nav {
+
+    background-color: $color-primary;
+
+    img.logo{
+
+    }
+
+    :not(img).logo{
+
+    }
+
+    .navigation{
+        @include navigation;
+    }
+
+    .navbar-fixed{
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+
+        a:last-child{
+        }
+
+        span:last-child{
+        }
+    }
+
+}

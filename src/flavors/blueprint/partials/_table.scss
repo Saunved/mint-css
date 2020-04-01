@@ -1,0 +1,29 @@
+/* TABLES */
+table{
+
+    &.wrapped{
+    }
+
+    &.cells{
+    }
+
+    &.separated{
+        td, th{
+        }
+    }
+
+    &.striped{
+        tr:nth-child(odd){
+        }
+    }
+
+    &.highlight{
+        tr:nth-child(odd):hover{
+
+        }
+
+        tr:nth-child(even):hover{
+        }
+    }
+    
+}
