@@ -7,7 +7,7 @@ Specify just 4 colors in your theme file, and you're ready to go! **Full support
 ![alt text](./themes.gif "Themes GIF")
 
 ## Quickstart (for designers or non-web developers)
-1. Clone (download) this repository
+1. Download the latest release [here](https://github.com/Saunved/mint-css/releases)
 2. Open the ```index.html``` file in Chrome/Firefox to view the project in its default state
 
 That's it! If you wish to change themes or play with the code files, keep reading.
