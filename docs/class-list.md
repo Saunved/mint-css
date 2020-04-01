@@ -9,8 +9,8 @@ class name | purpose
 .btn-outline | defines a button with an outline
 .btn-small | defines a small button
 .btn-large | defines a large button
-.btn-float | defines a button with a box shadow
-.btn-raise | defines a button with a box shadow on hover
+.btn-float | defines a button with a box shadow that loses that box shadow on hover
+.btn-raise | defines a button that acquires a box shadow on hover
 .btn-rounded | defines a button with rounded corners
 .btn-light | defines a light-colored button
 .btn-secondary | defines a button with a secondary background color
