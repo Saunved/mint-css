@@ -24,4 +24,26 @@ Thank you for taking the time to contribute to this project!
 * If you are designers or you think certain styles can be improved in existing flavors, you can suggest enhancement [here](https://github.com/Saunved/mint-css/issues/new/choose)
 
 ## Contributing to documentation
-* Still working on how to structure the documentation!
+* *Still working on how to structure the documentation!*
+
+## Help required with
+1. Adding cross-browser compatibility
+2. Improving the existing code (optimizations and removing redundancies)
+3. Create new flavors or improve existing flavors
+
+You can work on the existing code in any of the following folders:  
+```src/flavors/flavor-name/partials```  
+```src/flavors/flavor-name/components```  
+```src/themes```
+
+The following files/folders are used only in the index.html file for demonstration purposes. You can edit these files/folders if you are working on the index.html file to add documentation:    
+```demo/assets```
+
+**To create partials**
+1. Create a new file in the ```src/flavors/flavor-name/partials``` folder called ```your-partial-name.scss```
+2. Link this partial in the ```src/main.scss``` file
+
+**To create JS-based components**
+1. Create a new folder in ```src/flavors/flavor-name/components``` called ```your-component-name```
+2. Create a scss file in the folder and link it in ```src/main.scss```
+3. Create a js file in the folder and link it in ```src/index.html```
