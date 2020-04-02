@@ -38,4 +38,4 @@ gulp.task('sass', async function(){
 
 })
 
-// gulp.watch('./**/*.scss', gulp.series(['sass']))
+gulp.watch(['./**/*.scss', './**./*.scss'], gulp.series(['sass']))

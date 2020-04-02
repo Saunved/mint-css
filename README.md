@@ -44,7 +44,7 @@ A list of class names that you should ideally retain for consistency is provided
 
 * A consistent class naming system will allow various flavors to be interchangeable, giving us the ability to adapt to new flavors quickly. Although this cannot be enforced, we can take good care to use the ```docs/class-list``` file for any classes that we might require.
 
-* The world has moved beyond framework-based grids. I have included the skeleton-css grid directly in the project, but you can always comment out the component from the ```./src/main.scss``` file and use CSS Grids instead.
+* The world has moved beyond framework-based grids. I have included the skeleton-css grid directly in the project, but you can always comment out the ```_grid.scss``` partial from the ```./src/flavors/flavor-name``` folder and use CSS Grids instead.
 
 ## How you can contribute
 Refer to the [CONTRIBUTING.md file](https://github.com/Saunved/mint-css/blob/master/CONTRIBUTING.md)
