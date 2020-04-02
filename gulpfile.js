@@ -7,7 +7,7 @@ const debug = require('gulp-debug');
 
 sass.compiler = require('node-sass');
 
-const themes = ['mint','antique', 'amber', 'metal', 'mint-dark', 'mint-light']
+const themes = ['mint','antique', 'amber', 'metal', 'mint-dark', 'mint-light', 'royal']
 const flavors = ['default']
 
 
