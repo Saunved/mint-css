@@ -15,16 +15,14 @@ It is useful for web designers as well as developers.
 *src = source code, build = final output, demo = demo webpage and documentation*
 1. Download the latest release [here](https://github.com/Saunved/mint-css/releases)
 2. Open the ```demo/default/index.html``` file
-3. You will be able to view the predefined themes by using the "Switch theme" buttons
+3. You will be able to view the predefined themes by using the "Switch theme" buttons, as shown in the GIF below
 
 ## Themes and flavors
 
 Specify just 4 colors in your theme file and you're ready to go!  
 Full support for dark themes and contrast-conscious typography.  
 
-![alt text](./themes.gif "Themes GIF")
-
-**Flavors** allow us to create UI-kits while retaining a consistent class-naming system. Read more about flavors [here](#what-are-flavors).
+![alt text](./themes_ui.gif "Themes GIF")
 
 ## What are flavors?
 A flavor is a type of UI. E.g. "Material design" is a flavor, or "Flat" is a flavor. I decided not to call it a theme, since that term is used to define the color themes in this project. Flavors contain partials (css code for different UI elements). **All flavors share javascript components that add functionality to the css.**
