@@ -172,16 +172,21 @@
             <p>Wrap sidenavs in a div with an ID of your choice. Sidenavs should contain:</p>
                 <ol>
                     <li>An open trigger with class="trigger"</li>
-                    <li>A sidenav div with class="sidenav"</li>
                     <li>A close trigger with class="close-trigger"</li>
+                    <li>A sidenav div with class="sidenav"</li>
                 </ol>
+            <p>In case you want to define external triggers, you can use the <code>Sidenav.open()</code> and <code>Sidenav.close()</code> methods</p>
             <p>To use sidenavs, simply ensure that the Sidenav component is included in the script:</p>
             <pre><code><&#8203;script src="/path/to/sidenav.js"><&#8203;script></code></pre>
             <p>Then initialize the sidenav with:</p>
-            <pre><code>Sidenav.init('your-id')</code></pre>
-            <p>To initialize multiple sidenavs at once:</p>
-            <pre><code>Sidenav.init('your-id1','your-id2','your-id3')</code></pre>
-            <p>You can utilize the 'sidenav' as an overlay and can have as many sidenavs on a page as you want, as long as their wrapping div ID is unique.</p>
+            <pre><code>const sidenav = new Sidenav('sidenav-id')</code></pre>
+            <p>To programatically open or close a sidenav, simply do:</p>
+            <pre><code>sidenav.open(); // opens the sidenav
+sidenav.close(); // closes the sidenav</code></pre>
+            <p>You can also create Overlays (no animation) with the following code:</p>
+            <pre><code>const overlay = new Overlay('overlay-id')</code></pre>
+            <p>Overlays contain the same methods that Sidenavs have</p>
+            <p>You can have as many sidenavs on a page as you want as long as their wrapping div ID is unique.</p>
 
             <div class="space-medium">
             <code-viewer title="Slide from left sidenav" content='<&#8203;div id="sidenav1">
@@ -309,7 +314,7 @@
     <&#8203;/div>
 <&#8203;/div>
 <&#8203;/div>'></code-viewer>
-                        <div id="sidenav5">
+                        <div id="overlay">
                             <button class="trigger btn btn-light btn-small" style="display: inline-block; margin-top: 8px">Tap to open</button>
                                 <div class="sidenav">
                                 <a class="center" href="#">Link 1</a>
@@ -1061,9 +1066,13 @@
             });
         }
     </script>
-    <script src="../../src/flavors/default/components/sidenav/sidenav.js"></script>
+    <script src="../../src/components/sidenav.js"></script>
     <script>
-        Sidenav.init('sidenav1', 'sidenav2', 'sidenav3', 'sidenav4', 'sidenav5');
+        const sidenav1 = new Sidenav('sidenav1');
+        const sidenav2 = new Sidenav('sidenav2');
+        const sidenav3 = new Sidenav('sidenav3');
+        const sidenav4 = new Sidenav('sidenav4');
+        const sidenav5 = new Overlay('overlay');
     </script>
 <!-- Place this tag in your head or just before your close body tag. -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>

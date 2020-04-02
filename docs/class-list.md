@@ -26,6 +26,7 @@ class name | purpose
 .dropdown-content | defines the list of dropdown elements
 .navbar-fixed | defines a navbar fixed to the top of the page
 .sidenav | defines sidenav content
+.sidenav.active | indicates an active sidenav
 .slide-left | defines sidenav that slides in from left
 .slide-right | defines sidenav that slides in from right
 .rise | defines a sidenav that slides up from below

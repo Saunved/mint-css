@@ -26,7 +26,7 @@
 // @import "partials/color.scss";
 
 /* JS-BASED COMPONENTS */
-@import "flavors/default/components/sidenav/sidenav.scss";
+@import "flavors/default/partials/sidenav";
 
 /* PROJECT-SPECIFIC FILES */
 @import "../demo/default/assets/CodeViewer/code-viewer.scss";

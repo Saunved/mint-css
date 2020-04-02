@@ -43,16 +43,16 @@ That's it! If you wish to change themes or play with the code files, keep readin
 
 * Allowing people to spin up a good-looking website in record time with all the essential elements styled and a small CSS file size was always an aim.
 
-* Another important idea is to make the CSS as extensible as possible by keeping components decoupled. For example, if you aren't going to use any forms, you can simply comment out the partials/form line in src/main.scss. This is already available in existing frameworks like Bootstrap and Materialize.
+* Another important idea is to make the CSS as customizable as possible For example, if you aren't going to use any forms, you can simply comment out the partials/form line in src/main.scss. This is already available in existing frameworks like Bootstrap and Materialize.
 
 * A consistent class naming system will allow various flavors to be interchangeable, giving us the ability to adapt to new flavors quickly. Although this cannot be enforced, we can take good care to use the ```docs/class-list``` file for any classes that we might require.
 
 * The world has moved beyond framework-based grids. I have included the skeleton-css grid directly in the project, but you can always comment out the component from the ```./src/main.scss``` file and use CSS Grids instead.
 
 ## What are flavors?
-A flavor is a type of UI. E.g. "Material design" is a flavor, or "Flat" is a flavor. I decided not to call it a theme, since that term is used to define the color themes in this project. Flavors contain partials (css code for different UI elements) and components (Javascript-based UI + functionality).
+A flavor is a type of UI. E.g. "Material design" is a flavor, or "Flat" is a flavor. I decided not to call it a theme, since that term is used to define the color themes in this project. Flavors contain partials (css code for different UI elements). **All flavors share javascript components that add functionality to the css.**
 
-You can create your own flavors. You can even copy and modify some partials and components from the existing flavors if you wish to. To start creating flavors quickly, you can create a copy of the existing ```blueprint``` flavor, and modify it however you wish to. You can refer to the ```default``` flavor to get an idea of the implementation.
+You can create your own flavors. You can even copy and modify some partials from the existing flavors if you wish to. To start creating flavors quickly, you can create a copy of the existing ```blueprint``` flavor, and modify it however you wish to. You can refer to the ```default``` flavor to get an idea of the implementation.
 
 A list of class names that you should ideally retain for consistency is provided in this file: [docs/class-list.md](./docs/class-list.md).
 

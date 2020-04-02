@@ -1,0 +1,31 @@
+{
+  "name": "mintcss",
+  "version": "1.0.0",
+  "description": "mint-css is boilerplate CSS that you can use for prototyping, theming, or even use directly in your projects. It is useful for web designers as well as developers",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Saunved/mint-css.git"
+  },
+  "keywords": [
+    "css",
+    "boilerplate",
+    "web",
+    "design",
+    "sass",
+    "scss"
+  ],
+  "author": "Saunved Mutalik",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Saunved/mint-css/issues"
+  },
+  "homepage": "https://github.com/Saunved/mint-css#readme",
+  "devDependencies": {}
+}
