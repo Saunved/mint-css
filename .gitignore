@@ -1,6 +1,5 @@
 .sass-cache
 # *.css
-*.min.css
 *.map
 *.vscode
 node_modules

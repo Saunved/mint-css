@@ -42,7 +42,7 @@
 }
 
 i {
-    border: solid darken($color-link-nav, 10%);
+    border: solid yellow;
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 3px;
@@ -71,13 +71,6 @@ section{
     margin-top: 24px;
 }
 
-.menu-icon{
-    width: 35px;
-    height: 3px;
-    background-color: $color-base-text;
-    margin: 7px 0;
-}
-
 .tiny{
     font-size: 14px;
     vertical-align: middle;
@@ -103,5 +96,5 @@ code{
 }
 
 .border{
-    border: 1px solid $color-medium-gray;
+    border: 1px solid #888;
 }

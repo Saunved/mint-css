@@ -21,16 +21,19 @@ Thank you for taking the time to contribute to this project!
 * Please write a verbose description to highlight exactly what has been fixed and how
 
 ## Adding new themes
-* You can create new themes under ```src/themes``` and open a pull request for the same
-* You can refer to the following website to quickly create theme colors: [Colormind](http://colormind.io/template/material-dashboard/)
-* Modifications for existing themes will usually not be accepted
-* **You have to specify only 4 colors in the theme file.** The rest of the colors are calculated directly in the ```src/themes/_contrasts.scss``` file based on the lightness (HSL) values of the specified colors.
-* Refer to any existing themes to get an idea for how they are implemented
-* Fefer to the theme file in ```src/main.scss``` to view your changes once you are done
+You can refer to the following website to quickly create theme colors: [Colormind](http://colormind.io/template/material-dashboard/). Modifications for existing themes will usually not be accepted. 
+* **You have to specify only 4 colors in the theme file.** The rest of the colors are calculated directly based on the lightness (HSL) values of the specified colors.
+
+* Create a theme under ```src/themes/theme-name```
+* Update ```gulpfile.js``` and add the theme to the array of themes
+* Run ```gulp sass``` in the command line and update the stylesheet reference in ```index.html``` to view your new theme
+* Open a pull request if you want to add this theme to the main branch
 
 ## Adding new flavors
 * Create new flavors quickly by simply creating a copy of the ```src/flavors/blueprint``` folder and renaming it to ```your-flavor-name```
-* **Components are shared across flavors**. We are still figuring out the best way to build components from source so only the necessary ones can be used per flavor.
+* **Javascript components are shared across flavors**
+* Add the flavor to ```gulpfile.js```
+* Run ```gulp sass``` to generate ```build/flavor-name``` output css
 * Open a pull request when you are ready to add your flavor
 * If you have an idea or you are a designer who wants to implement a flavor, please create a new flavor request [here](https://github.com/Saunved/mint-css/issues/new/choose)
 

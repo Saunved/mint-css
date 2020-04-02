@@ -12,7 +12,7 @@
     <title>Mint CSS</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="output.css">
+    <link id="stylesheet" rel="stylesheet" type="text/css" href="./assets/css/mint.css">
     <link rel="stylesheet" href="./assets/js/highlight/styles/codepen-embed.css">
     <script src="./assets/js/highlight/highlight.pack.js"></script>
     <script src="./assets/CodeViewer/code-viewer.js"></script>
@@ -21,6 +21,7 @@
 
 <body>
 
+    <div id="wrapper">
     <template id="sidenav-template">
 
     </template>
@@ -67,12 +68,33 @@
                             </div>
                                 </section>
             
+   
+                                <section>
+                                    <h4>Switch themes</h4>
+                                    <button onclick="switchTheme('mint')" class="btn btn-light">Mint</button>
+                                    <button onclick="switchTheme('mint-light')" class="btn btn-light">Mint light</button>
+                                    <button onclick="switchTheme('mint-dark')" class="btn btn-light">Mint dark</button>
+                                    <button onclick="switchTheme('metal')" class="btn btn-light">Metal</button>
+                                    <button onclick="switchTheme('amber')" class="btn btn-light">Amber</button>
+                                    <button onclick="switchTheme('antique')" class="btn btn-light">Antique</button>
+                                </section>
+
+                                <section>
+                                    <h5>Theme colors</h5>
+                                    <span style="display: inline-block; width: 25px; height: 25px;" class="primary"></span>
+                                    <span style="display: inline-block; width: 25px; height: 25px;" class="secondary"></span>
+                                    <span style="display: inline-block; width: 25px; height: 25px;" class="accent"></span>
+                                </section>
+
                         <p>mint-css is a boilerplate, customizable, themable CSS for prototyping and creating simple websites fast.
                         <br><b>Boilerplate</b> means that the minimum required styles are provided and the rest is up to you.
                         <br><b>Customizable</b> means that you can extend the code however you wish to by adding or modifying flavors.
                         <br><b>Themable</b> means that you can test out themes by specifying just 4 colors (primary, secondary, accent, and base). The page will adapt for dark and light colors equally well.</p>
                         <p>Whether you are a web designer, a web developer, or just someone who needs to create a website and get done with it quickly, mint-css should help you achieve that goal.</p>
                         <p>To start using the base theme immediately, simply copy and refer to the <code class="inline" style="padding: 0px !important">output.css</code> file in your own html file and start hacking away! Refer back to this file for documentation where needed.</p>
+                    </section>
+
+                    <section>
                     </section>
 
             <section>
@@ -991,7 +1013,6 @@ sidenav.close(); // closes the sidenav</code></pre>
 
         </section>
     </div>
-</div>
 <hr>
     <div class="container grid">
         <h4>Grid from skeleton-css</h4>
@@ -1047,6 +1068,7 @@ sidenav.close(); // closes the sidenav</code></pre>
 
     <section>
     </section>
+</div>
     <script>
 
         //https://stephanwagner.me/auto-resizing-textarea-with-vanilla-javascript
@@ -1064,6 +1086,16 @@ sidenav.close(); // closes the sidenav</code></pre>
                 element.style.height = element.scrollHeight + offset + "px";
                 element.removeAttribute('data-autoresize');
             });
+        }
+
+        function switchTheme(theme){
+            document.getElementById('wrapper').style.display = 'none';
+            // document.getElementById('loader').style.display = 'block';
+            document.getElementById('stylesheet').href = `./assets/css/${theme}.css`;
+            setTimeout(() => {
+                // document.getElementById('loader').style.display = 'none';
+                document.getElementById('wrapper').style.display = 'block';
+            },1000)
         }
     </script>
     <script src="../../src/components/sidenav.js"></script>
