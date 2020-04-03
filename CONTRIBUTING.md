@@ -4,10 +4,11 @@ Thank you for taking the time to contribute to this project!
 ## Table of contents
 
 * [Reporting bugs](#reporting-bugs)
-* [Fixing bugs](#fixing-bugs)
-* [Adding new themes](#adding-new-themes)
-* [Adding new flavors](#adding-new-flavors)
 * [Suggesting an enhancement](#suggesting-an-enhancement)
+* [Modifying the codebase](#modifying-the-codebase)
+    - [Fixing bugs](#fixing-bugs)
+    - [Adding new themes](#adding-new-themes)
+    - [Adding new flavors](#adding-new-flavors)
 * [Contributing to documentation](#contributing-to-documentation)
 * [Help required with](#help-required-with)
 * [Quick how-to](#quick-how-to)
@@ -16,11 +17,26 @@ Thank you for taking the time to contribute to this project!
 * Check if the bug was reported previously by searching under [Issues](https://github.com/Saunved/mint-css/issues) on Github
 * If the bug isn't reported please report it [here](https://github.com/Saunved/mint-css/issues/new/choose)
 
-## Fixing bugs
+## Suggesting an enhancement
+* If you are a designer or you think certain styles can be improved in existing flavors, you can suggest enhancement [here](https://github.com/Saunved/mint-css/issues/new/choose)
+
+## Modifying the codebase
+
+**Folder structure**
+1) Themes are defined in ```src/themes```
+2) Flavors are defined in ```src/flavors```
+    - The ```flavor-name/partials``` is used to define the partial sass files for that flavor
+    - The ```flavor-name/flavor-name.scss``` file is used to import the partials you wish to use. This file is added to Gulp to build the output 
+3) Javascript components are shared across flavors and are defined in ```src/components```
+
+**Building**
+**Gulp** is used to compile the scss files and store the .css and .min.css output in the ```build```
+
+### Fixing bugs
 * Open a new pull request and mention the issue number (if present)
 * Please write a verbose description to highlight exactly what has been fixed and how
 
-## Adding new themes
+### Adding new themes
 You can refer to the following website to quickly create theme colors: [Colormind](http://colormind.io/template/material-dashboard/). Modifications for existing themes will usually not be accepted. 
 * **You have to specify only 4 colors in the theme file.** The rest of the colors are calculated directly based on the lightness (HSL) values of the specified colors.
 
@@ -29,16 +45,13 @@ You can refer to the following website to quickly create theme colors: [Colormin
 * Run ```gulp sass``` in the command line and update the stylesheet reference in ```index.html``` to view your new theme
 * Open a pull request if you want to add this theme to the main branch
 
-## Adding new flavors
+### Adding new flavors
+* If you have an idea or you are a designer who wants to implement a flavor, please create a new flavor request [here](https://github.com/Saunved/mint-css/issues/new/choose)
 * Create new flavors quickly by simply creating a copy of the ```src/flavors/blueprint``` folder and renaming it to ```your-flavor-name```
 * **Javascript components are shared across flavors**
 * Add the flavor to ```gulpfile.js```
 * Run ```gulp sass``` to generate ```build/flavor-name``` output css
 * Open a pull request when you are ready to add your flavor
-* If you have an idea or you are a designer who wants to implement a flavor, please create a new flavor request [here](https://github.com/Saunved/mint-css/issues/new/choose)
-
-## Suggesting an enhancement
-* If you are a designer or you think certain styles can be improved in existing flavors, you can suggest enhancement [here](https://github.com/Saunved/mint-css/issues/new/choose)
 
 ## Contributing to documentation
 * *Still working on how to structure the documentation!*
