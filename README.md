@@ -28,7 +28,7 @@ Full support for dark themes and contrast-conscious typography.
 A flavor is a type of UI. E.g. "Material design" is a flavor, or "Flat" is a flavor.
 
 The idea behind flavors is simple:  
-If you want to change your website's UI (say from Material to Flat), all you have to do to is change **one** stylesheet reference! This can be achieved by maintaining a standard [class-list](./docs/class-list.md) across flavors. 
+**If you want to change your website's UI (say from Material to Flat), all you have to do to is change one stylesheet reference.** This can be achieved by maintaining a consistent set of [classes](./docs/class-list.md) across flavors. 
 
 Flavors contain partials (css code for different UI elements) and **share javascript components that add functionality to that css.**
 
