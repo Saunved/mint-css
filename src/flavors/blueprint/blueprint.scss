@@ -1,7 +1,9 @@
-@import "partials/variables";
+// inject:scss
+// endinject
 
-/* THEME */
-@import "../../theme";
+@import "partials/variables";
+@import "partials/contrasts";
+
 
 /* BASE */
 @import "partials/base";
@@ -21,3 +23,4 @@
 // @import "partials/color.scss";
 
 /* JS-BASED COMPONENTS */
+@import "partials/sidenav";
