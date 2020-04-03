@@ -1,6 +1,14 @@
 This file contains a list of CSS classes used in this repository along with information about them. 
-
 **It is intended to serve as a basis for naming classes across flavors to retain consistency.**
+
+## Table of contents
+* [Buttons](#buttons)
+* [Navigation](#navigation)
+* [Table](#table)
+* [Form elements](#form-elements)
+* [Utility](#utility)
+* [Cards](#cards)
+* [Responsive helpers](#responsive-helpers)
 
 ## Buttons
 class name | purpose
@@ -15,6 +23,7 @@ class name | purpose
 .btn-light | defines a light-colored button
 .btn-secondary | defines a button with a secondary background color
 .btn-accent | defines a button with an accent background color
+.btn-circle | defines a circular button
 
 ## Navigation
 class name | purpose
@@ -25,6 +34,7 @@ class name | purpose
 .dropdown-title | defines the dropdown name
 .dropdown-content | defines the list of dropdown elements
 .navbar-fixed | defines a navbar fixed to the top of the page
+navbar-fixed-bottom | defines a navbar fixed to the bottom of the page
 .sidenav | defines sidenav content
 .sidenav.active | indicates an active sidenav
 .slide-left | defines sidenav that slides in from left
@@ -33,7 +43,6 @@ class name | purpose
 .drop | defines a sidenav that slides down from above
 .trigger | defines the trigger for a sidenav
 .close-trigger | defines the close trigger for a sidenav
-*.navbar-fixed-bottom* | *defines a navbar fixed to the bottom of the page*
 
 ## Table
 class name | purpose
@@ -80,6 +89,10 @@ class name | purpose
 .card | defines a card
 .box | defines a box
 .hoverable | defines an element that acquires a box shadow on hover
+.card-title | defines the title of a card
+.card-content | defines the content of a card
+.card-footer | defines the footer of a card
+.card-image | defines an image contained in a card
 
 ## Responsive helpers
 class name | purpose

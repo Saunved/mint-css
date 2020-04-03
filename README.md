@@ -51,7 +51,7 @@ Refer to the [CONTRIBUTING.md file](https://github.com/Saunved/mint-css/blob/mas
 
 ## Credits
 * This project is inspired by **skeleton-css**. The grid used is taken directly from [SkeletonCSS Github](https://github.com/dhg/Skeleton.)
-* A color file is included along with this project, taken from the **Materialize CSS** project found [here](https://github.com/Dogfalo/materialize). To use the color classes, simply add this to the main.scss file:  
+* A color file is included along with this project, taken from the **Materialize CSS** project found [here](https://github.com/Dogfalo/materialize). To use the color classes, simply add this to the ```src/flavors/flavor-name/flavor-name.scss``` file:  
 ```@import "partials/color.scss"```  
 You can find out how to use the color classes [here](https://materializecss.com/color.html).
 Bear in mind that this increases the project size by 32.9kb!

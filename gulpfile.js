@@ -20,6 +20,7 @@ gulp.task('sass', async function(){
      demo/flavor-name/assets/css/theme-name.css
      for each flavor-theme combination
      */
+    
     flavors.forEach(flavor => {
         themes.forEach(theme => {
             gulp.src([
