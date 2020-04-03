@@ -1,0 +1,27 @@
+/* LISTS */
+
+ul {
+    list-style-type: disc;
+    font-size: $font-p;
+    line-height: 1.3rem;
+}
+
+ol {
+    list-style-type: decimal;
+    font-size: $font-p;
+    line-height: 1.3rem;
+}
+
+ol > ul, ul > ol, ol > ol, ul > ul {
+    margin-left: 16px;
+}
+
+ul ul > li, ol ul > li{
+    list-style-type: circle;
+    font-size: $font-small;
+}
+
+ol ol > li,  ul ol > li{
+    list-style-type: lower-alpha;
+    font-size: $font-medium;
+}

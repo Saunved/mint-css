@@ -3,12 +3,13 @@ const sass = require('gulp-sass');
 const rename = require('gulp-rename');
 const inject = require('gulp-inject');
 const cleanCSS = require('gulp-clean-css');
+const debug = require('gulp-debug');
 
 sass.compiler = require('node-sass');
 
 /* Used to generate correct build files */
 const themes = ['mint', 'antique', 'amber', 'metal', 'mint-dark', 'mint-light', 'royal'];
-const flavors = ['default'];
+const flavors = ['default', 'plain'];
 
 gulp.task('demo', async () => {
 /*
@@ -59,14 +60,15 @@ gulp.task('build', async () => {
 				.pipe(gulp.dest(`./build/${flavor}`))
 				.pipe(cleanCSS())
 				.pipe(rename(`${theme}.min.css`))
-				.pipe(gulp.dest(`./build/${flavor}`));
+                .pipe(gulp.dest(`./build/${flavor}`))
+                // .debug();
 		});
 	});
 });
 
 gulp.task('run', async () => {
-	gulp.series(gulp.task('demo'), gulp.task('build'));
+	gulp.series(gulp.task('demo'), gulp.task('build')); 
 	// Gulp.task('demo')();
 	// gulp.task('build')();
-	gulp.watch(['./**/*.scss', './**./*.scss'], gulp.series(['demo', 'build']));
+	gulp.watch(['./**/*.scss', './**./*_.scss'], gulp.series(['demo', 'build']));
 });
