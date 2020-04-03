@@ -28,6 +28,7 @@ Thank you for taking the time to contribute to this project!
     - The ```flavor-name/partials``` is used to define the partial sass files for that flavor
     - The ```flavor-name/flavor-name.scss``` file is used to import the partials you wish to use. This file is added to Gulp to build the output 
 3) Javascript components are shared across flavors and are defined in ```src/components```
+4) The [class list](./docs/class-list) file contains a list of classes that must be reused across flavors where applicable 
 
 **Building**
 **Gulp** is used to compile the scss files and store the .css and .min.css output in the ```build```
@@ -48,10 +49,14 @@ You can refer to the following website to quickly create theme colors: [Colormin
 ### Adding new flavors
 * If you have an idea or you are a designer who wants to implement a flavor, please create a new flavor request [here](https://github.com/Saunved/mint-css/issues/new/choose)
 * Create new flavors quickly by simply creating a copy of the ```src/flavors/blueprint``` folder and renaming it to ```your-flavor-name```
-* **Javascript components are shared across flavors**
+* Before creating new classes, always refer to the [class list](./docs/class-list.md) to use the correct class name
 * Add the flavor to ```gulpfile.js```
 * Run ```gulp sass``` to generate ```build/flavor-name``` output css
 * Open a pull request when you are ready to add your flavor
+* **Javascript components are shared across flavors**
+
+### Adding to the class list
+* If you want to new classes to the class list file, open a pull request [here](https://github.com/Saunved/mint-css/issues/new/choose) and suggest a style enhancement
 
 ## Contributing to documentation
 * *Still working on how to structure the documentation!*

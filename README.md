@@ -25,7 +25,12 @@ Full support for dark themes and contrast-conscious typography.
 ![alt text](./themes_ui.gif "Themes GIF")
 
 ## What are flavors?
-A flavor is a type of UI. E.g. "Material design" is a flavor, or "Flat" is a flavor. I decided not to call it a theme, since that term is used to define the color themes in this project. Flavors contain partials (css code for different UI elements). **All flavors share javascript components that add functionality to the css.**
+A flavor is a type of UI. E.g. "Material design" is a flavor, or "Flat" is a flavor.
+
+The idea behind flavors is simple:  
+If you want to change your website's UI (say from Material to Flat), all you have to do to is change **one** stylesheet reference! This can be achieved by maintaining a standard [class-list](./docs/class-list.md) across flavors. 
+
+Flavors contain partials (css code for different UI elements) and **share javascript components that add functionality to that css.**
 
 You can create your own flavors. You can even copy and modify some partials from the existing flavors if you wish to. To start creating flavors quickly, you can create a copy of the existing ```blueprint``` flavor, and modify it however you wish to. You can refer to the ```default``` flavor to get an idea of the implementation.
 
