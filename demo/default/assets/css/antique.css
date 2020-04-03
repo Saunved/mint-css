@@ -847,7 +847,7 @@ section {
   vertical-align: middle;
   background-color: #daca9e;
   color: #111;
-  border: none; }
+  border: 1px solid #777; }
   .tiny:hover {
     background-color: #d3c08b; }
 
