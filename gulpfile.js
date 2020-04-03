@@ -3,16 +3,23 @@ const sass = require('gulp-sass');
 const rename = require('gulp-rename');
 const inject = require('gulp-inject');
 const cleanCSS = require('gulp-clean-css');
-const debug = require('gulp-debug');
 
 sass.compiler = require('node-sass');
 
+/* Used to generate correct build files */
 const themes = ['mint','antique', 'amber', 'metal', 'mint-dark', 'mint-light', 'royal']
 const flavors = ['default']
 
 
 gulp.task('sass', async function(){
 
+    /*
+     * This gulp task creates the following files: 
+     build/flavor-name/theme-name.css 
+     build/flavor-name/theme-name.min.css
+     demo/flavor-name/assets/css/theme-name.css
+     for each flavor-theme combination
+     */
     flavors.forEach(flavor => {
         themes.forEach(theme => {
             gulp.src([
@@ -22,7 +29,6 @@ gulp.task('sass', async function(){
                 starttag: '// inject:{{ext}}',
                 endtag: '// endinject',
                 transform: function(filepath){
-                    console.log(filepath);
                     return `@import "${filepath}";\n@import "./src/flavors/${flavor}/${flavor}.scss";`;
                 }
             }))
