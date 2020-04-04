@@ -4,6 +4,9 @@
     color: $color-primary-text;
     background-color: $color-primary;
     padding: 12px 22px;
+    margin-top: 8px;
+    margin-right: 8px;
+    margin-bottom: 8px;
     @if(is-dark($color-base)){
         border: 1px solid #555;
     }

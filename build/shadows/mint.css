@@ -387,7 +387,7 @@ nav {
       text-transform: uppercase;
       margin-left: 8px;
       font-size: 1rem;
-      color: #00e47d;
+      color: #009250;
       display: inline-block;
       padding: 8px; }
     nav .navigation a:visited {
@@ -745,9 +745,11 @@ ol ol > li, ul ol > li {
     text-transform: uppercase;
     line-height: 3.5rem;
     display: block;
-    font-weight: 300; }
+    font-weight: 300;
+    padding-bottom: 0px; }
     .sidenav a:hover {
-      color: white; }
+      color: white;
+      border: none; }
 
 .sidenav.active {
   opacity: 1; }
@@ -799,7 +801,8 @@ ol ol > li, ul ol > li {
 .sidenav.active.slide-left {
   height: 100%;
   z-index: 1000;
-  transform: translate(0%, 0%); }
+  transform: translate(0%, 0%);
+  border-radius: 0px; }
 
 .sidenav.active.slide-right {
   height: 100%;
@@ -807,4 +810,5 @@ ol ol > li, ul ol > li {
   transform: translate(0%, 0%); }
 
 .close-trigger {
+  box-shadow: 5px 5px 4px #007e45;
   margin: 16px; }

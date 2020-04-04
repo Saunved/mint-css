@@ -250,6 +250,9 @@ blockquote {
   color: #eee;
   background-color: #660159;
   padding: 12px 22px;
+  margin-top: 8px;
+  margin-right: 8px;
+  margin-bottom: 8px;
   border: 1px solid #bbb; }
   .btn:hover {
     background-color: #33012d; }
