@@ -1,6 +1,6 @@
 This file contains a list of CSS classes used in this repository along with information about them. 
 **It is intended to serve as a basis for naming classes across flavors to retain consistency.** 
-The implementation of classes is left upto the author. It is recommended that you define ALL the classes specified in the class list to ensure smoother migrations from existing flavors.
+The implementation of classes is left upto the author of each flavor. It is recommended that you define ALL the classes specified in the class list to ensure smoother migrations from existing flavors.
 
 This class list **does not** deal with layouts since they do not factor into how various elements are styled.
 
