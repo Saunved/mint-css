@@ -9,7 +9,7 @@ sass.compiler = require('node-sass');
 
 /* Used to generate correct build files */
 const themes = ['mint', 'antique', 'amber', 'metal', 'mint-dark', 'mint-light', 'royal'];
-const flavors = ['default', 'plain'];
+const flavors = ['default', 'shadows'];
 
 gulp.task('demo', async () => {
 /*
@@ -72,3 +72,5 @@ gulp.task('run', async () => {
 	// gulp.task('build')();
 	gulp.watch(['./**/*.scss', './**./*_.scss'], gulp.series(['demo', 'build']));
 });
+
+gulp.watch(['./src/flavors/**/*.scss', './src/flavors/**/*_.scss'], gulp.series(['demo']));

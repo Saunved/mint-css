@@ -1,0 +1,60 @@
+$font-h1: 3rem;
+$font-h2: 2.5rem;
+$font-h3: 2rem;
+$font-h4: 1.7rem;
+$font-h5: 1.4rem;
+$font-h6: 1.2rem;
+$font-p: 1.05rem;
+$font-medium: 1rem;
+$font-small: 0.9rem;
+$font-tiny: 0.8rem;
+$base-font: 'Poppins', 'serif';
+
+$phone-above: 0px;
+$tablet-portrait-above: 600px;
+$tablet-landscape-above: 900px;
+$desktop-above: 1440px;
+$desktop-large-above: 1800px;
+
+$color-dark: #111;
+$color-light: #eee;
+$color-white: #fff;
+$color-light-gray: #ccc;
+$color-medium-gray: #aaa;
+$color-light-grey: $color-light-gray;
+$color-medium-grey: $color-light-gray;
+
+@mixin clearfix{
+    &::after {
+    content: '';
+    clear: both;
+    display: table;
+  }
+}
+
+@function is-dark($color){
+    @if(lightness($color) > 52){
+        @return false;
+    }
+    @else {
+        @return true;
+    }
+}
+
+@function text-contrast($color){
+    @if (not is-dark($color)){
+        @return #111;
+    }
+    @else {
+        @return #eee;
+    }
+}
+
+@function get-link-color($color){
+    @if(not is-dark($color)){
+        @return #006fcf;
+    }
+    @else {
+        @return #b3dbff;
+    }
+}

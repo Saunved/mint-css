@@ -3,7 +3,19 @@
 * {
   outline-color: #7a629e; }
 
-html * {
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   font-family: "Noto Sans JP"; }
 
 html, body, section, menu, summary, footer, header, article, aside, details {
@@ -43,7 +55,6 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-family: sans-serif;
   vertical-align: baseline; }
 
 button {
@@ -299,6 +310,9 @@ blockquote {
 .btn-rounded {
   border-radius: 24px; }
 
+.btn-no-shadow {
+  box-shadow: none; }
+
 /* NAVIGATION */
 nav {
   background-color: #660159; }
@@ -310,7 +324,7 @@ nav {
     color: #eee; }
   nav .navigation {
     padding-top: 0.6rem;
-    padding-bottom: 0.4rem;
+    padding-bottom: 0.5rem;
     padding-right: 2rem;
     padding-left: 2rem;
     z-index: 1000; }
@@ -695,7 +709,7 @@ ol ol > li, ul ol > li {
 
 /** CARD **/
 .card {
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 #dfdcd1;
+  box-shadow: 0px 0px 12px 4px #d5d1c2;
   padding: 8px;
   background-color: #f8f8f5; }
 
@@ -704,7 +718,7 @@ ol ol > li, ul ol > li {
   padding: 8px; }
 
 .hoverable:hover {
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 #00000030; }
+  box-shadow: 0px 0px 12px 4px #d5d1c2; }
 
 /* JS-BASED COMPONENTS */
 .sidenav {

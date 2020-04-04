@@ -1,5 +1,5 @@
 This file contains a list of CSS classes used in this repository along with information about them. 
-**It is intended to serve as a basis for naming classes across flavors to retain consistency.**
+**It is intended to serve as a basis for naming classes across flavors to retain consistency.** Whenever you are implementing a new flavor or migrating an existing framework across, ensure that these classes are used wherever applicable. 
 
 ## Table of contents
 * [Buttons](#buttons)
@@ -7,6 +7,8 @@ This file contains a list of CSS classes used in this repository along with info
 * [Table](#table)
 * [Form elements](#form-elements)
 * [Utility](#utility)
+    - [General utility classes](#general-utility-classes)
+    - [Extra utility classes](#extra-utility-classes)
 * [Cards](#cards)
 * [Responsive helpers](#responsive-helpers)
 
@@ -24,6 +26,7 @@ class name | purpose
 .btn-secondary | defines a button with a secondary background color
 .btn-accent | defines a button with an accent background color
 .btn-circle | defines a circular button
+.btn-no-shadow | specify a button without any shadow (even on hover)
 
 ## Navigation
 class name | purpose
@@ -34,7 +37,7 @@ class name | purpose
 .dropdown-title | defines the dropdown name
 .dropdown-content | defines the list of dropdown elements
 .navbar-fixed | defines a navbar fixed to the top of the page
-navbar-fixed-bottom | defines a navbar fixed to the bottom of the page
+.navbar-fixed-bottom | defines a navbar fixed to the bottom of the page
 .sidenav | defines sidenav content
 .sidenav.active | indicates an active sidenav
 .slide-left | defines sidenav that slides in from left
@@ -65,6 +68,7 @@ class name | purpose
 
 
 ## Utility
+### General utility classes
 class name | purpose
 -----------|-----------
 .left | left float
@@ -72,7 +76,7 @@ class name | purpose
 .left-align | text align to the left
 .right-align | text align to the right
 .center | text-align to the center, vertical align to middle
-.shadow | indicates a bottom shadow on an element
+.shadow | indicates a **bottom shadow** on an element
 .clearfix | indicates float clearfix
 .inline | indicates ```display:inline-block```
 .transparent | unsets the background color
@@ -82,6 +86,21 @@ class name | purpose
 .primary-text | primary text color
 .secondary-text | secondary text color
 .accent-text | accent text color
+
+### Extra utility classes
+class name | purpose
+-----------|-----------
+depth-1 | indicates an element with box-shadow level 1 (least)
+depth-2 | indicates an element with box-shadow level 2
+depth-3 | indicates an element with box-shadow level 3
+depth-4 | indicates an element with box-shadow level 4
+depth-5 | indicates an element with box-shadow level 5
+depth-6 | indicates an element with box-shadow level 6
+depth-7 | indicates an element with box-shadow level 7
+depth-8 | indicates an element with box-shadow level 8
+depth-9 | indicates an element with box-shadow level 9
+depth-10 | indicates an element with box-shadow level 10 (most)
+
 
 ## Cards
 class name | purpose

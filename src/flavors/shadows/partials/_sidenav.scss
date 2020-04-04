@@ -1,0 +1,101 @@
+// @import "../../main.scss";
+
+.sidenav{
+    @if(is-dark($color-primary)){
+        background: darken($color-primary, 5%);
+    }
+    @else{
+        background: lighten($color-primary, 5%);
+    }
+    position: fixed;
+    padding: 24px;
+    opacity: 0;
+    transition-duration: 0.25s;
+    height: 100%;
+    color: $color-primary-text;
+    a{
+        border: none;
+        color: $color-primary-text;
+        font-size: $font-h5;
+        text-transform: uppercase;
+        line-height: $font-h5*2.5;
+        display: block;
+        font-weight: 300;
+
+        &:hover{
+            color: lighten($color-primary-text, 10%);
+        }
+    }
+}
+
+.sidenav.active{
+    opacity: 1;
+}
+
+.sidenav.plain{
+    width: 100%;
+    display: none;
+    top: 0;
+    left: 0;
+}
+
+.sidenav.drop{
+    width: 100%;
+    transform: translate(0%, -100%);
+    top: 0;
+    left: 0;
+}
+
+.sidenav.slide-left{
+    width: 100%;
+    transform: translate(-100%, 0%);
+    top: 0;
+    left: 0;
+}
+
+.sidenav.slide-right{
+    width: 100%;
+    transform: translate(100%, 0%);
+    top: 0;
+    right: 0;
+}
+
+.sidenav.rise{
+    width: 100%;
+    transform: translate(0%, 100%);
+    bottom: 0;
+    right: 0;
+}
+
+.sidenav.active.plain{
+    display: block;
+    z-index: 1000;
+}
+
+.sidenav.active.drop{
+    height: 100%;
+    z-index: 1000;
+    transform: translate(0%, 0%);
+}
+
+.sidenav.active.rise{
+    height: 100%;
+    z-index: 1000;
+    transform: translate(0%, 0%);
+}
+
+.sidenav.active.slide-left{
+    height: 100%;
+    z-index: 1000;
+    transform: translate(0%, 0%);
+}
+
+.sidenav.active.slide-right{
+    height: 100%;
+    z-index: 1000;
+    transform: translate(0%, 0%);
+}
+
+.close-trigger{
+    margin: 16px;
+}

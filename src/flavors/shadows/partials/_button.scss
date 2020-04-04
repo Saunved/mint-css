@@ -1,0 +1,181 @@
+/* BUTTONS */
+.btn{
+    border-radius: 4px;
+    color: $color-primary-text;
+    background-color: $color-primary;
+    padding: 12px 22px;
+    margin: 8px 8px 8px 0px;
+    @if(is-dark($color-base)){
+        border: 1px solid #eee;
+        box-shadow: 4px 4px 2px darken($color-base, 10%);
+    }
+    @else{
+        border: 1px solid #111;
+        box-shadow: 4px 4px 2px darken($color-base, 20%);
+    }
+
+    &:hover{
+        @if(is-dark($color-base)){
+            background-color: lighten($color-primary, 5%);
+            box-shadow: none;
+        }
+        @else{
+            background-color: darken($color-primary, 5%);
+            box-shadow: none;
+        }
+    }
+}
+
+.btn.btn-outline{
+    @if(is-dark($color-base)){
+        background-color: $color-dark;
+        color: lighten($color-primary, 60%);
+    }
+    @else{
+        background-color: $color-white;
+        color: darken($color-primary, 50%);
+    }
+    border: 1px solid $color-primary;
+
+    &:hover{
+        @if (is-dark($color-primary)){
+            @if(is-dark($color-base)){
+                background-color: lighten($color-dark, 4%);
+            }
+            @else{
+                background-color: darken($color-white, 4%);
+            }
+        }
+        @else{
+            @if(is-dark($color-base)){
+                background-color: lighten($color-dark, 4%);
+            }
+            @else{
+                background-color: darken($color-white, 4%);
+            }
+        }
+    }
+}
+
+.btn-small{
+    padding: 8px 18px;
+}
+
+.btn-large{
+    padding: 16px 26px;
+}
+
+.btn-float{
+    box-shadow: 0 5px 5px -5px #333;
+    &:hover{
+        box-shadow: 0px 0px 0px;
+    }
+}
+
+.btn-light{
+    color: $color-dark;
+    background-color: $color-white;
+
+    &:hover{
+        background-color: darken($color-white, 6%);
+        // border: 1px solid black;
+    }
+}
+
+.btn-secondary{
+    color: $color-secondary-text;
+    background: $color-secondary;
+    &:hover{
+        @if (is-dark($color-secondary)){
+            background-color: lighten($color-secondary, 6%);
+        }
+        @else{
+            background-color: darken($color-secondary, 6%);
+        }
+    }
+}
+
+.btn-secondary.btn-outline{
+    @if(is-dark($color-base)){
+        background-color: $color-dark;
+        color: lighten($color-secondary, 40%);
+    }
+    @else{
+        background-color: $color-white;
+        color: darken($color-secondary, 30%);
+    }
+    border: 1px solid $color-secondary;
+
+    &:hover{
+        @if (is-dark($color-secondary)){
+            @if(is-dark($color-base)){
+                background-color: lighten($color-dark, 4%);
+            }
+            @else{
+                background-color: darken($color-white, 4%);
+            }
+        }
+        @else{
+            @if(is-dark($color-base)){
+                background-color: lighten($color-dark, 4%);
+            }
+            @else{
+                background-color: darken($color-white, 4%);
+            }
+        }
+    }
+}
+
+.btn-accent{
+    color: $color-accent-text;
+    background: $color-accent;
+    &:hover{
+        @if (is-dark($color-accent)){
+            background-color: lighten($color-accent, 6%);
+        }
+        @else{
+            background-color: darken($color-accent, 6%);
+        }
+    }
+}
+
+.btn-accent.btn-outline{
+    @if(is-dark($color-base)){
+        background-color: $color-dark;
+        color: lighten($color-accent, 40%);
+    }
+    @else{
+        background-color: $color-white;
+        color: darken($color-accent, 30%);
+    }
+    border: 1px solid $color-accent;
+
+    &:hover{
+        @if (is-dark($color-accent)){
+            @if(is-dark($color-base)){
+                background-color: lighten($color-dark, 4%);
+            }
+            @else{
+                background-color: darken($color-white, 4%);
+            }
+        }
+        @else{
+            @if(is-dark($color-base)){
+                background-color: lighten($color-dark, 4%);
+            }
+            @else{
+                background-color: darken($color-white, 4%);
+            }
+        }
+    }
+}
+
+.btn-raise{
+    &:hover{
+        box-shadow: 0 5px 5px -5px #111;
+    }
+}
+
+.btn-rounded{
+    border-radius: 24px;
+}

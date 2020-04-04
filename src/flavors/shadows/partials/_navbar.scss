@@ -1,0 +1,97 @@
+/* NAVIGATION */
+@import "dropdown";
+
+@mixin navigation {
+    @include dropdown;
+
+        padding-top: 0.6rem;
+        padding-bottom: 0.4rem;
+        padding-right: 2rem;
+        padding-left: 2rem;
+        z-index: 1000;
+
+    a{
+        &:link{
+            all: unset;
+            text-transform: uppercase;
+            margin-left: 8px;
+            font-size: $font-medium;
+            @if(is-dark($color-primary)){
+                color: lighten($color-primary, 10%);
+            }
+            @else{
+                color: darken($color-primary, 15%);
+            }
+            display: inline-block;
+            padding: 8px;
+        }
+
+        &:visited{
+            @if(is-dark($color-primary)){
+                color: darken($color-primary, 10%);
+            }
+            @else{
+                color: lighten($color-primary, 10%);
+            }
+        }
+
+        &:hover{
+            cursor: pointer;
+            @if(is-dark($color-base)){
+                color: darken($color-primary, 4%);
+            }
+            @else{
+                color: lighten($color-primary, 4%);
+            }
+        }
+
+        &:first-child{
+            margin-left: 0px;
+        }
+
+        &:last-child{
+            margin-right: 16px;
+        }
+    }
+}
+
+nav {
+
+    background-color: $color-primary-text;
+
+    img.logo{
+        font-size: 20px; 
+    }
+
+    :not(img).logo{
+        line-height: 30px;
+        font-size: 24px;
+        @if(is-dark($color-primary)){
+            color: darken($color-primary, 10%);
+        }
+        @else{
+            color: lighten($color-primary, 10%);
+        }
+    }
+
+    .navigation{
+        @include navigation;
+    }
+
+    .navbar-fixed{
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        background-color: $color-primary-text;
+        width: 100%;
+
+        a:last-child{
+            padding-right: 8px;
+        }
+
+        span:last-child{
+            padding-right: 16px;
+        }
+    }
+
+}

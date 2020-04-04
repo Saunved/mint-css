@@ -48,10 +48,11 @@ You can refer to the following website to quickly create theme colors: [Colormin
 
 ### Adding new flavors
 * If you have an idea or you are a designer who wants to implement a flavor, please create a new flavor request [here](https://github.com/Saunved/mint-css/issues/new/choose)
-* Create new flavors quickly by simply creating a copy of the ```src/flavors/blueprint``` folder and renaming it to ```your-flavor-name```
+* Create new flavors quickly by simply creating a copy of any of the existing flavors, e.g. ```src/flavors/default``` folder and renaming it to ```your-flavor-name```
 * Before creating new classes, always refer to the [class list](./docs/class-list.md) to use the correct class name
 * Add the flavor to ```gulpfile.js```
-* Run ```gulp sass``` to generate ```build/flavor-name``` output css
+* Run ```gulp build``` to generate ```build/flavor-name``` output css
+* Run ```gulp demo``` to generate ```demo/flavor-name/assets/css``` output css
 * Open a pull request when you are ready to add your flavor
 * **Javascript components are shared across flavors**
 
