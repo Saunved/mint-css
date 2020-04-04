@@ -1,5 +1,8 @@
 This file contains a list of CSS classes used in this repository along with information about them. 
-**It is intended to serve as a basis for naming classes across flavors to retain consistency.** Whenever you are implementing a new flavor or migrating an existing framework across, ensure that these classes are used wherever applicable. 
+**It is intended to serve as a basis for naming classes across flavors to retain consistency.** 
+The implementation of classes is left upto the author. It is recommended that you define ALL the classes specified in the class list to ensure smoother migrations from existing flavors.
+
+This class list **does not** deal with layouts since they do not factor into how various elements are styled.
 
 ## Table of contents
 * [Buttons](#buttons)
@@ -9,16 +12,21 @@ This file contains a list of CSS classes used in this repository along with info
 * [Utility](#utility)
     - [General utility classes](#general-utility-classes)
     - [Extra utility classes](#extra-utility-classes)
+* [Elements](#elements)
+* [Modal](#modal)
+* [Media](#media)
 * [Cards](#cards)
+* [Color classes](#color-classes)
 * [Responsive helpers](#responsive-helpers)
 
 ## Buttons
-class name | purpose
+Class | Purpose
 -----------|-----------
-.btn | defines a button
-.btn-outline | defines a button with an outline
+.btn | defines a normal button
 .btn-small | defines a small button
 .btn-large | defines a large button
+.btn-default | defines the default button
+.btn-outline | defines a button with an outline
 .btn-float | defines a button with a box shadow that loses that box shadow on hover
 .btn-raise | defines a button that acquires a box shadow on hover
 .btn-rounded | defines a button with rounded corners
@@ -27,10 +35,10 @@ class name | purpose
 .btn-secondary | defines a button with a secondary background color
 .btn-accent | defines a button with an accent background color
 .btn-circle | defines a circular button
-.btn-no-shadow | specify a button without any shadow (even on hover)
+.btn-group | defines a wrapper for a group of buttons
 
 ## Navigation
-class name | purpose
+Class | Purpose
 -----------|-----------
 .navigation | defines a navigation menu wrapper
 .logo | defines a logo wrapper
@@ -49,7 +57,7 @@ class name | purpose
 .close-trigger | defines the close trigger for a sidenav
 
 ## Table
-class name | purpose
+Class | Purpose
 -----------|-----------
 .wrapped | defines a table with a border around it
 .cells | defines a table with borders around each cell
@@ -58,61 +66,105 @@ class name | purpose
 .highlight | defines a table with rows that change background color on hover
 
 ## Form elements
-class name | purpose
+Class | Purpose
 -----------|-----------
-.suffix | indicates a suffix element
-.prefix | indicates a prefix element
-.presuffix | indicates suffix and prefix element
-.cover | indicates a wrapper for a form element
+.suffix | indicates a suffix element on input:text
+.prefix | indicates a prefix element on input:text
+.presuffix | indicates suffix and prefix element on input:text
+.cover | indicates a wrapper for custom radio buttons or checkboxes
 .checkmark | indicates a checked checkbox
 .dot | indicates a checked radio button
-
+.custom-input | custom input element
+.custom-file | custom file input
+.custom-select | indicates a customized select element
+.custom-toggle | indicates a customized toggle switch
+.custom-range | indicates a customized range picker
 
 ## Utility
 ### General utility classes
-class name | purpose
+Class | Purpose
 -----------|-----------
 .left | left float
 .right | right float
 .left-align | text align to the left
 .right-align | text align to the right
 .center | text-align to the center, vertical align to middle
-.shadow | indicates a *bottom shadow* on an element
 .clearfix | indicates float clearfix
-.inline | indicates ```display:inline-block```
+.clear-left | indicates a clear left
+.clear-right | indicates a clear right
+.inline-block | indicates ```display:inline-block```
 .transparent | unsets the background color
-.primary | primary background color
-.secondary | secondary background color
-.accent | accent background color
-.primary-text | primary text color
-.secondary-text | secondary text color
-.accent-text | accent text color
 
 ### Extra utility classes
-class name | purpose
+Class | Purpose
 -----------|-----------
-keep | sets display to block
-remove | sets display to none
-visible | sets visibility to visible
-hidden | sets visibility to hidden
-rounded-large | adds a large border-radius
-rounded | adds a border-radius
-border | adds a border to an element
-no-border | removes border from an element
-depth-1 | indicates an element with box-shadow level 1 (least)
-depth-2 | indicates an element with box-shadow level 2
-depth-3 | indicates an element with box-shadow level 3
-depth-4 | indicates an element with box-shadow level 4
-depth-5 | indicates an element with box-shadow level 5
-depth-6 | indicates an element with box-shadow level 6
-depth-7 | indicates an element with box-shadow level 7
-depth-8 | indicates an element with box-shadow level 8
-depth-9 | indicates an element with box-shadow level 9
-depth-10 | indicates an element with box-shadow level 10 (most)
+.display-block | sets display to block
+.display-none | sets display to none
+.visible | sets visibility to visible
+.hidden | sets visibility to hidden
+.rounded-large | adds a large border-radius
+.rounded | adds a border-radius
+.border | adds a border to an element
+.no-border | removes border from an element
+.shadow | indicates a box-shadow on an element
+.no-shadow | removes box-shadow from an element
+.uppercase | transforms text to uppercase
+.lowercase | transforms text to lowercase
+.capitalize | transforms text to capitalize
+.text-justify | indicates justified text
+.break-all | indicates a ```word-break: break-all```
+.break-word | indicates a ```word-break: keep-all```
+.tooltip | indicates tooltip that appears on hover over (usually) some icon
+.depth-1 | indicates an element with box-shadow level 1 (least)
+.depth-2 | indicates an element with box-shadow level 2
+.depth-3 | indicates an element with box-shadow level 3
+.depth-4 | indicates an element with box-shadow level 4
+.depth-5 | indicates an element with box-shadow level 5
+.depth-6 | indicates an element with box-shadow level 6
+.depth-7 | indicates an element with box-shadow level 7
+.depth-8 | indicates an element with box-shadow level 8
+.depth-9 | indicates an element with box-shadow level 9
+.depth-10 | indicates an element with box-shadow level 10 (most)
 
+
+## Elements
+Class | Purpose
+-----------|-----------
+.breadcrumb | indicates a wrapper for a breadcrumb element
+.progress | indicates a wrapper for a progress bar
+.progress-bar | indicates a progress bar
+.progress-bar-success | indicates a (usually) green progress bar
+.progress-bar-info | indicates a (usually) blue progress bar
+.progress-bar-warning | indicates a (usually) yellow progress bar
+.progress-bar-danger | indicates a (usually) red progress bar
+.badge | indicates a badge (a small element with text inside, e.g. unread count)
+.badge-dark | indicates a dark badge
+.badge-light | indicates a light badge
+.badge-success | indicates a (usually) green badge
+.badge-info | indicates a (usually) blue badge
+.badge-warning | indicates a (usually) blue badge
+.badge-danger | indicates a (usually) red 
+.toast | indicates a toast
+
+
+## Modal
+Class | Purpose
+-----------|-----------
+.modal  | defines a modal
+.modal-close | defines the close button for a modal
+.modal-header | defines a modal header
+.modal-content | defines a modal's content area
+.modal-footer | defines a modal's footer
+
+## Media
+Class | Purpose
+-----------|-----------
+.img-responsive | indicates a responsive image
+.img-circle | indicates a circular image
+.img-thumbnail | indicates a thumbnail image
 
 ## Cards
-class name | purpose
+Class | Purpose
 -----------|-----------
 .card | defines a card
 .box | defines a box
@@ -122,8 +174,27 @@ class name | purpose
 .card-footer | defines the footer of a card
 .card-image | defines an image contained in a card
 
+## Color classes
+Class | Purpose
+-----------|-----------
+.primary | primary background color
+.secondary | secondary background color
+.accent | accent background color
+.primary-text | primary text color
+.secondary-text | secondary text color
+.accent-text | accent text color
+.success | (usually) green background color
+.success-text | (usually) green text color
+.danger | (usually) red background color
+.danger-text | (usually) red text color
+.info | (usually) blue background color
+.info-text | (usually) blue text color
+.warning | (usually) yellow background color
+.warning-text | (usually) yellow text color
+
+
 ## Responsive helpers
-class name | purpose
+Class | Purpose
 -----------|-----------
 .only-phone | content will be visible only on phones
 .above-tablet-portrait | content will be visible only above tablet portrait width

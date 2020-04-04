@@ -625,7 +625,7 @@ label.cover {
   clear: both;
   display: table; }
 
-.inline {
+.inline-block {
   display: inline-block; }
 
 .transparent {
