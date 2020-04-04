@@ -12,7 +12,7 @@ It is useful for web designers as well as developers.
 * [Credits](#credits)
 
 ## Quickstart
-You can view the project live here: [mint-css demo](#https://saunved.github.io/mint-css/#)
+You can view the project live here: [mint-css demo](https://saunved.github.io/mint-css)
 
 1. To view offline, download the latest release [here](https://github.com/Saunved/mint-css/releases)
 2. Open the ```docs/index.html``` file
