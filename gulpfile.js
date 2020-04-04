@@ -3,7 +3,12 @@ const sass = require('gulp-sass');
 const rename = require('gulp-rename');
 const inject = require('gulp-inject');
 const cleanCSS = require('gulp-clean-css');
+const uglify = require('gulp-uglify-es').default;
+const concat = require('gulp-concat');
 const debug = require('gulp-debug');
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const cssNano = require('cssnano');
 
 sass.compiler = require('node-sass');
 
@@ -35,6 +40,12 @@ gulp.task('demo', async () => {
 				.pipe(gulp.dest(`./docs/${flavor}/assets/css`));
 		});
 	});
+
+	gulp.src(['./src/components/*.js', './docs/js/CodeViewer/*.js'])
+	.pipe(concat('scripts.js'))
+	.pipe(uglify())
+	.pipe(gulp.dest('./docs/js'))
+
 });
 
 gulp.task('build', async () => {
@@ -56,20 +67,24 @@ gulp.task('build', async () => {
 					}
 				}))
 				.pipe(sass().on('error', sass.logError))
+				.pipe(postcss([autoprefixer()]))
 				.pipe(rename(`${theme}.css`))
-				.pipe(gulp.dest(`./build/${flavor}`))
-				.pipe(cleanCSS())
+				.pipe(gulp.dest(`./build/css/${flavor}`))
+				.pipe(postcss([cssNano()]))
 				.pipe(rename(`${theme}.min.css`))
-                .pipe(gulp.dest(`./build/${flavor}`))
-                // .debug();
+                .pipe(gulp.dest(`./build/css/${flavor}`))
 		});
 	});
+
+	// You can pass specific js files here to only keep those in the output
+	gulp.src('./src/components/*.js')
+	.pipe(concat('scripts.min.js'))
+	.pipe(uglify())
+	.pipe(gulp.dest('./build/js'))
 });
 
 gulp.task('run', async () => {
 	gulp.series(gulp.task('demo'), gulp.task('build')); 
-	// Gulp.task('demo')();
-	// gulp.task('build')();
 	gulp.watch(['./**/*.scss', './**./*_.scss'], gulp.series(['demo', 'build']));
 });
 
