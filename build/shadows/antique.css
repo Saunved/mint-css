@@ -345,7 +345,7 @@ nav {
         font-size: 1rem;
         display: inline-block;
         padding: 8px;
-        color: #cfc08b;
+        color: #ad9747;
         background-color: #111;
         padding-left: 0px;
         cursor: pointer; }
@@ -391,7 +391,7 @@ nav {
       display: inline-block;
       padding: 8px; }
     nav .navigation a:visited {
-      color: #cfc08b; }
+      color: #ad9747; }
     nav .navigation a:hover {
       cursor: pointer;
       color: #c6b575; }

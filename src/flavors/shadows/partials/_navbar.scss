@@ -27,8 +27,8 @@
         }
 
         &:visited{
-            @if(is-dark($color-primary-text)){
-                color: lighten($color-primary, 10%);
+            @if(is-dark($color-primary)){
+                color: darken($color-primary, 6%);
             }
             @else{
                 color: darken($color-primary, 10%);
