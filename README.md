@@ -1,6 +1,6 @@
 ## Intro
 mint-css is boilerplate CSS that you can use for prototyping, theming, or even use directly in your projects. 
-It is useful for web designers as well as developers.
+It is useful for web designers as well as developers. View a demo live: [mint-css demo](https://saunved.github.io/mint-css)
 
 ## Table of contents
 
