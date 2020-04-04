@@ -5,39 +5,33 @@ It is useful for web designers as well as developers.
 ## Table of contents
 
 * [Quickstart](#quickstart)
-* [Themes and flavors](#themes-and-flavors)
+* [Quick theming](#quick-theming)
 * [What are flavors?](#what-are-flavors)
 * [Why this project?](#why-this-project)
 * [How you can contribute](#how-you-can-contribute)
 * [Credits](#credits)
 
 ## Quickstart
-*src = source code, build = final output, demo = demo webpage and documentation*
-1. Download the latest release [here](https://github.com/Saunved/mint-css/releases)
-2. Open the ```docs/default/index.html``` file
-3. You will be able to view the predefined themes by using the "Switch theme" buttons, as shown in the GIF below
+You can view the project live here: [mint-css demo](#https://saunved.github.io/mint-css/#)
 
-## Themes and flavors
+1. To view offline, download the latest release [here](https://github.com/Saunved/mint-css/releases)
+2. Open the ```docs/index.html``` file
+
+## Color themes
 
 **Themes determine the colors used in your application.**
-Specify just 4 colors in your theme file and you're ready to go!  
-Full support for dark themes and contrast-conscious typography.  
+You can define these colors yourself.
+All styling is created with dark themes and contrast conscious colors in mind.
 
 ![alt text](./themes_flavors_ui.gif "Themes GIF")
 
 ## What are flavors?
-**Flavors determine how your UI is styled.**
-
-A flavor is a type of UI. E.g. "Material design" is a flavor, or "Flat" is a flavor.
+**Flavors determine how your UI is styled.**  
 
 The idea behind flavors is simple:  
-**If you want to change your website's UI (say from Material to Flat), all you have to do to is change one stylesheet reference.** This can be achieved by maintaining a consistent set of [classes](./docs/class-list.md) across flavors.
+**If you want to change your website's UI (say from Material to Flat), all you have to do to is change one stylesheet reference.** This can be achieved by maintaining a consistent set of CSS classes across flavors. This class list can be found [here](./docs/class-list.md)
 
-Flavors contain partials (css code for different UI elements) and **share javascript components that add functionality to that css.**
-
-You can create your own flavors. You can even copy and modify some partials from the existing flavors. To start creating flavors quickly, you can create a copy of any of the existing flavors and modify it however you wish to. You can refer to the ```default``` flavor to get an idea of the implementation.
-
-A list of class names that you should ideally retain for consistency is provided in this file: [docs/class-list.md](./docs/class-list.md).
+Flavors contain partials (css code for different UI elements) and *usually* share javascript components. You can create your own flavors. You can even copy and modify some partials from the existing flavors. To start creating flavors quickly, you can create a copy of any of the existing flavors and modify it however you wish to. You can refer to the ```default``` flavor to get an idea of the implementation.
 
 ## Why this project?
 * The focus is on being able to make different themes based on various color palettes for prototyping. This is super useful for designers and front-end devs to check how different color combinations might look before implementing them in their existing projects.

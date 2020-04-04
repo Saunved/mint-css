@@ -43,7 +43,7 @@ You can refer to the following website to quickly create theme colors: [Colormin
 
 * Create a theme under ```src/themes/theme-name```
 * Update ```gulpfile.js``` and add the theme to the array of themes
-* Run ```gulp sass``` in the command line and update the stylesheet reference in ```index.html``` to view your new theme
+* Run ```gulp``` in the command line and update the stylesheet reference in ```index.html``` to view your new theme
 * Open a pull request if you want to add this theme to the main branch
 
 ### Adding new flavors
@@ -51,8 +51,7 @@ You can refer to the following website to quickly create theme colors: [Colormin
 * Create new flavors quickly by simply creating a copy of any of the existing flavors, e.g. ```src/flavors/default``` folder and renaming it to ```your-flavor-name```
 * Before creating new classes, always refer to the [class list](./docs/class-list.md) to use the correct class name
 * Add the flavor to ```gulpfile.js```
-* Run ```gulp build``` to generate ```build/flavor-name``` output css
-* Run ```gulp demo``` to generate ```docs/flavor-name/assets/css``` output css
+* Run ```gulp``` in the command line to generate all required build files
 * Open a pull request when you are ready to add your flavor
 * **Javascript components are shared across flavors**
 
