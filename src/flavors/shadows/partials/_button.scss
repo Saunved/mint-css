@@ -5,6 +5,7 @@
     background-color: $color-primary;
     padding: 12px 22px;
     margin: 8px 8px 8px 0px;
+
     @if(is-dark($color-base)){
         border: 1px solid #eee;
         box-shadow: 4px 4px 2px darken($color-base, 10%);
