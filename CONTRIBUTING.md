@@ -12,6 +12,7 @@ Thank you for taking the time to contribute to this project!
 * [Contributing to documentation](#contributing-to-documentation)
 * [Help required with](#help-required-with)
 * [Quick how-to](#quick-how-to)
+* [Allied tools](#allied-tools)
 
 ## Reporting bugs
 * Check if the bug was reported previously by searching under [Issues](https://github.com/Saunved/mint-css/issues) on Github
@@ -74,9 +75,17 @@ You can work on the existing code in any of the following folders:
 
 **To create partials**
 1. Create a new file in the ```src/flavors/flavor-name/partials``` folder called ```your-partial-name.scss```
-2. Link this partial in the ```src/main.scss``` file
+2. Link this partial in the ```src/flavors/flavor-name/flavor-name.scss``` file
+3. Build output css by executing ```gulp``` in the command line
 
 **To create JS-based components**
 1. Create a new component in ```src/components``` called ```your-component-name```
 2. Create a scss file in the relevant ```src/flavors/flavor-name``` folder and link it in ```src/main.scss```
-3. Link the JS file in ```src/index.html```
+3. Build output js by executing ```gulp``` in the command line
+
+## Allied tools
+Here are a few tools that could be developed to help make this project easier to use and implement
+1) Editor extensions that autocomplete from the class list, e.g for VSCode or Atom
+2) A class list parser that goes through the output css to determine which classes have not been implemented
+3) A migration tool that finds which class differences between flavors and warns the end user about missing implementations
+4) A scaffold generator for sass partials

@@ -63,6 +63,10 @@ function jsTask(cb){
 		.pipe(uglify())
 		.pipe(gulp.dest('./build/js'));
 
+		gulp.src('./src/components/*.js')
+		.pipe(concat('scripts.js'))
+		.pipe(gulp.dest('./build/js'));
+
 		cb();
 }
 
