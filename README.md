@@ -14,7 +14,7 @@ It is useful for web designers as well as developers.
 ## Quickstart
 *src = source code, build = final output, demo = demo webpage and documentation*
 1. Download the latest release [here](https://github.com/Saunved/mint-css/releases)
-2. Open the ```demo/default/index.html``` file
+2. Open the ```docs/default/index.html``` file
 3. You will be able to view the predefined themes by using the "Switch theme" buttons, as shown in the GIF below
 
 ## Themes and flavors

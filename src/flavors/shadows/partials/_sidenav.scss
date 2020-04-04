@@ -21,9 +21,12 @@
         line-height: $font-h5*2.5;
         display: block;
         font-weight: 300;
+        padding-bottom: 0px;
 
         &:hover{
             color: lighten($color-primary-text, 10%);
+            border: none;
+            
         }
     }
 }
@@ -88,6 +91,7 @@
     height: 100%;
     z-index: 1000;
     transform: translate(0%, 0%);
+    border-radius: 0px;
 }
 
 .sidenav.active.slide-right{
@@ -97,5 +101,11 @@
 }
 
 .close-trigger{
+    @if(is-dark($color-primary)){
+        box-shadow: 5px 5px 4px darken($color-primary, 10%);
+    }
+    @else{
+        box-shadow: 5px 5px 4px lighten($color-primary, 10%);
+    }
     margin: 16px;
 }

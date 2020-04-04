@@ -22,7 +22,8 @@ class name | purpose
 .btn-float | defines a button with a box shadow that loses that box shadow on hover
 .btn-raise | defines a button that acquires a box shadow on hover
 .btn-rounded | defines a button with rounded corners
-.btn-light | defines a light-colored button
+.btn-light | defines a light background button
+.btn-dark | defines a dark background button
 .btn-secondary | defines a button with a secondary background color
 .btn-accent | defines a button with an accent background color
 .btn-circle | defines a circular button
@@ -76,7 +77,7 @@ class name | purpose
 .left-align | text align to the left
 .right-align | text align to the right
 .center | text-align to the center, vertical align to middle
-.shadow | indicates a **bottom shadow** on an element
+.shadow | indicates a *bottom shadow* on an element
 .clearfix | indicates float clearfix
 .inline | indicates ```display:inline-block```
 .transparent | unsets the background color
@@ -90,6 +91,14 @@ class name | purpose
 ### Extra utility classes
 class name | purpose
 -----------|-----------
+keep | sets display to block
+remove | sets display to none
+visible | sets visibility to visible
+hidden | sets visibility to hidden
+rounded-large | adds a large border-radius
+rounded | adds a border-radius
+border | adds a border to an element
+no-border | removes border from an element
 depth-1 | indicates an element with box-shadow level 1 (least)
 depth-2 | indicates an element with box-shadow level 2
 depth-3 | indicates an element with box-shadow level 3

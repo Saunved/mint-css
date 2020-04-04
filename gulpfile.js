@@ -14,7 +14,7 @@ const flavors = ['default', 'shadows'];
 gulp.task('demo', async () => {
 /*
 * This gulp task creates the following files:
-* demo/flavor-name/assets/css/theme-name.css
+* docs/flavor-name/assets/css/theme-name.css
 * for each flavor-theme combination
 */
 
@@ -32,7 +32,7 @@ gulp.task('demo', async () => {
 				}))
 				.pipe(sass().on('error', sass.logError))
 				.pipe(rename(`${theme}.css`))
-				.pipe(gulp.dest(`./demo/${flavor}/assets/css`));
+				.pipe(gulp.dest(`./docs/${flavor}/assets/css`));
 		});
 	});
 });

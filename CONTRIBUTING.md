@@ -52,7 +52,7 @@ You can refer to the following website to quickly create theme colors: [Colormin
 * Before creating new classes, always refer to the [class list](./docs/class-list.md) to use the correct class name
 * Add the flavor to ```gulpfile.js```
 * Run ```gulp build``` to generate ```build/flavor-name``` output css
-* Run ```gulp demo``` to generate ```demo/flavor-name/assets/css``` output css
+* Run ```gulp demo``` to generate ```docs/flavor-name/assets/css``` output css
 * Open a pull request when you are ready to add your flavor
 * **Javascript components are shared across flavors**
 
@@ -72,9 +72,6 @@ You can work on the existing code in any of the following folders:
 ```src/components```  
 ```src/flavors/flavor-name/partials```    
 ```src/themes```
-
-The following files/folders are used only in the index.html file for demonstration purposes. You can edit these files/folders if you are working on the index.html file to add documentation:    
-```demo/assets```
 
 **To create partials**
 1. Create a new file in the ```src/flavors/flavor-name/partials``` folder called ```your-partial-name.scss```
