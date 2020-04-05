@@ -1,5 +1,9 @@
 ## Intro
-mint-css lets you change how every single component of your website looks by changing one stylesheet. It can make redesigning instant.  
+mint-css lets you change how every single component of your website looks by changing one stylesheet. Make redesigning instant.
+
+<p align="center">
+  <img width="600" src="./themes_flavors_ui.gif">
+</p>
 
 Use for prototyping, theming or directly in your projects. View a live demo here: [mint-css demo](https://saunved.github.io/mint-css)
 
@@ -23,8 +27,6 @@ You can view the project live here: [mint-css demo](https://saunved.github.io/mi
 **Themes determine the colors used in your application.**
 You can define these colors yourself.
 All styling is created with dark themes and contrast conscious colors in mind.
-
-![alt text](./themes_flavors_ui.gif "Themes GIF")
 
 ## What are flavors?
 **Flavors determine how your UI is styled.**  
