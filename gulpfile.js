@@ -7,6 +7,7 @@ const concat = require('gulp-concat');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssNano = require('cssnano');
+const purge = require('gulp-purgecss');
 
 sass.compiler = require('node-sass');
 
@@ -90,6 +91,8 @@ function demoTask(cb) {
 					}
 				}))
 				.pipe(sass().on('error', sass.logError))
+				.pipe(purge({content: ['./docs/*.html', './docs/js/*.js']}))
+				.pipe(postcss([autoprefixer(), cssNano()]))
 				.pipe(rename(`${theme}.css`))
 				.pipe(gulp.dest(`./docs/${flavor}/assets/css`, {sourcemaps: '.'}))
 		});
@@ -99,6 +102,7 @@ function demoTask(cb) {
 		.pipe(concat('scripts.js'))
 		.pipe(uglify())
 		.pipe(gulp.dest('./docs/js'));
+
 	
 	cb();	
 	
