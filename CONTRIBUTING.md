@@ -63,9 +63,9 @@ You can refer to the following website to quickly create theme colors: [Colormin
 * *Still working on how to structure the documentation!*
 
 ## Help required with
-1. Adding cross-browser compatibility
-2. Improving the existing code (optimizations and removing redundancies)
-3. Creating new flavors
+1. Improving the existing code (optimizations and removing redundancies)
+2. Creating new flavors (e.g. created a Material flavor, Bootstrap flavor, Flat flavor, etc.)
+3. Testing
 
 ## Quick how-to
 You can work on the existing code in any of the following folders:  

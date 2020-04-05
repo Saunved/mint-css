@@ -5,7 +5,8 @@ mint-css lets you change how every single component of your website looks by cha
   <img width="600" src="./themes_flavors_ui.gif">
 </p>
 
-Use for prototyping, theming or directly in your projects. View a live demo here: [mint-css demo](https://saunved.github.io/mint-css)
+Use for prototyping, theming or directly in your projects. View a live demo here: [mint-css demo](https://saunved.github.io/mint-css).  
+The backbone of this project is the ```docs/class-list.md``` file, which you can find [here](./docs/class-list.md).
 
 ## Table of contents
 
