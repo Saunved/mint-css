@@ -1,5 +1,7 @@
 ## Intro
-mint-css lets you change how every single component of your website looks by changing one stylesheet. Make redesign a breeze. Use for prototyping, theming or directly in your projects. View a live demo here: [mint-css demo](https://saunved.github.io/mint-css)
+mint-css lets you change how every single component of your website looks by changing one stylesheet. It can make redesigning instant.  
+
+Use for prototyping, theming or directly in your projects. View a live demo here: [mint-css demo](https://saunved.github.io/mint-css)
 
 ## Table of contents
 
