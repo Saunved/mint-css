@@ -56,7 +56,7 @@ function minifyTask(cb){
 	cb();
 }
 
-function jsTask(cb){
+function buildJsTask(cb){
 		// You can pass specific js files here to only keep those in the output
 		gulp.src('./src/components/*.js')
 		.pipe(concat('scripts.min.js'))
@@ -105,10 +105,8 @@ function demoTask(cb) {
 }
 
 function watchTask(cb) {
-	gulp.series(buildTask, minifyTask, jsTask, demoTask);
-	gulp.watch(['./**/*.scss', './**./*_.scss'], gulp.series(buildTask, minifyTask, jsTask, demoTask));
-	cb();
+	gulp.watch(['./**/*.scss', './**/*_.scss', './src/components/*.js'], gulp.series(demoTask));
 }
 
-exports.default = gulp.series(buildTask, minifyTask, jsTask, demoTask);
+exports.default = gulp.series(buildTask, minifyTask, buildJsTask, demoTask);
 exports.watch = gulp.series(watchTask);

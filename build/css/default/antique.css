@@ -684,6 +684,64 @@ label.cover {
   .above-desktop-large {
     display: none; } }
 
+.reveal.from-left {
+  opacity: 0;
+  transform: translateX(-120px);
+  transition-duration: 0s; }
+
+.revealed.from-left {
+  transition-duration: 0.7s;
+  opacity: 1;
+  transform: translateX(0px); }
+
+.reveal.from-right {
+  opacity: 0;
+  transform: translateX(120px);
+  transition-duration: 0s; }
+
+.revealed.from-right {
+  transition-duration: 0.7s;
+  opacity: 1;
+  transform: translateX(0px); }
+
+.reveal.from-below {
+  opacity: 0;
+  transform: translateY(120px);
+  transition-duration: 0s; }
+
+.revealed.from-below {
+  transition-duration: 0.7s;
+  opacity: 1;
+  transform: translateX(0px); }
+
+.reveal.from-above {
+  opacity: 0;
+  transform: translateY(-120px);
+  transition-duration: 0s; }
+
+.revealed.from-above {
+  transition-duration: 0.7s;
+  opacity: 1;
+  transform: translateY(0px); }
+
+.reveal.grow {
+  opacity: 0;
+  transform: scale(0.3);
+  transition-duration: 0s; }
+
+.revealed.grow {
+  transition-duration: 0.7s;
+  opacity: 1;
+  transform: scale(1); }
+
+.reveal {
+  opacity: 0;
+  transition-duration: 0s; }
+
+.revealed {
+  transition-duration: 1s;
+  opacity: 1; }
+
 /* LISTS */
 ul {
   list-style-type: disc;
