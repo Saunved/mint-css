@@ -1,0 +1,28 @@
+@mixin dropdown{
+    .dropdown {
+
+        .dropdown-title {
+
+            &:hover{
+
+            }
+        }
+        
+        .dropdown-content{
+
+            a{
+                &:link{
+
+                }
+
+                &:hover{
+
+                }
+
+                &:visited{
+
+                }
+            }
+        }
+    }
+}

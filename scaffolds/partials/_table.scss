@@ -1,0 +1,38 @@
+/* TABLES */
+table{
+
+    td, th{
+
+    }
+
+    th{
+
+    }
+
+    &.wrapped{
+
+    }
+
+    &.cells{
+        td, th{
+
+        }
+    }
+
+    &.separated{
+        td, th{
+
+        }
+    }
+
+    &.striped{
+        tr:nth-child(odd){
+
+        }
+    }
+
+    &.highlight{
+
+    }
+    
+}

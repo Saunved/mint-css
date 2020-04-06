@@ -1,0 +1,53 @@
+@import "dropdown";
+
+@mixin navigation {
+    @include dropdown;
+    a{
+        &:link{
+
+        }
+
+        &:visited{
+
+        }
+
+        &:hover{
+
+        }
+
+        &:first-child{
+            margin-left: 0px;
+        }
+
+        &:last-child{
+            margin-right: 16px;
+        }
+    }
+
+        
+    img.logo{
+        font-size: 20px; 
+    }
+
+    :not(img).logo{
+        line-height: 30px;
+        font-size: 24px;
+        color: $color-primary-text;
+    }
+
+}
+
+nav{
+    .navigation {
+        @include navigation;
+    }
+
+    .navbar-fixed {
+
+    }
+    
+    .navbar-fixed-bottom {
+    
+    }
+
+}

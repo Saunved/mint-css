@@ -1,0 +1,134 @@
+/** UTILITY **/
+
+.left{ float: left; }
+
+.right{ float: right; }
+
+.right-align{ text-align: right; }
+
+.left-align{ text-align: left; }
+
+.center{ text-align: center; vertical-align: middle; }
+
+.responsive{ overflow-x: auto; }
+
+.clearfix{ @include clearfix; }
+
+.inline-block {display: inline-block; }
+
+.transparent {background-color: unset;}
+
+.primary {background-color: $color-primary;}
+.secondary {background-color: $color-secondary;}
+.accent {background-color: $color-accent;}
+.primary-text {color: $color-primary-text;}
+.secondary-text {color: $color-secondary-text;}
+.accent-text {color: $color-accent-text;}
+
+.success{
+    // background-color: ;
+}
+.success-text{
+// color: ;
+}
+.danger{
+// background-color: ;
+}
+.danger-text{
+// color: ;
+}
+.info{
+// background-color: ;
+}
+.info-text{
+// color: ;
+}
+.warning{
+// background-color: ;
+}
+.warning-text{
+    // color: ;
+}
+
+.display-block{
+
+}
+.display-none{
+
+}
+.visible{
+
+}
+.hidden{
+
+}
+.rounded-large{
+    // border-radius: 24px;
+}
+.rounded{
+    // border-radius: 4px;
+}
+.border{
+    // border: 1px solid #999;
+}
+.no-border{
+    border: none;
+}
+.shadow{
+
+}
+.no-shadow{
+
+}
+.uppercase{
+    text-transform: uppercase;
+}
+.lowercase{
+    text-transform: lowercase;
+}
+.capitalize{
+    text-transform: capitalize;
+}
+.text-justify{
+    text-align: justify;
+    text-justify: inter-word;
+}
+.break-all{
+    word-break: break-all;
+}
+.break-word{
+    word-wrap: break-word;
+}
+.tooltip{
+
+}
+.depth-1{
+    // box-shadow: 
+}
+.depth-2{
+// box-shadow: 
+}
+.depth-3{
+    // box-shadow: 
+}
+.depth-4{
+// box-shadow: 
+}
+.depth-5{
+// box-shadow: 
+}
+.depth-6{
+// box-shadow: 
+}
+.depth-7{
+// box-shadow: 
+}
+.depth-8{
+// box-shadow: 
+}
+.depth-9{
+// box-shadow: 
+}
+.depth-10{
+// box-shadow: 
+}

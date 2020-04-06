@@ -1,0 +1,29 @@
+// inject:scss
+// endinject
+
+@import "partials/variables";
+@import "partials/contrasts";
+
+/* BASE */
+@import "partials/base";
+@import "partials/reset";
+
+/* PARTIALS (keep the ones you need) */
+@import "partials/button";
+@import "partials/card";
+@import "partials/elements";
+@import "partials/form";
+@import "partials/media";
+@import "partials/modal";
+@import "partials/navbar";
+@import "partials/responsive";
+@import "partials/typography";
+@import "partials/table";
+@import "partials/utility";
+@import "partials/list";
+
+@import "partials/font";
+// @import "partials/color.scss";
+
+/* JS-BASED COMPONENTS */
+@import "partials/sidenav";

@@ -1,0 +1,194 @@
+/* FORM INPUTS */
+
+.form-control{
+    label{
+
+    }
+    
+    input{
+    
+    }
+    
+    textarea{
+
+    }
+    
+    select{
+
+    }
+
+    .custom-input{
+
+    }
+
+    .custom-file{
+
+    }
+
+    .custom-select{
+
+    }
+
+    .custom-toggle{
+
+    }
+
+    .custom-range{
+
+    }
+    
+    
+    /*Prefix and suffix from: https://codepen.io/chamsi/pen/LavooJ*/
+    
+    .input-group-addon {
+        // padding: 6px 12px;
+        // font-size: 14px;
+        // font-weight: 400;
+        // line-height: 1;
+        // color: $color-base-text;
+        // text-align: center;
+        // background-color: darken($color-base, 4%);
+        // border: 1px solid #ccc;
+        // width: 1%;
+        // white-space: nowrap;
+        // vertical-align: middle;
+        // display: table-cell;
+    }
+    
+    
+    .input-group {
+        // position: relative;
+        // display: table;
+        // border-collapse: separate;
+    
+            input {
+                // position: relative;
+                // z-index: 2;
+                // float: left;
+                // width: 100%;
+                // margin-bottom: 0;
+                // display: table-cell;
+                // margin: 0;
+            }
+
+            .suffix input {
+                // border-radius: 4px 0px 0px 4px;
+            }
+            .suffix .input-group-addon {
+                // border-left: 0;
+                // border-radius: 0px 4px 4px 0px;
+            }
+            .prefix input {
+                // border-radius: 0px 4px 4px 0px;
+            }
+            .prefix .input-group-addon {
+                // border-right: 0;
+                // border-radius: 4px 0px 0px 4px;
+            }
+            .presuffix input {
+                // border-radius: 0px;
+            }
+            .input-group-addon.prefix {
+                // border-radius: 4px 0px 0px 4px;
+                // border-right: 0;
+            }
+            .input-group-addon.suffix {
+                // border-radius: 0px 4px 4px 0px;
+                // border-left: 0;
+            }
+    }
+    
+    
+    /* RADIO BUTTONS AND CHECKBOXES - DERIVED FROM W3CSS */
+    /* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_checkbox */
+    /* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_radio */
+    
+    label.cover{
+        // font-weight: 400;
+    }
+    
+    .cover {
+        // display: block;
+        // position: relative;
+        // padding-left: $font-p*1.5;
+        // margin-bottom: 12px;
+        // cursor: pointer;
+        // font-size: $font-p;
+        // -webkit-user-select: none;
+        // -moz-user-select: none;
+        // -ms-user-select: none;
+        // user-select: none;
+      }
+      
+      /* Hide the browser's default radio button */
+      .cover input {
+        // position: absolute;
+        // opacity: 0;
+        // cursor: pointer;
+      }
+      
+      /* Create a custom radio button */
+      .dot {
+        // position: absolute;
+        // top: 0;
+        // left: 0;
+        // height: $font-p;
+        // width: $font-p;
+        // background-color: #ddd;
+        // border-radius: 50%;
+      }
+    
+      .checkmark {
+        // position: absolute;
+        // top: 0;
+        // left: 0;
+        // height: $font-p;
+        // width: $font-p;
+        // background-color: #ddd;
+      }
+      
+      /* On mouse-over, add a grey background color */
+      .cover:hover input ~ .dot, .cover:hover input ~ .checkmark {
+        // background-color: ;
+      }
+      
+      /* When the radio button is checked, add a different background */
+      .cover input:checked ~ .dot, .cover input:checked ~ .checkmark {
+        // background-color: ;
+      }
+      
+      /* Create the indicator (the dot/circle - hidden when not checked) */
+      .dot:after, .checkmark:after {
+        // content: "";
+        // position: absolute;
+        // opacity: 0;
+        // transition-duration: 0.2s;
+      }
+      
+      /* Show the indicator (dot/circle) when checked */
+      .cover input:checked ~ .dot:after, .cover input:checked ~ .checkmark:after {
+        // opacity: 1;
+      }
+    
+      .cover .checkmark:after {
+        // left: $font-p/3.2;
+        // top: $font-p/7;
+        // width: $font-p/4;
+        // height: $font-p/2;
+        // border: solid white;
+        // border-width: 0 2px 2px 0;
+        // -webkit-transform: rotate(45deg);
+        // -ms-transform: rotate(45deg);
+        // transform: rotate(45deg);
+      }
+      
+      /* Style the indicator (dot/circle) */
+      .cover .dot:after {
+        //   top: 6px;
+        //   left: 6px;
+        //   width: 5px;
+        //   height: 5px;
+        //   border-radius: 50%;
+        //   background: $color-secondary;
+      }
+}
