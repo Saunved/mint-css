@@ -19,7 +19,8 @@
 #list-block{
     display: grid;
     grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr;
+    row-gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
 }
 
 .pad-8{
