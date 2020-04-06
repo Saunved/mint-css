@@ -11,7 +11,7 @@ The backbone of this project is the ```docs/class-list.md``` file, which you can
 ## Table of contents
 
 * [Quickstart](#quickstart)
-* [Quick theming](#quick-theming)
+* [Color themes](#color-themes)
 * [What are flavors?](#what-are-flavors)
 * [Why this project?](#why-this-project)
 * [How you can contribute](#how-you-can-contribute)
@@ -50,14 +50,12 @@ Flavors contain partials (css code for different UI elements) and *usually* shar
 
 * A consistent class naming system will allow various flavors to be interchangeable, giving us the ability to adapt to new flavors quickly. Although this cannot be enforced, we can take good care to use the ```docs/class-list``` file for any classes that we might require.
 
-* The world has moved beyond framework-based grids. I have included the skeleton-css grid directly in the project, but you can always comment out the ```_grid.scss``` partial from the ```./src/flavors/flavor-name``` folder and use CSS Grids instead.
-
 ## How you can contribute
 Refer to the [CONTRIBUTING.md file](https://github.com/Saunved/mint-css/blob/master/CONTRIBUTING.md)
 
 ## Credits
-* This project is inspired by **skeleton-css**. The grid used is taken directly from [SkeletonCSS Github](https://github.com/dhg/Skeleton.)
-* A color file is included along with this project, taken from the **Materialize CSS** project found [here](https://github.com/Dogfalo/materialize). To use the color classes, simply add this to the ```src/flavors/flavor-name/flavor-name.scss``` file:  
+* This project is inspired by **skeleton-css**. [SkeletonCSS Github](https://github.com/dhg/Skeleton.)
+* Some scss color files are included along with this project, taken from the **Materialize CSS** project found [here](https://github.com/Dogfalo/materialize). To use the color classes, simply add this to the ```src/flavors/flavor-name/flavor-name.scss``` file:  
 ```@import "partials/color.scss"```  
 You can find out how to use the color classes [here](https://materializecss.com/color.html).
 Bear in mind that this increases the project size by 32.9kb!
