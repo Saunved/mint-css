@@ -71,6 +71,8 @@ Class | Purpose
 ## Form elements
 Class | Purpose
 -----------|-----------
+.form-control | defines a wrapper around (usually) an input and a label
+.input-group | defines an input group form prefix, suffix, and presuffix
 .suffix | indicates a suffix element on input:text
 .prefix | indicates a prefix element on input:text
 .presuffix | indicates suffix and prefix element on input:text
