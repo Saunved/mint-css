@@ -21,9 +21,9 @@
 .primary {background-color: $color-primary;}
 .secondary {background-color: $color-secondary;}
 .accent {background-color: $color-accent;}
-.primary-text {color: $color-primary;}
-.secondary-text {color: $color-secondary;}
-.accent-text {color: $color-accent;}
+.primary-text {color: $color-primary-text;}
+.secondary-text {color: $color-secondary-text;}
+.accent-text {color: $color-accent-text;}
 
 .shadow{
     box-shadow: 0px 4px 8px -2px darken($color-base, 30%);
