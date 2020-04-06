@@ -31,16 +31,16 @@ Thank you for taking the time to contribute to this project!
 3) Javascript components are shared across flavors and are defined in ```src/components```
 4) The [class list](./docs/class-list) file contains a list of classes that must be reused across flavors where applicable 
 
-**Building**
-**Gulp** is used to compile the scss files and store the .css and .min.css output in the ```build```
+**Building**  
+**Gulp** is used to compile the scss, js files and store the .css and .min.css output in the ```build```
 
 ### Fixing bugs
 * Open a new pull request and mention the issue number (if present)
 * Please write a verbose description to highlight exactly what has been fixed and how
 
 ### Adding new themes
-You can refer to the following website to quickly create theme colors: [Colormind](http://colormind.io/template/material-dashboard/). Modifications for existing themes will usually not be accepted. 
-* **You have to specify only 4 colors in the theme file.** The rest of the colors are calculated directly based on the lightness (HSL) values of the specified colors.
+You can refer to the following website to quickly create theme colors: [Colormind](http://colormind.io/template/material-dashboard/). Modifications for existing themes will usually not be accepted.  
+**You have to specify only 4 colors in the theme file.** The rest of the colors are calculated directly based on the lightness (HSL) values of the specified colors.
 
 * Create a theme under ```src/themes/theme-name```
 * Update ```gulpfile.js``` and add the theme to the array of themes
@@ -50,14 +50,14 @@ You can refer to the following website to quickly create theme colors: [Colormin
 ### Adding new flavors
 * If you have an idea or you are a designer who wants to implement a flavor, please create a new flavor request [here](https://github.com/Saunved/mint-css/issues/new/choose)
 * Create new flavors quickly by simply creating a copy of any of the existing flavors, e.g. ```src/flavors/default``` folder and renaming it to ```your-flavor-name```
-* Before creating new classes, always refer to the [class list](./docs/class-list.md) to use the correct class name
+* You can also use the ```scaffolds/partials``` folder to get a complete scaffold for creating your own flavor
 * Add the flavor to ```gulpfile.js```
 * Run ```gulp``` in the command line to generate all required build files
 * Open a pull request when you are ready to add your flavor
 * **Javascript components are shared across flavors**
 
 ### Adding to the class list
-* If you want to new classes to the class list file, open a pull request [here](https://github.com/Saunved/mint-css/issues/new/choose) and suggest a style enhancement
+* If you want to new classes to the class list file, you can do so [here](https://github.com/Saunved/mint-css/issues/new/choose) and suggest a style enhancement
 
 ## Contributing to documentation
 * *Still working on how to structure the documentation!*
@@ -87,5 +87,4 @@ You can work on the existing code in any of the following folders:
 Here are a few tools that could be developed to help make this project easier to use and implement
 1) Editor extensions that autocomplete from the class list, e.g for VSCode or Atom
 2) A class list parser that goes through the output css to determine which classes have not been implemented
-3) A migration tool that finds which class differences between flavors and warns the end user about missing implementations
-4) A scaffold generator for sass partials
+3) A migration tool that finds class differences between flavors and warns the end user about missing implementations
