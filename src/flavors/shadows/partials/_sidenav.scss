@@ -29,75 +29,76 @@
             
         }
     }
-}
 
-.sidenav.active{
-    opacity: 1;
-}
+    &.active{
+        opacity: 1;
+        
+        &.plain{
+            display: block;
+            z-index: 1000;
+        }
+        
+        &.drop{
+            height: 100%;
+            z-index: 1000;
+            transform: translate(0%, 0%);
+        }
+        
+        &.rise{
+            height: 100%;
+            z-index: 1000;
+            transform: translate(0%, 0%);
+        }
+        
+        &.slide-left{
+            height: 100%;
+            z-index: 1000;
+            transform: translate(0%, 0%);
+            border-radius: 0px;
+        }
+        
+        &.slide-right{
+            height: 100%;
+            z-index: 1000;
+            transform: translate(0%, 0%);
+        }
+    }
 
-.sidenav.plain{
-    width: 100%;
-    display: none;
-    top: 0;
-    left: 0;
-}
+    &.plain{
+        width: 100%;
+        display: none;
+        top: 0;
+        left: 0;
+    }
 
-.sidenav.drop{
-    width: 100%;
-    transform: translate(0%, -100%);
-    top: 0;
-    left: 0;
-}
-
-.sidenav.slide-left{
-    width: 100%;
-    transform: translate(-100%, 0%);
-    top: 0;
-    left: 0;
-}
-
-.sidenav.slide-right{
-    width: 100%;
-    transform: translate(100%, 0%);
-    top: 0;
-    right: 0;
-}
-
-.sidenav.rise{
-    width: 100%;
-    transform: translate(0%, 100%);
-    bottom: 0;
-    right: 0;
-}
-
-.sidenav.active.plain{
-    display: block;
-    z-index: 1000;
-}
-
-.sidenav.active.drop{
-    height: 100%;
-    z-index: 1000;
-    transform: translate(0%, 0%);
-}
-
-.sidenav.active.rise{
-    height: 100%;
-    z-index: 1000;
-    transform: translate(0%, 0%);
-}
-
-.sidenav.active.slide-left{
-    height: 100%;
-    z-index: 1000;
-    transform: translate(0%, 0%);
-    border-radius: 0px;
-}
-
-.sidenav.active.slide-right{
-    height: 100%;
-    z-index: 1000;
-    transform: translate(0%, 0%);
+    &.drop{
+        width: 100%;
+        transform: translate(0%, -100%);
+        top: 0;
+        left: 0;
+    }
+    
+    &.slide-left{
+        width: 100%;
+        transform: translate(-100%, 0%);
+        top: 0;
+        left: 0;
+    }
+    
+    &.slide-right{
+        width: 100%;
+        transform: translate(100%, 0%);
+        top: 0;
+        right: 0;
+    }
+    
+    &.rise{
+        width: 100%;
+        transform: translate(0%, 100%);
+        bottom: 0;
+        right: 0;
+    }
+    
 }
 
 .close-trigger{
