@@ -9,11 +9,15 @@
     }
     padding: 8px;
     background-color: lighten($color-base, 2%);
+    height: 250px;
+    margin: 8px;
 }
 
 .box{
     border: 1px solid $color-light-grey;
     padding: 8px;
+    height: 250px;
+    margin: 8px;
 }
 
 .hoverable:hover{

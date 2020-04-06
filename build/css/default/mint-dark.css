@@ -710,11 +710,15 @@ ol ol > li, ul ol > li {
 .card {
   box-shadow: 0px 0px 4px 4px black;
   padding: 8px;
-  background-color: #1f1f20; }
+  background-color: #1f1f20;
+  height: 250px;
+  margin: 8px; }
 
 .box {
   border: 1px solid #ccc;
-  padding: 8px; }
+  padding: 8px;
+  height: 250px;
+  margin: 8px; }
 
 .hoverable:hover {
   box-shadow: 0px 0px 4px 4px black; }
