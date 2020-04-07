@@ -38,6 +38,7 @@ Class | Purpose
 .btn-secondary | defines a button with a secondary background color
 .btn-accent | defines a button with an accent background color
 .btn-circle | defines a circular button
+.btn-disabled | defines a disabled button
 .btn-group | defines a wrapper for a group of buttons
 
 ## Navigation
@@ -107,29 +108,27 @@ Class | Purpose
 .display-none | sets display to none
 .visible | sets visibility to visible
 .hidden | sets visibility to hidden
-.rounded-large | adds a large border-radius
 .rounded | adds a border-radius
+.rounded-large | adds a large border-radius
 .border | adds a border to an element
 .no-border | removes border from an element
-.shadow | indicates a box-shadow on an element
-.no-shadow | removes box-shadow from an element
+.no-padding | remove all padding from an element
+.no-margin | remove all margins from an element
 .uppercase | transforms text to uppercase
 .lowercase | transforms text to lowercase
 .capitalize | transforms text to capitalize
 .text-justify | indicates justified text
 .break-all | indicates a ```word-break: break-all```
 .break-word | indicates a ```word-break: keep-all```
+.hoverable | indicates element that gains styling on hover
+.shadow | indicates a box-shadow on an element
+.no-shadow | removes box-shadow from an element
 .tooltip | indicates tooltip that appears on hover over (usually) some icon
 .depth-1 | indicates an element with box-shadow level 1 (least)
 .depth-2 | indicates an element with box-shadow level 2
 .depth-3 | indicates an element with box-shadow level 3
 .depth-4 | indicates an element with box-shadow level 4
 .depth-5 | indicates an element with box-shadow level 5
-.depth-6 | indicates an element with box-shadow level 6
-.depth-7 | indicates an element with box-shadow level 7
-.depth-8 | indicates an element with box-shadow level 8
-.depth-9 | indicates an element with box-shadow level 9
-.depth-10 | indicates an element with box-shadow level 10 (most)
 
 
 ## Elements
@@ -164,9 +163,11 @@ Class | Purpose
 ## Media
 Class | Purpose
 -----------|-----------
-.img-responsive | indicates a responsive image
+img.img-responsive | indicates a responsive image
+video.video-responsive | indicates a responsive video
 .img-circle | indicates a circular image
 .img-thumbnail | indicates a thumbnail image
+
 
 ## Cards
 Class | Purpose
