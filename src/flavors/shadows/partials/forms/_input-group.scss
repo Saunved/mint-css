@@ -1,0 +1,74 @@
+/*Prefix and suffix from: https://codepen.io/chamsi/pen/LavooJ*/
+
+.input-group {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+
+
+  input {
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 100%;
+    margin-bottom: 0;
+    display: table-cell;
+    margin: 0;
+}
+
+  .input-group-addon {
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    color: $color-base-text;
+    text-align: center;
+    background-color: darken($color-base, 4%);
+    border: 1px solid #ccc;
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+    &.suffix{
+        input{
+          border-radius: 4px 0px 0px 4px;
+        }
+
+        .input-group-addon {
+          border-left: 0;
+          border-radius: 0px 4px 4px 0px;
+      }
+    }
+
+    &.prefix {
+        input {
+        border-radius: 0px 4px 4px 0px;
+      }
+    
+      .input-group-addon {
+        border-right: 0;
+        border-radius: 4px 0px 0px 4px;
+      }
+    } 
+   
+    &.presuffix{
+      input {
+        border-radius: 0px;
+      }
+    } 
+    
+&.input-group-addon {
+  &.prefix {
+  border-radius: 4px 0px 0px 4px;
+  border-right: 0;
+  }
+
+  &.suffix {
+  border-radius: 0px 4px 4px 0px;
+  border-left: 0;
+  }
+}
+
+}

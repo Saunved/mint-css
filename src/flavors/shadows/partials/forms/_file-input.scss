@@ -1,0 +1,24 @@
+// https://github.com/Dogfalo/materialize/blob/v1-dev/sass/components/forms/_file-input.scss
+
+.custom-file{
+    input[type=file] {
+
+        // Needed to override webkit button
+        &::-webkit-file-upload-button {
+          display: none;
+        }
+    
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        cursor: pointer;
+        opacity: 0;
+        filter: alpha(opacity=0);
+      }
+}

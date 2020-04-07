@@ -1,0 +1,10 @@
+// https://github.com/Dogfalo/materialize/blob/v1-dev/sass/components/forms/_select.scss
+select{
+    padding: 4px 0px;
+    font-size: 16px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    background: lighten($color-base, 3%);
+    color: $color-base-text;
+    max-width: 90%;
+}

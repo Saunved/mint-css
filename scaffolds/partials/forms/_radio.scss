@@ -1,0 +1,99 @@
+/* From Dogfalo/materialie MIT License */
+
+[type="radio"]:not(:checked),
+[type="radio"]:checked {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+[type="radio"]:not(:checked) + span,
+[type="radio"]:checked + span {
+    display: block;
+    position: relative;
+    padding-left: $font-p*1.5;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: $font-p;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+[type="radio"] + span:before,
+[type="radio"] + span:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 4px;
+  width: 16px;
+  height: 16px;
+  z-index: 0;
+  transition: .28s ease;
+}
+
+/* Unchecked styles */
+[type="radio"]:not(:checked) + span:before,
+[type="radio"]:not(:checked) + span:after,
+[type="radio"]:checked + span:before,
+[type="radio"]:checked + span:after,
+[type="radio"].with-gap:checked + span:before,
+[type="radio"].with-gap:checked + span:after {
+  border-radius: 50%;
+}
+
+[type="radio"]:not(:checked) + span:before,
+[type="radio"]:not(:checked) + span:after {
+  border: 2px solid #999;
+}
+
+[type="radio"]:not(:checked) + span:after {
+  transform: scale(0);
+}
+
+/* Checked styles */
+[type="radio"]:checked + span:before {
+  border: 2px solid transparent;
+}
+
+[type="radio"]:checked + span:after,
+[type="radio"].with-gap:checked + span:before,
+[type="radio"].with-gap:checked + span:after {
+  border: 1px solid #999;
+}
+
+[type="radio"]:checked + span:after,
+[type="radio"].with-gap:checked + span:after {
+  background-color: $color-secondary;
+}
+
+[type="radio"]:checked + span:after {
+  transform: scale(1);
+}
+
+/* Focused styles */
+[type="radio"]:focus + span:before {
+  
+}
+
+/* Disabled style */
+[type="radio"]:disabled:not(:checked) + span:before,
+[type="radio"]:disabled:checked + span:before {
+//   background-color: transparent;
+//   border-color:;
+}
+
+[type="radio"]:disabled + span {
+//   color:;
+}
+
+[type="radio"]:disabled:not(:checked) + span:before {
+//   border-color:;
+}
+
+[type="radio"]:disabled:checked + span:after {
+//   background-color:;
+//   border-color: ;
+}
