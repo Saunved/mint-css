@@ -6,18 +6,23 @@
 
 /* BASE */
 @import "partials/base";
-@import "partials/_reset";
+@import "partials/reset";
 
 /* PARTIALS (keep the ones you need) */
-@import "partials/typography";
 @import "partials/button";
-@import "partials/font";
-@import "partials/navbar";
-@import "partials/table";
+@import "partials/card";
+@import "partials/elements";
 @import "partials/form";
+@import "partials/media";
+@import "partials/modal";
+@import "partials/navbar";
+@import "partials/responsive";
+@import "partials/typography";
+@import "partials/table";
 @import "partials/utility";
 @import "partials/list";
-@import "partials/card";
+
+@import "partials/font";
 // @import "partials/color.scss";
 
 /* JS-BASED COMPONENTS */
