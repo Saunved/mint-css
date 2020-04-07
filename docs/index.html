@@ -60,7 +60,7 @@
 
                     <section>
                         <h1>mint-css</h1>
-                        <a href="https://github.com/Saunved/mint-css/releases" target="_blank"><img alt="GitHub tag (latest by date)" src="https://img.shields.io/github/v/tag/saunved/mint-css?label=release"></a>
+                        <!-- <a href="https://github.com/Saunved/mint-css/releases" target="_blank"><img alt="GitHub tag (latest by date)" src="https://img.shields.io/github/v/tag/saunved/mint-css?label=release"></a> -->
                         <section>
                             <!-- <a style="border: none; padding-bottom: 0px" href="https://github.com/saunved/mint-css" target="_blank"><button class="btn btn-small">View on Github</button></a> -->
                             <div class="clearfix space">
@@ -98,7 +98,7 @@
                                 </section>
 
                         <p>The sections below contain some of the elements styled by the current theme-flavor combination.</p>
-                        <p>The total size of the CSS file used on this page is <b>10.3kb</b> (minified). Yes, that includes everything you see on this page!</p>
+                        <p>The total size of the CSS file used on this page is <b>12.5kb</b> (minified)</p>
                         <p>You can copy the relevant stylesheet from the <code>build/flavor-name</code> folder, refer to it in your own html file and start hacking away! Refer back to this file for documentation where needed.</p>
                     </section>
 
@@ -715,7 +715,7 @@ sidenav.close(); // closes the sidenav</code></pre>
             <h4>Form elements</h4>
             <code-viewer title="Normal label" content='<&#8203;label for="name">First name<&#8203;/label>
 <&#8203;input type="text" id="name">'></code-viewer>
-            <div class="space-medium">
+            <div class="space-medium input-wrapper">
                 <label for="one">First name</label>
                 <input type="text" id="one">
             </div>
@@ -723,13 +723,13 @@ sidenav.close(); // closes the sidenav</code></pre>
             <div class="space-medium">
                 <code-viewer title="Inline-block label" content='<&#8203;label class="inline" for="phone">Mobile<&#8203;/label>
 <&#8203;input type="number" id="phone">'></code-viewer>
-                <div class="space">
+                <div class="space input-wrapper">
                     <label class="inline-block" for="phone">Mobile</label>
                     <input type="number" id="phone">
                 </div>
             </div>
 
-                <div class="space-medium">
+                <div class="space-medium input-wrapper">
                     <h4>Prefix and suffix</h4>
                     <p>Based on the code by <a
                             href="https://codepen.io/chamsi/pen/LavooJ">https://codepen.io/chamsi/pen/LavooJ</a></p>
@@ -740,7 +740,7 @@ sidenav.close(); // closes the sidenav</code></pre>
     <&#8203;input id=&#x22;dr&#x22; type=&#x22;text&#x22; name=&#x22;input&#x22;&#8203;>
 <&#8203;/div&#8203;>'></code-viewer>
                         <div>
-                            <div class="input-group prefix">
+                            <div class="input-group prefix input-wrapper">
                                 <span class="input-group-addon">Dr.</span>
                                 <input id="dr" type="text" name="input">
                             </div>
@@ -752,7 +752,7 @@ sidenav.close(); // closes the sidenav</code></pre>
 <&#8203;/div&#8203;>'></code-viewer>
 
                         <div>
-                            <div class="input-group suffix">
+                            <div class="input-group suffix input-wrapper">
                                 <input type="text" name="input">
                                 <span class="input-group-addon ">kg</span>
                             </div>
@@ -765,7 +765,7 @@ sidenav.close(); // closes the sidenav</code></pre>
 <&#8203;/div&#x3E;'></code-viewer>
 
                         <div>
-                            <div class="input-group presuffix">
+                            <div class="input-group presuffix input-wrapper">
                                 <span class="input-group-addon prefix">$</span>
                                 <input type="text" name="input">
                                 <span class="input-group-addon suffix">.00</span>
@@ -774,12 +774,12 @@ sidenav.close(); // closes the sidenav</code></pre>
                     </div>
                 </div>
 
-                <div class="space-medium">
+                <div class="space-medium input-wrapper">
                     <h4>Textarea</h4>
                     <textarea data-autoresize name="" id=""></textarea>
                 </div>
 
-                <div class="space-medium">
+                <div class="space-medium input-wrapper">
                     <h4>Dropdown</h4>
                     <label for="">Select your security question</label>
                     <select name="" id="">
@@ -791,105 +791,89 @@ sidenav.close(); // closes the sidenav</code></pre>
 
                 <div class="space-medium">
                 <h4>Date</h4>
-                <div class="space">
+                <div class="space input-wrapper">
                 <label for="">Enter a date</label>
                 <input type="date" name="" id="">
             </div>
             </div>
 
             <div class="space-large">
-                <code-viewer title="Radio buttons" content='<&#8203;label class="cover">
+                <code-viewer title="Radio buttons" content='<&#8203;label>
     <&#8203;input type="radio" checked="checked" name="radio">
-    <&#8203;span class="dot"><&#8203;/span>
-    One
+    <&#8203;span>One<&#8203;/span>
 <&#8203;/label>
-<&#8203;label class="cover">
+<&#8203;label>
     <&#8203;input type="radio" name="radio">
-    <&#8203;span class="dot"><&#8203;/span>
-    Two
+    <&#8203;span>Two<&#8203;/span>
 <&#8203;/label>
-<&#8203;label class="cover">
+<&#8203;label>
     <&#8203;input type="radio" name="radio">
-    <&#8203;span class="dot"><&#8203;/span>
-    Three
+    <&#8203;span>Three<&#8203;/span>
 <&#8203;/label>
-<&#8203;label class="cover">
+<&#8203;label>
     <&#8203;input type="radio" name="radio">
-    <&#8203;span class="dot"><&#8203;/span>
-    Four
+    <&#8203;span>Four<&#8203;/span>
 <&#8203;/label>'></code-viewer>
-<div class="space">
-                <label class="cover">
-                    <input type="radio" checked="checked" name="radio">
-                    <span class="dot"></span>
-                    One
-                  </label>
-                  <label class="cover">
-                    <input type="radio" name="radio">
-                    <span class="dot"></span>
-                    Two
-                  </label>
-                  <label class="cover">
-                    <input type="radio" name="radio">
-                    <span class="dot"></span>
-                    Three
-                  </label>
-                  <label class="cover">
-                    <input type="radio" name="radio">
-                    <span class="dot"></span>
-                    Four
-                  </label>
-                </div>
+                <div class="space input-wrapper">
+                    <label>
+                        <input type="radio" checked="checked" name="radio">
+                        <span>One</span>
+                      </label>
+                      <label>
+                        <input type="radio" name="radio">
+                        <span>Two</span>
+                      </label>
+                      <label>
+                        <input type="radio" name="radio">
+                        <span>Three</span>
+                      </label>
+                      <label>
+                        <input type="radio" name="radio">
+                        <span>Four</span>
+                      </label>
+                    </div>
                   
             </div>
 <hr>
             <div class="space">
-                <code-viewer title="Checkboxes" content='<&#8203;label class="cover">
-    <&#8203;input type="checkbox" checked="checked">
-    <&#8203;span class="checkmark"><&#8203;/span>
-    One
-<&#8203;/label>
-                  
-<&#8203;label class="cover">
+                <code-viewer title="Checkboxes" content='<&#8203;label>
     <&#8203;input type="checkbox">
-    <&#8203;span class="checkmark"><&#8203;/span>
-    Two
+    <&#8203;span>One<&#8203;/span>
 <&#8203;/label>
-                  
-<&#8203;label class="cover">
+
+<&#8203;label>
     <&#8203;input type="checkbox">
-    <&#8203;span class="checkmark"><&#8203;/span>
-    Three
+    <&#8203;span>Two<&#8203;/span>
 <&#8203;/label>
-                  
-<&#8203;label class="cover">
+
+<&#8203;label>
     <&#8203;input type="checkbox">
-    <&#8203;span class="checkmark"><&#8203;/span>
-    Four
+    <&#8203;span>Three<&#8203;/span>
+<&#8203;/label>
+
+<&#8203;label>
+    <&#8203;input type="checkbox">
+    <&#8203;span>Four<&#8203;/span>
 <&#8203;/label>'></code-viewer>
-                <div class="space">
-                <label class="cover">
-                    <input type="checkbox" checked="checked">
-                    <span class="checkmark"></span>
-                    One
+            <div class="space input-wrapper">
+                <label>
+                    <input type="checkbox">
+                    <span>One</span>
                   </label>
                   
-                  <label class="cover">
+                  <label>
                     <input type="checkbox">
-                    <span class="checkmark"></span>
-                    Two
+                    <span>Two</span>
                   </label>
                   
-                  <label class="cover">
+                  <label>
                     <input type="checkbox">
-                    <span class="checkmark"></span>
-                    Three
+                    <span>Three</span>
                   </label>
                   
-                  <label class="cover">
+                  <label>
                     <input type="checkbox">
-                    <span class="checkmark"></span>
-                    Four
+                    <span>Four</span>
                   </label>
             </div>
         </div>
@@ -1036,7 +1020,7 @@ sidenav.close(); // closes the sidenav</code></pre>
             <h4>Grids?</h4>
             <p>I have decided to remove any grids from the flavors. There are three reasons for doing so:</p>
             <ol>
-                <li>CSS Grids can be used over any external grid system now</li>
+                <li>CSS Grids can be used instead of any external grid system</li>
                 <li>Standardizing grid classes will be a huge pain, both for developers and users</li>
                 <li>Grids are a part of how your layout is arranged, while this repo focuses more on individual components and how they are styled</li>
             </ol>
