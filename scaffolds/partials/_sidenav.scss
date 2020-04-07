@@ -8,6 +8,27 @@
         }
     }
 
+
+    &.plain{
+
+    }
+
+    &.drop{
+
+    }
+    
+    &.slide-left{
+
+    }
+    
+    &.slide-right{
+
+    }
+    
+    &.rise{
+
+    }
+
     &.active{
         
         &.plain{
@@ -29,26 +50,6 @@
         &.slide-right{
 
         }
-    }
-
-    &.plain{
-
-    }
-
-    &.drop{
-
-    }
-    
-    &.slide-left{
-
-    }
-    
-    &.slide-right{
-
-    }
-    
-    &.rise{
-
     }
     
 }

@@ -1,5 +1,11 @@
-.img-responsive{
+img.img-responsive{
+    max-width: 100%;
+    height: auto;
+}
 
+video.video-responsive{
+    max-width: 100%;
+    height: auto;
 }
 
 .img-circle{

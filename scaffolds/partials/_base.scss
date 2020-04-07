@@ -15,32 +15,30 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video{
-    // font-family: $base-font;
+    font-family: $base-font;
 }
 
 html, body, section, menu, summary, footer, header, article, aside, details{
-    // color: $color-base-text;
-    // background-color: $color-base;
+    color: $color-base-text;
+    background-color: $color-base;
 }
 
-// .container {
-//     position: relative;
-//     width: 100%;
-//     max-width: 1024px;
-//     margin-right: auto;
-//     margin-left: auto;
-//     padding: 0 20px;
-//     box-sizing: border-box; 
-//   }
+.container {
+    position: relative;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 20px;
+    box-sizing: border-box; 
+  }
 
 a{
-    // text-decoration: none;
+    text-decoration: none;
 
     &:link, &:visited{
-
+        color: $color-link;
     }
 
     &:link:hover, &:visited:hover{
-
     }
 }
