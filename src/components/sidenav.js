@@ -58,3 +58,9 @@ class Overlay extends Sidenav {
 		this.sidenav.classList.add('plain');
 	}
 }
+
+class Modal extends Overlay {
+	constructor(id){
+		super(id);
+	}
+}

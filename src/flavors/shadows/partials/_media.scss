@@ -9,9 +9,12 @@ video.video-responsive{
 }
 
 .img-circle{
-
+    border-radius: 50%;
 }
 
 .img-thumbnail{
-
+    max-height: 150px;
+    max-width: 150px;
+    display: inline-block;
+    margin: 8px;
 }
