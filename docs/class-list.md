@@ -72,19 +72,20 @@ Class | Purpose
 ## Form elements
 Class | Purpose
 -----------|-----------
-.form-control | defines a wrapper around (usually) an input and a label
+.input-wrapper | defines a wrapper around (usually) an input and a label
 .input-group | defines an input group form prefix, suffix, and presuffix
 .suffix | indicates a suffix element on input:text
 .prefix | indicates a prefix element on input:text
 .presuffix | indicates suffix and prefix element on input:text
-.cover | indicates a wrapper for custom radio buttons or checkboxes
-.checkmark | indicates a checked checkbox
-.dot | indicates a checked radio button
-.custom-input | custom input element
 .custom-file | custom file input
 .custom-select | indicates a customized select element
 .custom-toggle | indicates a customized toggle switch
 .custom-range | indicates a customized range picker
+.character-count | indicates a character counter element
+.helper-text | indicates helper text (usually) below the input
+.valid | indicates a valid input
+.invalid | indicates an invalid input
+.disabled | indicates a disabled form element
 
 ## Utility
 ### General utility classes
