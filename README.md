@@ -54,8 +54,5 @@ Flavors contain partials (css code for different UI elements) and *usually* shar
 Refer to the [CONTRIBUTING.md file](https://github.com/Saunved/mint-css/blob/master/CONTRIBUTING.md)
 
 ## Credits
-* This project is inspired by **skeleton-css**. [SkeletonCSS Github](https://github.com/dhg/Skeleton.)
-* Some scss color files are included along with this project, taken from the **Materialize CSS** project found [here](https://github.com/Dogfalo/materialize). To use the color classes, simply add this to the ```src/flavors/flavor-name/flavor-name.scss``` file:  
-```@import "partials/color.scss"```  
-You can find out how to use the color classes [here](https://materializecss.com/color.html).
-Bear in mind that this increases the project size by 32.9kb!
+* This scaffolding and boilerplate part of this project is inspired by **skeleton-css**. [SkeletonCSS Github](https://github.com/dhg/Skeleton.)
+* The colors and sass structure of this project is inspired by **Materialize CSS** found [here](https://github.com/Dogfalo/materialize).
