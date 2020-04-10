@@ -53,3 +53,10 @@ pre{
     margin: 8px 0px;
     white-space: pre-wrap;
 }
+
+.animated {
+    -webkit-animation-duration: 0.2s;
+    animation-duration: 0.2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
