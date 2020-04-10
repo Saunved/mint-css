@@ -1,4 +1,5 @@
 /* BASE */
+@import url(/src/global-css/animate.min.css);
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
 * {
   outline-color: #a56838; }
@@ -45,6 +46,12 @@ pre {
   font-size: 1rem;
   margin: 8px 0px;
   white-space: pre-wrap; }
+
+.animated {
+  -webkit-animation-duration: 0.2s;
+  animation-duration: 0.2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
 
 /* MEYER RESET + BASE EXTENSIONS */
 html, body, div, span, applet, object, iframe,
@@ -483,6 +490,68 @@ video.video-responsive {
   display: inline-block;
   margin: 8px; }
 
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background: #EFE8D5;
+  padding: 16px;
+  visibility: hidden;
+  box-shadow: 0px 5px 16px 2px #555;
+  z-index: 5000;
+  height: 45vh;
+  width: 85vw; }
+  .modal .modal-header {
+    font-size: 1.7rem;
+    color: #111;
+    background: #EFE8D5;
+    margin: 8px; }
+  .modal .modal-content {
+    position: relative;
+    overflow: auto;
+    height: 90%;
+    margin: 8px; }
+  .modal .modal-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 16px;
+    width: 100%;
+    background: #EFE8D5; }
+
+.modal-bottom {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  background: #EFE8D5;
+  padding: 32px;
+  min-height: 300px;
+  max-height: 50vh;
+  box-shadow: 0px 5px 16px 2px #555;
+  z-index: 5000;
+  visibility: hidden; }
+  .modal-bottom .modal-header {
+    font-size: 1.7rem;
+    color: #111;
+    background: #EFE8D5; }
+  .modal-bottom .modal-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 16px;
+    width: 100%; }
+
+.modal-overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 4999;
+  background: black;
+  top: 0px;
+  left: 0px;
+  opacity: 0.5; }
+
 /* NAVIGATION */
 nav {
   background-color: #c0ad67; }
@@ -701,6 +770,18 @@ table {
 .transparent {
   background-color: unset; }
 
+.hidden {
+  visibility: hidden; }
+
+.visible {
+  visibility: visible; }
+
+.display-none {
+  display: none; }
+
+.display-block {
+  display: block; }
+
 .primary {
   background-color: #c0ad67; }
 
@@ -718,6 +799,14 @@ table {
 
 .accent-text {
   color: #eee; }
+
+.warning {
+  background-color: #ec3f00; }
+  .warning:hover {
+    background-color: #d83a00; }
+
+.warning-text {
+  color: white; }
 
 .shadow {
   box-shadow: 0px 4px 8px -2px #c5ab66; }

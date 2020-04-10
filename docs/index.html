@@ -14,6 +14,7 @@
     <meta name="keywords" content="sass, boilerplate, framework, tool, css, theming, gulp, prototype, web design">
     <meta name="author" content="Saunved Mutalik">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"> -->
     <link id="stylesheet" rel="stylesheet" type="text/css" href="./default/assets/css/mint.css">
     <link rel="stylesheet" href="./js/highlight/styles/codepen-embed.css">
     <script src="./js/highlight/highlight.pack.js"></script>
@@ -36,7 +37,7 @@
             <a href="#">About us</a>
             <a href="#">Contact us</a>
             <span class="dropdown">
-                <span class="dropdown-title">Dropdown<i class="arrow down"></i></span>
+                <span class="dropdown-title">Dropdown<i class="icon arrow down"></i></span>
                 <div class="dropdown-content">
                     <a href="#">Link 1</a>
                     <a href="#">Link 2</a>
@@ -98,25 +99,42 @@
                                 </section>
 
                         <p>The sections below contain some of the elements styled by the current theme-flavor combination.</p>
-                        <p>The total size of the CSS file used on this page is <b>12.5kb</b> (minified)</p>
                         <p>You can copy the relevant stylesheet from the <code>build/flavor-name</code> folder, refer to it in your own html file and start hacking away! Refer back to this file for documentation where needed.</p>
                     </section>
 
                     <section>
                     </section>
 
-                    <!-- <section>
-                        <img src="https://via.placeholder.com/1600x800" alt="" class="img-responsive">
-                        <div class="center">
-                        <img src="https://via.placeholder.com/800x800" alt="" class="img-thumbnail img-circle">
-                        <img src="https://via.placeholder.com/800x800" alt="" class="img-thumbnail img-circle">
-                        <img src="https://via.placeholder.com/800x800" alt="" class="img-thumbnail img-circle">
-                        <img src="https://via.placeholder.com/800x800" alt="" class="img-thumbnail img-circle">
-                        <img src="https://via.placeholder.com/800x800" alt="" class="img-thumbnail img-circle">
-                        <img src="https://via.placeholder.com/800x800" alt="" class="img-thumbnail img-circle">
-                    </div>
-                        <video class="video-responsive" src="test_video.mp4" autoplay muted loop controls></video>
-                    </section> -->
+                    <section>
+                        <h4>Modals</h4>
+                        <p><i>Undocumented feature</i></p>
+                        <button class="btn" onclick="modal.open()">Modal click</button>
+                        <div id="modal1" class="modal">
+                            <div class="modal-header">Are you sure?</div>
+                            <div class="modal-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi totam eaque a laborum dolor placeat molestias commodi facere tempore sed!</p>
+                            </div>
+                            <div class="modal-footer">
+                                <div class="right-align">
+                                <button class="btn right-align" onclick="modal.close()">Cancel</button>
+                                <button class="btn right-align warning warning-text" onclick="modal2.open()">Delete</button>
+                            </div>
+                        </div>
+                        </div>
+                        <div id="modal2" class="modal-bottom">
+                            <div class="modal-header">SECOND MODAL</div>
+                            <div class="modal-content">
+                            <p>Build scalable things my friend</p>
+                            <button class="btn" onclick="modal3.open()">Open thyself</button>
+                        </div>
+                        </div>
+                        <div id="modal3" class="modal-bottom">
+                            <div class="modal-header">THIRD MODAL</div>
+                            <div class="modal-content">
+                            <p>Third nesting</p>
+                        </div>
+                        </div>
+                    </section>
 
             <section>
 
@@ -195,7 +213,7 @@
             <a href="#" class="">Home</a>
             <a href="#">About us</a>
             <span class="dropdown">
-                <span class="dropdown-title">Dropdown<i class="arrow down"></i></span>
+                <span class="dropdown-title">Dropdown<i class="icon arrow down"></i></span>
                 <div class="dropdown-content">
                     <a href="#">Link 1</a>
                     <a href="#">Link 2</a>
@@ -1041,11 +1059,13 @@ sidenav.close(); // closes the sidenav</code></pre>
     </div>
 
 </div>
+<script src="./js/scripts.js"></script>
     <script>
-
+var sidenav1, sidenav2, sidenav3, sidenav4, sidenav5, modal, modal2;
         //https://stephanwagner.me/auto-resizing-textarea-with-vanilla-javascript
         document.addEventListener('DOMContentLoaded', (event) => {
             addAutoResize();
+            setupElems();
         })
         function addAutoResize() {
             document.querySelectorAll('[data-autoresize]').forEach(function (element) {
@@ -1081,17 +1101,20 @@ sidenav.close(); // closes the sidenav</code></pre>
             },1000)
         }
 
-        
+        function setupElems(){
+            sidenav1 = new Sidenav('sidenav1');
+            sidenav2 = new Sidenav('sidenav2');
+            sidenav3 = new Sidenav('sidenav3');
+            sidenav4 = new Sidenav('sidenav4');
+            sidenav5 = new Overlay('overlay');
+            modal = new Modal('modal1');
+            modal2 = new Modal('modal2');
+            modal3 = new Modal('modal3');
+        }
 
     </script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="./js/scripts.js"></script>
     <script>
-        const sidenav1 = new Sidenav('sidenav1');
-        const sidenav2 = new Sidenav('sidenav2');
-        const sidenav3 = new Sidenav('sidenav3');
-        const sidenav4 = new Sidenav('sidenav4');
-        const sidenav5 = new Overlay('overlay');
     </script>
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
