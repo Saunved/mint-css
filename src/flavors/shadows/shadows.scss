@@ -5,7 +5,7 @@
 @import "partials/contrasts";
 
 /* BASE */
-@import "partials/base";
+@import "../default/partials/base";
 @import "partials/reset";
 
 /* PARTIALS (keep the ones you need) */
@@ -19,7 +19,7 @@
 @import "partials/responsive";
 @import "partials/typography";
 @import "partials/table";
-@import "partials/utility";
+@import "../default/partials/utility";
 @import "partials/list";
 @import "/src/global-css/animate.min.css";
 
@@ -27,4 +27,5 @@
 // @import "partials/color.scss";
 
 /* JS-BASED COMPONENTS */
+@import "../default/partials/modal";
 @import "partials/sidenav";
