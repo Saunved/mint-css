@@ -5,10 +5,23 @@ class Sidenav {
 	// sidenav;
 	// id;
 
-	constructor(id) {
+	constructor(id, options = {}) {
+		this._setupOptions(options);
 		this._setupSelectors(id);
 		this._setupClickListeners();
 		Sidenav._bindEsc();
+	}
+
+	_setupOptions(userOptions){
+		this.options = {};
+		this.options.enterFrom = 'left';
+
+		if(userOptions){
+            for(var key of Object.keys(userOptions)){
+                this.options[key] = userOptions[key];
+            }
+        }
+
 	}
 
 	_setupSelectors(id) {
@@ -21,15 +34,57 @@ class Sidenav {
 	_setupClickListeners() {
 		if (this.openTrigger) {
 			this.openTrigger.addEventListener('click', () => {
-				this.sidenav.classList.add('active');
+				this.sidenav.style.visibility = 'visible';
+				switch(this.options.enterFrom){
+					case 'left':
+						animateCSS(`#${this.id} .sidenav`, 'slideInLeft');
+						break;
+					case 'right':
+						animateCSS(`#${this.id} .sidenav`, 'slideInRight');
+						break;
+					case 'top':
+						animateCSS(`#${this.id} .sidenav`, 'slideInDown');
+						break;
+					case 'bottom':
+						animateCSS(`#${this.id} .sidenav`, 'slideInUp');
+						break;
+					case 'plain':
+						break;
+					default:
+						animateCSS(`#${this.id} .sidenav`, 'slideInLeft');
+						break;
+				}	
 			});
 		}
 
 		if (this.closeTrigger) {
 			this.closeTrigger.addEventListener('click', () => {
-				this.sidenav.classList.remove('active');
+				switch(this.options.enterFrom){
+					case 'left':
+						animateCSS(`#${this.id} .sidenav`, 'slideOutLeft', () => { this._hideSidenav() });
+						break;
+					case 'right':
+						animateCSS(`#${this.id} .sidenav`, 'slideOutRight', () => { this._hideSidenav() });
+						break;
+					case 'top':
+						animateCSS(`#${this.id} .sidenav`, 'slideOutUp', () => { this._hideSidenav() });
+						break;
+					case 'bottom':
+						animateCSS(`#${this.id} .sidenav`, 'slideOutDown', () => { this._hideSidenav() });
+						break;
+					case 'plain':
+						this._hideSidenav();
+						break;
+					default:
+						animateCSS(`#${this.id} .sidenav`, 'slideOutLeft', () => { this._hideSidenav() });
+						break;
+				}
 			});
 		}
+	}
+
+	_hideSidenav(){
+		this.sidenav.style.visibility = 'hidden';
 	}
 
 	static _bindEsc() {
@@ -53,8 +108,9 @@ class Sidenav {
 }
 
 class Overlay extends Sidenav {
-	constructor(id) {
+	constructor(id, options) {
 		super(id);
-		this.sidenav.classList.add('plain');
+		this.options.enterFrom = 'plain';
+		// this.sidenav.classList.add('plain');
 	}
 }
