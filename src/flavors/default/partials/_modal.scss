@@ -1,18 +1,103 @@
 .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background: $color-base;
+    padding: 16px;
+    visibility: hidden;
+    @if(is-dark($color-base)){
+       box-shadow: 0px 5px 16px 2px darken($color-base, 20%);
+    }
+    @else{
+       box-shadow: 0px 5px 16px 2px #555;
+    }
+    z-index: 5000;
+    height: 45vh;
+    width: 85vw;
     
+    .modal-header{
+        font-size: $font-h4;
+        color: $color-base-text;
+        background: $color-base;
+        margin: 8px;
+    }
+    
+    .modal-content{
+        // color: $color-base-text;
+        position: relative;
+        overflow: auto;
+        height: 90%;
+        margin: 8px;
+    }
+    
+    .modal-footer{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 16px;
+        width: 100%;
+        background: $color-base;
+    }
+
+
+    .modal-close{
+    
+    }
+}
+
+.modal-bottom{
+
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    // top: 50%;
+    // left: 50%;
+    width: 100%;
+    // transform: translate(-50%, -50%);
+    background: $color-base;
+    padding: 32px;;
+    min-height: 300px;
+    max-height: 50vh;
+    @if(is-dark($color-base)){
+       box-shadow: 0px 5px 16px 2px darken($color-base, 20%);
+    }
+    @else{
+       box-shadow: 0px 5px 16px 2px #555;
+    }
+    z-index: 5000;
+    visibility: hidden;
+
     .modal-close{
     
     }
     
     .modal-header{
-        
+        font-size: $font-h4;
+        color: $color-base-text;
+        background: $color-base;
     }
     
     .modal-content{
-        
+        // color: $color-base-text;
     }
     
     .modal-footer{
-        
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 16px;
+        width: 100%;
     }
+
+}
+
+.modal-overlay{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 4999;
+    background: black;
+    top: 0px;
+    left: 0px;
+    opacity: 0.5;
 }
