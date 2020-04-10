@@ -116,6 +116,7 @@ class Modal{
     }
 
     _outsideClickListener = event => {
+        event.preventDefault();
         if (!this.modal.contains(event.target) && this._isVisible(this.modal)) { // or use: event.target.closest(selector) === null
           this.close();
         }

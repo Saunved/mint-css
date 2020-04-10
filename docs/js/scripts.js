@@ -136,6 +136,7 @@ class Modal{
     }
 
     _outsideClickListener = event => {
+        event.preventDefault();
         if (!this.modal.contains(event.target) && this._isVisible(this.modal)) { // or use: event.target.closest(selector) === null
           this.close();
         }
@@ -234,7 +235,8 @@ class Sidenav {
 		}
 
 		if (this.closeTrigger) {
-			this.closeTrigger.addEventListener('click', () => {
+			this.closeTrigger.addEventListener('click', (event) => {
+				event.preventDefault();
 				switch(this.options.enterFrom){
 					case 'left':
 						animateCSS(`#${this.id} .sidenav`, 'slideOutLeft', () => { this._hideSidenav() });
