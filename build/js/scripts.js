@@ -67,7 +67,7 @@ class Modal{
             }
         }
 
-        if(screen.width < 380){
+        if(screen.width < 364){
             this.options.animate = false;
         }
     }
@@ -102,16 +102,22 @@ class Modal{
 
     _toggleModal(show){
         if(show){
-            Modal.overlay.classList.remove('hidden');
+            if(this.options.animate){
+                Modal.overlay.classList.remove('hidden');
+            }
             this.modal.style.visibility = 'visible';
             if(this.modal.classList.contains('modal-bottom')){
                 if(this.options.animate){
-                    animateCSS(`#${this.id}`, 'slideInUp');
+                    animateCSS(`#${this.id}`, 'slideInUp', () => {
+                        Modal.overlay.classList.remove('hidden');
+                    });
                 }
             }
             else{
                 if(this.options.animate){
-                    animateCSS(`#${this.id}`, 'fadeIn zoomIn');
+                    animateCSS(`#${this.id}`, 'fadeIn zoomIn', () => {
+                        Modal.overlay.classList.remove('hidden');
+                    });
                 }
             }
         }
@@ -214,8 +220,7 @@ class Sidenav {
             }
 		}
 		
-		if(screen.width < 380){
-			console.log('Plain');
+		if(screen.width < 364){
 			this.options.enterFrom = 'plain';
 		}
 	}

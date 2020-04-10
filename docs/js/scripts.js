@@ -67,7 +67,7 @@ class Modal{
             }
         }
 
-        if(screen.width < 380){
+        if(screen.width < 364){
             this.options.animate = false;
         }
     }
@@ -220,8 +220,7 @@ class Sidenav {
             }
 		}
 		
-		if(screen.width < 380){
-			console.log('Plain');
+		if(screen.width < 364){
 			this.options.enterFrom = 'plain';
 		}
 	}
