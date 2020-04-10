@@ -5,6 +5,7 @@
 @import "partials/contrasts";
 
 /* BASE */
+@import "../../global-css/animate.min.scss";
 @import "partials/base";
 @import "partials/reset";
 
@@ -20,7 +21,6 @@
 @import "partials/table";
 @import "partials/utility";
 @import "partials/list";
-@import "/src/global-css/animate.min.css";
 
 @import "partials/font";
 // @import "partials/color.scss";
