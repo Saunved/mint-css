@@ -21,10 +21,6 @@ class Sidenav {
                 this.options[key] = userOptions[key];
             }
 		}
-		
-		if(screen.width < 364){
-			this.options.enterFrom = 'plain';
-		}
 	}
 
 	_setupSelectors(id) {
