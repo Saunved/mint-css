@@ -71,7 +71,7 @@
                             </div>
                                 </section>
                         <h6> Change how your entire website looks by changing one stylesheet. <br>Redesigning, prototyping, and theming made super simple.</h6>
-            
+                        <p style="color: #888">Your device width is: <span id="device-width"></span>px</p>
                                 <section>
                                     <hr>
                                     <p>Whenever you click on one of the buttons below, a new stylesheet is loaded. <br>No HTML is changed in the process. No new classes are added or removed.<br>Give it a try!</p>
@@ -1078,6 +1078,9 @@ var sidenav1, sidenav2, sidenav3, sidenav4, sidenav5, modal, modal2;
                 element.style.height = element.scrollHeight + offset + "px";
                 element.removeAttribute('data-autoresize');
             });
+
+            document.querySelector('#device-width').innerHTML = document.querySelector('html').offsetWidth;
+
         }
 
         var currentTheme = 'mint';

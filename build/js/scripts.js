@@ -55,6 +55,7 @@ class Modal{
         this.options.closeOnEsc = true;
         this.options.canBeDismissed = true;
         this.options.preventScrolling = true;
+        this.options.animate = true;
         this.options.beforeOpen = () => {};
         this.options.beforeClose = () => {};
         this.options.afterClose = () => {};
@@ -64,6 +65,10 @@ class Modal{
             for(var key of Object.keys(userOptions)){
                 this.options[key] = userOptions[key];
             }
+        }
+
+        if(screen.width < 380){
+            this.options.animate = false;
         }
     }
 
@@ -100,10 +105,14 @@ class Modal{
             Modal.overlay.classList.remove('hidden');
             this.modal.style.visibility = 'visible';
             if(this.modal.classList.contains('modal-bottom')){
-                animateCSS(`#${this.id}`, 'slideInUp');
+                if(this.options.animate){
+                    animateCSS(`#${this.id}`, 'slideInUp');
+                }
             }
             else{
-                animateCSS(`#${this.id}`, 'fadeIn zoomIn');
+                if(this.options.animate){
+                    animateCSS(`#${this.id}`, 'fadeIn zoomIn');
+                }
             }
         }
         else{
@@ -111,14 +120,24 @@ class Modal{
                 Modal.overlay.classList.add('hidden');
             }
             if(this.modal.classList.contains('modal-bottom')){
-                animateCSS(`#${this.id}`, 'slideOutDown', () => {
+                if(this.options.animate){
+                    animateCSS(`#${this.id}`, 'slideOutDown', () => {
+                        this.modal.style.visibility = 'hidden';
+                    });
+                }
+                else{
                     this.modal.style.visibility = 'hidden';
-                });
+                }
             }
             else{
-                animateCSS(`#${this.id}`, 'fadeOut zoomOut', () => {
-                    this.modal.style.visibility = 'hidden';
-                });
+                if(this.options.animate){
+                    animateCSS(`#${this.id}`, 'fadeOut zoomOut', () => {
+                        this.modal.style.visibility = 'hidden';
+                    });
+                }
+                else{
+                        this.modal.style.visibility = 'hidden';
+                }
             }
         }
     }
@@ -193,8 +212,12 @@ class Sidenav {
             for(var key of Object.keys(userOptions)){
                 this.options[key] = userOptions[key];
             }
-        }
-
+		}
+		
+		if(screen.width < 380){
+			console.log('Plain');
+			this.options.enterFrom = 'plain';
+		}
 	}
 
 	_setupSelectors(id) {

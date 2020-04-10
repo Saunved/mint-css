@@ -20,8 +20,12 @@ class Sidenav {
             for(var key of Object.keys(userOptions)){
                 this.options[key] = userOptions[key];
             }
-        }
-
+		}
+		
+		if(screen.width < 380){
+			console.log('Plain');
+			this.options.enterFrom = 'plain';
+		}
 	}
 
 	_setupSelectors(id) {
