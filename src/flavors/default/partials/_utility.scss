@@ -18,12 +18,22 @@
 
 .transparent {background-color: unset;}
 
+.hidden {visibility: hidden;}
+
+.visible {visibility: visible;}
+
+.display-none {display: none; }
+
+.display-block {display: block; }
+
 .primary {background-color: $color-primary;}
 .secondary {background-color: $color-secondary;}
 .accent {background-color: $color-accent;}
 .primary-text {color: $color-primary-text;}
 .secondary-text {color: $color-secondary-text;}
 .accent-text {color: $color-accent-text;}
+.warning {background-color: rgb(236, 63, 0); &:hover {background-color: darken(rgb(236,63,0),4%);}};
+.warning-text {color: white};
 
 .shadow{
     box-shadow: 0px 4px 8px -2px darken($color-base, 30%);
