@@ -78,6 +78,11 @@ function demoTask(cb) {
 	* for each flavor-theme combination
 	*/
 
+	gulp.src(['./src/components/*.js', './docs/js/CodeViewer/*.js'])
+	.pipe(concat('scripts.js'))
+	// .pipe(uglify())
+	.pipe(gulp.dest('./docs/js'));
+
 	flavors.forEach(flavor => {
 		themes.forEach(theme => {
 			gulp.src([
@@ -91,18 +96,12 @@ function demoTask(cb) {
 					}
 				}))
 				.pipe(sass().on('error', sass.logError))
-				.pipe(purge({content: ['./docs/*.html', './docs/js/*.js']}))
+				// .pipe(purge({content: ['./docs/*.html', './docs/**/*.js']}))
 				.pipe(postcss([autoprefixer(), cssNano()]))
 				.pipe(rename(`${theme}.css`))
 				.pipe(gulp.dest(`./docs/${flavor}/assets/css`, {sourcemaps: '.'}))
 		});
 	});
-
-	gulp.src(['./src/components/*.js', './docs/js/CodeViewer/*.js'])
-		.pipe(concat('scripts.js'))
-		.pipe(uglify())
-		.pipe(gulp.dest('./docs/js'));
-
 	
 	cb();	
 	
@@ -110,7 +109,9 @@ function demoTask(cb) {
 
 function watchTask(cb) {
 	gulp.watch(['./**/*.scss', './**/*_.scss', './src/components/*.js'], gulp.series(demoTask));
+	cb();
 }
 
 exports.default = gulp.series(buildTask, minifyTask, buildJsTask, demoTask);
+exports.demo = gulp.series(demoTask);
 exports.watch = gulp.series(watchTask);
