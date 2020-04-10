@@ -230,7 +230,7 @@
         <section>
 
             <h4>Sidenav/Overlay</h4>
-            <p>Wrap sidenavs in a div with an ID of your choice. Sidenavs should contain:</p>
+            <p> <b>Breaking initialization change. Undocumented. Please view docs/index.html for actual code.</b><br> Wrap sidenavs in a div with an ID of your choice. Sidenavs should contain:</p>
                 <ol>
                     <li>An open trigger with class="trigger"</li>
                     <li>A close trigger with class="close-trigger"</li>
@@ -1102,10 +1102,10 @@ var sidenav1, sidenav2, sidenav3, sidenav4, sidenav5, modal, modal2;
         }
 
         function setupElems(){
-            sidenav1 = new Sidenav('sidenav1');
-            sidenav2 = new Sidenav('sidenav2');
-            sidenav3 = new Sidenav('sidenav3');
-            sidenav4 = new Sidenav('sidenav4');
+            sidenav1 = new Sidenav('sidenav1', {enterFrom: 'left'});
+            sidenav2 = new Sidenav('sidenav2', {enterFrom: 'bottom'});
+            sidenav3 = new Sidenav('sidenav3', {enterFrom: 'right'});
+            sidenav4 = new Sidenav('sidenav4', {enterFrom: 'top'});
             sidenav5 = new Overlay('overlay');
             modal = new Modal('modal1');
             modal2 = new Modal('modal2');

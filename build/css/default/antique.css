@@ -53,6 +53,14 @@ pre {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both; }
 
+.btn {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent; }
+
 /* MEYER RESET + BASE EXTENSIONS */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -490,68 +498,6 @@ video.video-responsive {
   display: inline-block;
   margin: 8px; }
 
-.modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  background: #EFE8D5;
-  padding: 16px;
-  visibility: hidden;
-  box-shadow: 0px 5px 16px 2px #555;
-  z-index: 5000;
-  height: 45vh;
-  width: 85vw; }
-  .modal .modal-header {
-    font-size: 1.7rem;
-    color: #111;
-    background: #EFE8D5;
-    margin: 8px; }
-  .modal .modal-content {
-    position: relative;
-    overflow: auto;
-    height: 90%;
-    margin: 8px; }
-  .modal .modal-footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 16px;
-    width: 100%;
-    background: #EFE8D5; }
-
-.modal-bottom {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  background: #EFE8D5;
-  padding: 32px;
-  min-height: 300px;
-  max-height: 50vh;
-  box-shadow: 0px 5px 16px 2px #555;
-  z-index: 5000;
-  visibility: hidden; }
-  .modal-bottom .modal-header {
-    font-size: 1.7rem;
-    color: #111;
-    background: #EFE8D5; }
-  .modal-bottom .modal-footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 16px;
-    width: 100%; }
-
-.modal-overlay {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  z-index: 4999;
-  background: black;
-  top: 0px;
-  left: 0px;
-  opacity: 0.5; }
-
 /* NAVIGATION */
 nav {
   background-color: #c0ad67; }
@@ -870,8 +816,11 @@ ol ol > li, ul ol > li {
   background: #c7b779;
   position: fixed;
   padding: 24px;
-  opacity: 0;
-  transition-duration: 0.25s;
+  visibility: hidden;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
   color: #111; }
   .sidenav a {
@@ -886,55 +835,70 @@ ol ol > li, ul ol > li {
     .sidenav a:hover {
       color: #2b2b2b;
       border: none; }
-  .sidenav.active {
-    opacity: 1; }
-    .sidenav.active.plain {
-      display: block;
-      z-index: 1000; }
-    .sidenav.active.drop {
-      height: 100%;
-      z-index: 1000;
-      transform: translate(0%, 0%); }
-    .sidenav.active.rise {
-      height: 100%;
-      z-index: 1000;
-      transform: translate(0%, 0%); }
-    .sidenav.active.slide-left {
-      height: 100%;
-      z-index: 1000;
-      transform: translate(0%, 0%);
-      border-radius: 0px; }
-    .sidenav.active.slide-right {
-      height: 100%;
-      z-index: 1000;
-      transform: translate(0%, 0%); }
-  .sidenav.plain {
-    width: 100%;
-    display: none;
-    top: 0;
-    left: 0; }
-  .sidenav.drop {
-    width: 100%;
-    transform: translate(0%, -100%);
-    top: 0;
-    left: 0; }
-  .sidenav.slide-left {
-    width: 100%;
-    transform: translate(-100%, 0%);
-    top: 0;
-    left: 0; }
-  .sidenav.slide-right {
-    width: 100%;
-    transform: translate(100%, 0%);
-    top: 0;
-    right: 0; }
-  .sidenav.rise {
-    width: 100%;
-    transform: translate(0%, 100%);
-    bottom: 0;
-    right: 0; }
 
 .close-trigger {
   box-shadow: 5px 5px 4px #cfc08b;
   margin: 16px; }
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background: #EFE8D5;
+  padding: 16px;
+  visibility: hidden;
+  box-shadow: 0px 5px 16px 2px #555;
+  z-index: 5000;
+  height: 45vh;
+  width: 85vw; }
+  .modal .modal-header {
+    font-size: 1.7rem;
+    color: #111;
+    background: #EFE8D5;
+    margin: 8px; }
+  .modal .modal-content {
+    position: relative;
+    overflow: auto;
+    height: 90%;
+    margin: 8px; }
+  .modal .modal-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 16px;
+    width: 100%;
+    background: #EFE8D5; }
+
+.modal-bottom {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  background: #EFE8D5;
+  padding: 32px;
+  min-height: 300px;
+  max-height: 50vh;
+  box-shadow: 0px 5px 16px 2px #555;
+  z-index: 5000;
+  visibility: hidden; }
+  .modal-bottom .modal-header {
+    font-size: 1.7rem;
+    color: #111;
+    background: #EFE8D5; }
+  .modal-bottom .modal-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 16px;
+    width: 100%; }
+
+.modal-overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 4999;
+  background: black;
+  top: 0px;
+  left: 0px;
+  opacity: 0.5; }
 /*# sourceMappingURL=antique.css.map */

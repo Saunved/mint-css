@@ -32,19 +32,11 @@ html, body, section, menu, summary, footer, header, article, aside, details {
   box-sizing: border-box; }
 
 a {
-  text-decoration: none;
-  display: inline-block; }
+  text-decoration: none; }
   a:link, a:visited {
-    color: #111;
-    border-bottom: 2px solid #242339;
-    padding-bottom: 4px;
-    transition-duration: 0.2s;
-    -webkit-animation: cubic-bezier(0.075, 0.82, 0.165, 1);
-            animation: cubic-bezier(0.075, 0.82, 0.165, 1); }
+    color: #006fcf; }
   a:link:hover, a:visited:hover {
-    color: #111;
-    padding-bottom: 0px;
-    border-bottom: 6px solid #242339; }
+    color: #00549c; }
 
 pre {
   padding: 8px;
@@ -54,6 +46,20 @@ pre {
   font-size: 1rem;
   margin: 8px 0px;
   white-space: pre-wrap; }
+
+.animated {
+  -webkit-animation-duration: 0.2s;
+  animation-duration: 0.2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+
+.btn {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent; }
 
 /* MEYER RESET + BASE EXTENSIONS */
 html, body, div, span, applet, object, iframe,
@@ -709,6 +715,18 @@ table {
 .transparent {
   background-color: unset; }
 
+.hidden {
+  visibility: hidden; }
+
+.visible {
+  visibility: visible; }
+
+.display-none {
+  display: none; }
+
+.display-block {
+  display: block; }
+
 .primary {
   background-color: #faaf3e; }
 
@@ -726,6 +744,14 @@ table {
 
 .accent-text {
   color: #eee; }
+
+.warning {
+  background-color: #ec3f00; }
+  .warning:hover {
+    background-color: #d83a00; }
+
+.warning-text {
+  color: white; }
 
 .shadow {
   box-shadow: 0px 4px 8px -2px #9d8dce; }
@@ -785,12 +811,77 @@ ol ol > li, ul ol > li {
   font-size: 1rem; }
 
 /* JS-BASED COMPONENTS */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background: #f9f8fc;
+  padding: 16px;
+  visibility: hidden;
+  box-shadow: 0px 5px 16px 2px #555;
+  z-index: 5000;
+  height: 45vh;
+  width: 85vw; }
+  .modal .modal-header {
+    font-size: 1.7rem;
+    color: #111;
+    background: #f9f8fc;
+    margin: 8px; }
+  .modal .modal-content {
+    position: relative;
+    overflow: auto;
+    height: 90%;
+    margin: 8px; }
+  .modal .modal-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 16px;
+    width: 100%;
+    background: #f9f8fc; }
+
+.modal-bottom {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  background: #f9f8fc;
+  padding: 32px;
+  min-height: 300px;
+  max-height: 50vh;
+  box-shadow: 0px 5px 16px 2px #555;
+  z-index: 5000;
+  visibility: hidden; }
+  .modal-bottom .modal-header {
+    font-size: 1.7rem;
+    color: #111;
+    background: #f9f8fc; }
+  .modal-bottom .modal-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 16px;
+    width: 100%; }
+
+.modal-overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 4999;
+  background: black;
+  top: 0px;
+  left: 0px;
+  opacity: 0.5; }
+
 .sidenav {
   background: #fbb957;
   position: fixed;
   padding: 24px;
-  opacity: 0;
-  transition-duration: 0.25s;
+  visibility: hidden;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
   color: #111; }
   .sidenav a {
@@ -805,53 +896,6 @@ ol ol > li, ul ol > li {
     .sidenav a:hover {
       color: #2b2b2b;
       border: none; }
-  .sidenav.active {
-    opacity: 1; }
-    .sidenav.active.plain {
-      display: block;
-      z-index: 1000; }
-    .sidenav.active.drop {
-      height: 100%;
-      z-index: 1000;
-      transform: translate(0%, 0%); }
-    .sidenav.active.rise {
-      height: 100%;
-      z-index: 1000;
-      transform: translate(0%, 0%); }
-    .sidenav.active.slide-left {
-      height: 100%;
-      z-index: 1000;
-      transform: translate(0%, 0%);
-      border-radius: 0px; }
-    .sidenav.active.slide-right {
-      height: 100%;
-      z-index: 1000;
-      transform: translate(0%, 0%); }
-  .sidenav.plain {
-    width: 100%;
-    display: none;
-    top: 0;
-    left: 0; }
-  .sidenav.drop {
-    width: 100%;
-    transform: translate(0%, -100%);
-    top: 0;
-    left: 0; }
-  .sidenav.slide-left {
-    width: 100%;
-    transform: translate(-100%, 0%);
-    top: 0;
-    left: 0; }
-  .sidenav.slide-right {
-    width: 100%;
-    transform: translate(100%, 0%);
-    top: 0;
-    right: 0; }
-  .sidenav.rise {
-    width: 100%;
-    transform: translate(0%, 100%);
-    bottom: 0;
-    right: 0; }
 
 .close-trigger {
   box-shadow: 5px 5px 4px #fbc470;
