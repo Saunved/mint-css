@@ -662,16 +662,16 @@ table {
   color: #eee;
   background-color: #080808;
   padding: 12px 22px;
-  margin: 8px 8px 8px 0px;
-  border: 1px solid #eee;
-  box-shadow: 4px 4px 2px #010101; }
+  margin-top: 8px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  border: 1px solid #555; }
   .btn:hover {
-    background-color: #151515;
-    box-shadow: none; }
+    background-color: #222222; }
 
 .btn.btn-outline {
   background-color: #111;
-  color: #a1a1a1;
+  color: #888888;
   border: 1px solid #080808; }
   .btn.btn-outline:hover {
     background-color: #1b1b1b; }
@@ -688,6 +688,7 @@ table {
     box-shadow: 0px 0px 0px; }
 
 .btn-light {
+  -webkit-text-fill-color: #111;
   color: #111;
   background-color: #fff; }
   .btn-light:hover {
@@ -701,7 +702,7 @@ table {
 
 .btn-secondary.btn-outline {
   background-color: #111;
-  color: #d8ccd7;
+  color: #c2afc1;
   border: 1px solid #7A5E79; }
   .btn-secondary.btn-outline:hover {
     background-color: #1b1b1b; }
@@ -714,7 +715,7 @@ table {
 
 .btn-accent.btn-outline {
   background-color: #111;
-  color: #ebe8ed;
+  color: #d3cbd7;
   border: 1px solid #897495; }
   .btn-accent.btn-outline:hover {
     background-color: #1b1b1b; }
@@ -724,6 +725,9 @@ table {
 
 .btn-rounded {
   border-radius: 24px; }
+
+.btn-no-shadow {
+  box-shadow: none; }
 
 /** CARD **/
 .card {
@@ -1101,16 +1105,13 @@ nav {
           margin-right: 0px; }
       nav .navigation .dropdown:hover .dropdown-content {
         display: block; }
-    nav .navigation a:link {
-      all: unset;
+    nav .navigation a:link, nav .navigation a:visited {
       text-transform: uppercase;
       margin-left: 8px;
       font-size: 1rem;
       color: black;
       display: inline-block;
       padding: 8px; }
-    nav .navigation a:visited {
-      color: black; }
     nav .navigation a:hover {
       cursor: pointer;
       color: black; }

@@ -662,12 +662,12 @@ table {
   color: #eee;
   background-color: #00B161;
   padding: 12px 22px;
-  margin: 8px 8px 8px 0px;
-  border: 1px solid #111;
-  box-shadow: 4px 4px 2px #d2bcc7; }
+  margin-top: 8px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  border: 1px solid #bbb; }
   .btn:hover {
-    background-color: #009853;
-    box-shadow: none; }
+    background-color: #007e45; }
 
 .btn.btn-outline {
   background-color: #fff;
@@ -688,6 +688,7 @@ table {
     box-shadow: 0px 0px 0px; }
 
 .btn-light {
+  -webkit-text-fill-color: #111;
   color: #111;
   background-color: #fff; }
   .btn-light:hover {
@@ -724,6 +725,9 @@ table {
 
 .btn-rounded {
   border-radius: 24px; }
+
+.btn-no-shadow {
+  box-shadow: none; }
 
 /** CARD **/
 .card {
@@ -1101,16 +1105,13 @@ nav {
           margin-right: 0px; }
       nav .navigation .dropdown:hover .dropdown-content {
         display: block; }
-    nav .navigation a:link {
-      all: unset;
+    nav .navigation a:link, nav .navigation a:visited {
       text-transform: uppercase;
       margin-left: 8px;
       font-size: 1rem;
       color: #009250;
       display: inline-block;
       padding: 8px; }
-    nav .navigation a:visited {
-      color: #009250; }
     nav .navigation a:hover {
       cursor: pointer;
       color: #00c56c; }

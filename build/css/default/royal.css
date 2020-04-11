@@ -688,6 +688,7 @@ table {
     box-shadow: 0px 0px 0px; }
 
 .btn-light {
+  -webkit-text-fill-color: #111;
   color: #111;
   background-color: #fff; }
   .btn-light:hover {
@@ -1105,7 +1106,6 @@ nav {
       nav .navigation .dropdown:hover .dropdown-content {
         display: block; }
     nav .navigation a:link {
-      all: unset;
       text-transform: uppercase;
       margin-left: 8px;
       font-size: 1rem;
