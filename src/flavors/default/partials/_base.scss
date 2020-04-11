@@ -23,15 +23,28 @@ html, body, section, menu, summary, footer, header, article, aside, details{
     background-color: $color-base;
 }
 
-.container {
-    position: relative;
-    width: 80%;
-    // max-width: 1024px;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 0 20px;
-    box-sizing: border-box; 
-  }
+@media (max-width: $tablet-portrait-above+(-1) ){
+    .container {
+        position: relative;
+        width: 94%;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 0 20px;
+        box-sizing: border-box; 
+      }
+}
+
+@media (min-width: $tablet-portrait-above ){
+    .container {
+        position: relative;
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 0 20px;
+        box-sizing: border-box; 
+      }
+}
+
 
 a{
     text-decoration: none;
