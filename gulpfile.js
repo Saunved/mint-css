@@ -7,6 +7,7 @@ const concat = require('gulp-concat');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssNano = require('cssnano');
+var clean = require('gulp-clean');
 const purge = require('gulp-purgecss');
 
 sass.compiler = require('node-sass');
@@ -59,12 +60,21 @@ function minifyTask(cb){
 
 function buildJsTask(cb){
 		// You can pass specific js files here to only keep those in the output
-		gulp.src('./src/components/*.js')
-		.pipe(concat('scripts.min.js'))
+		// gulp.src('./src/components/*.js')
+		// .pipe(concat('scripts.min.js'))
+		// .pipe(uglify())
+		// .pipe(gulp.dest('./build/js'));
+
+		// gulp.src('./src/components/*.js')
+		// .pipe(concat('scripts.js'))
+		// .pipe(gulp.dest('./build/js'));
+
+		gulp.src(['./build/es5/*.js'])
+		.pipe(concat('scripts.js'))
 		.pipe(uglify())
 		.pipe(gulp.dest('./build/js'));
 
-		gulp.src('./src/components/*.js')
+		gulp.src(['./build/es5/*.js'])
 		.pipe(concat('scripts.js'))
 		.pipe(gulp.dest('./build/js'));
 
@@ -78,9 +88,8 @@ function demoTask(cb) {
 	* for each flavor-theme combination
 	*/
 
-	gulp.src(['./src/components/*.js', './docs/js/CodeViewer/*.js'])
+	gulp.src(['./build/es5/*.js'])
 	.pipe(concat('scripts.js'))
-	// .pipe(uglify())
 	.pipe(gulp.dest('./docs/js'));
 
 	flavors.forEach(flavor => {
@@ -112,6 +121,12 @@ function watchTask(cb) {
 	cb();
 }
 
+async function cleanTask(){
+	gulp.src('./build/es5/*.js', {read: false})
+	.pipe(clean());
+}
+
 exports.default = gulp.series(buildTask, minifyTask, buildJsTask, demoTask);
 exports.demo = gulp.series(demoTask);
+exports.clean = gulp.series(cleanTask);
 exports.watch = gulp.series(watchTask);

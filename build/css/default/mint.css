@@ -655,9 +655,6 @@ table {
 * {
   box-sizing: border-box; }
 
-html {
-  touch-action: manipulation; }
-
 /* PARTIALS (keep the ones you need) */
 /* BUTTONS */
 .btn {

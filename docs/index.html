@@ -14,11 +14,14 @@
     <meta name="keywords" content="sass, boilerplate, framework, tool, css, theming, gulp, prototype, web design">
     <meta name="author" content="Saunved Mutalik">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"> -->
     <link id="stylesheet" rel="stylesheet" type="text/css" href="./default/assets/css/mint.css">
     <link rel="stylesheet" href="./js/highlight/styles/codepen-embed.css">
     <script src="./js/highlight/highlight.pack.js"></script>
-    <!-- <script src="./js/CodeViewer/code-viewer.js"></script> -->
+    <style>
+        html {
+            touch-action: manipulation !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -116,8 +119,8 @@
                             </div>
                             <div class="modal-footer">
                                 <div class="right-align">
-                                <button class="btn right-align" onclick="modal.close()">Cancel</button>
-                                <button class="btn right-align warning warning-text" onclick="modal2.open()">Delete</button>
+                                <button id="modal1-close" class="btn right-align" onclick="modal.close()">Cancel</button>
+                                <button id="modal2-open" class="btn right-align warning warning-text">Delete</button>
                             </div>
                         </div>
                         </div>
@@ -125,7 +128,7 @@
                             <div class="modal-header">SECOND MODAL</div>
                             <div class="modal-content">
                             <p>Build scalable things my friend</p>
-                            <button class="btn" onclick="modal3.open()">Open thyself</button>
+                            <button id="modal3-open" class="btn">Open thyself</button>
                         </div>
                         </div>
                         <div id="modal3" class="modal-bottom">
