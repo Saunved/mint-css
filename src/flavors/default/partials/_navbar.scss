@@ -16,7 +16,7 @@
             text-transform: uppercase;
             margin-left: 8px;
             font-size: $font-medium;
-            color: $color-link-nav;
+            color: $color-link-nav !important;
             display: inline-block;
             padding: 8px;
         }

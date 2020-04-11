@@ -10,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "xo": "xo --ignore=node_modules",
     "dev": "babel ./src/components ./docs/js/CodeViewer -d ./build/es5&&gulp demo&&gulp clean",
-    "build": "babel ./src/components -d ./build/es5&&gulp&&gulp clean"
+    "build": "babel ./src/components ./docs/js/CodeViewer -d ./build/es5&&gulp&&gulp clean"
   },
   "repository": {
     "type": "git",
