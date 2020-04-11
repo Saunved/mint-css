@@ -3,7 +3,7 @@
     top: 50%;
     left: 50%;
     background: $color-base;
-    padding: 16px;
+    padding: 0px 8px;
     visibility: hidden;
     @if(is-dark($color-base)){
        box-shadow: 0px 5px 16px 2px darken($color-base, 20%);
@@ -12,29 +12,49 @@
        box-shadow: 0px 5px 16px 2px #555;
     }
     z-index: 5000;
-    height: 45vh;
-    width: 85vw;
+    min-height: 200px;
+    height: auto;
+
+    @media (max-width: $tablet-portrait-above+(-1)){
+        width: 85vw;
+    }
+
+    @media (min-width: $tablet-portrait-above) and (max-width: $tablet-landscape-above+(-1)){
+        width: 55vw;
+    }
+
+    @media (min-width: $tablet-landscape-above){
+        width: 40vw;
+    }
+    overflow-y: auto;
     
     .modal-header{
+        padding: 16px 8px;
         font-size: $font-h4;
         color: $color-base-text;
         background: $color-base;
-        margin: 8px;
+    }
+
+    .modal-header-fixed{
+        @extend .modal-header;
+        margin-top: 0px;
+        position: sticky;
+        top: 0;
     }
     
     .modal-content{
-        // color: $color-base-text;
-        position: relative;
-        overflow: auto;
-        height: 90%;
         margin: 8px;
+        min-height: 84px;
     }
     
     .modal-footer{
-        position: absolute;
+        // border-top: 1px solid #999;
+    }
+
+    .modal-footer-fixed{
+        position: sticky;
         bottom: 0;
         left: 0;
-        padding: 16px;
         width: 100%;
         background: $color-base;
     }
@@ -50,12 +70,8 @@
     position: fixed;
     bottom: 0;
     right: 0;
-    // top: 50%;
-    // left: 50%;
     width: 100%;
-    // transform: translate(-50%, -50%);
     background: $color-base;
-    padding: 32px;;
     min-height: 300px;
     max-height: 50vh;
     @if(is-dark($color-base)){
@@ -70,23 +86,36 @@
     .modal-close{
     
     }
-    
     .modal-header{
+        padding: 16px 16px 0px 16px;
         font-size: $font-h4;
         color: $color-base-text;
         background: $color-base;
     }
-    
-    .modal-content{
-        // color: $color-base-text;
+
+    .modal-header-fixed{
+        @extend .modal-header;
+        margin-top: 0px;
+        position: sticky;
+        top: 0;
     }
     
+    .modal-content{
+        margin: 16px;
+        min-height: 134px;
+    }
+
     .modal-footer{
-        position: absolute;
+        // border-top: 1px solid #999;
+    }
+
+    .modal-footer-fixed{
+        position: sticky;
         bottom: 0;
         left: 0;
-        padding: 16px;
         width: 100%;
+        background: $color-base;
+        padding: 16px;
     }
 
 }
