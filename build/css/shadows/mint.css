@@ -7,6 +7,54 @@
  * Copyright (c) 2020 Daniel Eden
  */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
+@-webkit-keyframes shake {
+  0%, to {
+    transform: translateZ(0); }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-10px, 0, 0); }
+  20%, 40%, 60%, 80% {
+    transform: translate3d(10px, 0, 0); } }
+
+@keyframes shake {
+  0%, to {
+    transform: translateZ(0); }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-10px, 0, 0); }
+  20%, 40%, 60%, 80% {
+    transform: translate3d(10px, 0, 0); } }
+
+.shake {
+  -webkit-animation-name: shake;
+  animation-name: shake; }
+
+@-webkit-keyframes tada {
+  0% {
+    transform: scaleX(1); }
+  10%, 20% {
+    transform: scale3d(0.9, 0.9, 0.9) rotate(-3deg); }
+  30%, 50%, 70%, 90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate(3deg); }
+  40%, 60%, 80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate(-3deg); }
+  to {
+    transform: scaleX(1); } }
+
+@keyframes tada {
+  0% {
+    transform: scaleX(1); }
+  10%, 20% {
+    transform: scale3d(0.9, 0.9, 0.9) rotate(-3deg); }
+  30%, 50%, 70%, 90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate(3deg); }
+  40%, 60%, 80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate(-3deg); }
+  to {
+    transform: scaleX(1); } }
+
+.tada {
+  -webkit-animation-name: tada;
+  animation-name: tada; }
+
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0; }
@@ -567,13 +615,23 @@ html, body, section, menu, summary, footer, header, article, aside, details {
   color: #111;
   background-color: #FBF9FA; }
 
-.container {
-  position: relative;
-  width: 80%;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 0 20px;
-  box-sizing: border-box; }
+@media (max-width: 599px) {
+  .container {
+    position: relative;
+    width: 94%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 20px;
+    box-sizing: border-box; } }
+
+@media (min-width: 600px) {
+  .container {
+    position: relative;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 20px;
+    box-sizing: border-box; } }
 
 a {
   text-decoration: none; }
@@ -1361,27 +1419,40 @@ ol ol > li, ul ol > li {
   top: 50%;
   left: 50%;
   background: #FBF9FA;
-  padding: 16px;
+  padding: 0px 8px;
   visibility: hidden;
   box-shadow: 0px 5px 16px 2px #555;
   z-index: 5000;
-  height: 45vh;
-  width: 85vw; }
-  .modal .modal-header {
+  min-height: 200px;
+  height: auto;
+  overflow-y: auto; }
+  @media (max-width: 599px) {
+    .modal {
+      width: 85vw; } }
+  @media (min-width: 600px) and (max-width: 899px) {
+    .modal {
+      width: 55vw; } }
+  @media (min-width: 900px) {
+    .modal {
+      width: 40vw; } }
+  .modal .modal-header, .modal .modal-header-fixed {
+    padding: 16px 8px;
     font-size: 1.7rem;
     color: #111;
-    background: #FBF9FA;
-    margin: 8px; }
+    background: #FBF9FA; }
+  .modal .modal-header-fixed {
+    margin-top: 0px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0; }
   .modal .modal-content {
-    position: relative;
-    overflow: auto;
-    height: 90%;
-    margin: 8px; }
-  .modal .modal-footer {
-    position: absolute;
+    margin: 8px;
+    min-height: 84px; }
+  .modal .modal-footer-fixed {
+    position: -webkit-sticky;
+    position: sticky;
     bottom: 0;
     left: 0;
-    padding: 16px;
     width: 100%;
     background: #FBF9FA; }
 
@@ -1391,22 +1462,32 @@ ol ol > li, ul ol > li {
   right: 0;
   width: 100%;
   background: #FBF9FA;
-  padding: 32px;
   min-height: 300px;
   max-height: 50vh;
   box-shadow: 0px 5px 16px 2px #555;
   z-index: 5000;
   visibility: hidden; }
-  .modal-bottom .modal-header {
+  .modal-bottom .modal-header, .modal-bottom .modal-header-fixed {
+    padding: 16px 16px 0px 16px;
     font-size: 1.7rem;
     color: #111;
     background: #FBF9FA; }
-  .modal-bottom .modal-footer {
-    position: absolute;
+  .modal-bottom .modal-header-fixed {
+    margin-top: 0px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0; }
+  .modal-bottom .modal-content {
+    margin: 16px;
+    min-height: 134px; }
+  .modal-bottom .modal-footer-fixed {
+    position: -webkit-sticky;
+    position: sticky;
     bottom: 0;
     left: 0;
-    padding: 16px;
-    width: 100%; }
+    width: 100%;
+    background: #FBF9FA;
+    padding: 16px; }
 
 .modal-overlay {
   position: fixed;

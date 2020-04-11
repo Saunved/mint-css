@@ -113,14 +113,14 @@
                         <p><i>Undocumented feature</i></p>
                         <button class="btn" onclick="modal.open()">Modal click</button>
                         <div id="modal1" class="modal">
-                            <div class="modal-header">Are you sure?</div>
+                            <div class="modal-header-fixed">Are you sure?</div>
                             <div class="modal-content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi totam eaque a laborum dolor placeat molestias commodi facere tempore sed!</p>
+                            <p>When life gives you lemons</p>
                             </div>
-                            <div class="modal-footer">
+                            <div class="modal-footer-fixed">
                                 <div class="right-align">
-                                <button id="modal1-close" class="btn right-align" onclick="modal.close()">Cancel</button>
-                                <button id="modal2-open" class="btn right-align warning warning-text" onclick="modal2.open()">Delete</button>
+                                <button class="btn right-align btn-accent btn-outline btn-small no-border" onclick="modal.close()">Lemon</button>
+                                <button class="btn right-align btn-outline btn-secondary btn-small no-border" onclick="modal2.open()">Grab</button>
                             </div>
                         </div>
                         </div>
@@ -128,7 +128,11 @@
                             <div class="modal-header">SECOND MODAL</div>
                             <div class="modal-content">
                             <p>Build scalable things my friend</p>
-                            <button id="modal3-open" class="btn" onclick="modal3.open()">Open thyself</button>
+                        </div>
+                        <div class="modal-footer-fixed">
+                            <div class="right-align">
+                                <button class="btn" onclick="modal3.open()">Open thyself</button>
+                            </div>
                         </div>
                         </div>
                         <div id="modal3" class="modal-bottom">
@@ -1113,7 +1117,7 @@ var sidenav1, sidenav2, sidenav3, sidenav4, sidenav5, modal, modal2;
             sidenav3 = new Sidenav('sidenav3', {enterFrom: 'right'});
             sidenav4 = new Sidenav('sidenav4', {enterFrom: 'top'});
             sidenav5 = new Overlay('overlay');
-            modal = new Modal('modal1');
+            modal = new Modal('modal1', {canBeDismissed: false});
             modal2 = new Modal('modal2');
             modal3 = new Modal('modal3');
         }
