@@ -12,11 +12,10 @@
 
     a{
         &:link{
-            all: unset;
             text-transform: uppercase;
             margin-left: 8px;
             font-size: $font-medium;
-            color: $color-link-nav !important;
+            color: $color-link-nav;
             display: inline-block;
             padding: 8px;
         }

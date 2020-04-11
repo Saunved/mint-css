@@ -4,25 +4,22 @@
     color: $color-primary-text;
     background-color: $color-primary;
     padding: 12px 22px;
-    margin: 8px 8px 8px 0px;
-
+    margin-top: 8px;
+    margin-right: 8px;
+    margin-bottom: 8px;
     @if(is-dark($color-base)){
-        border: 1px solid #eee;
-        box-shadow: 4px 4px 2px darken($color-base, 10%);
+        border: 1px solid #555;
     }
     @else{
-        border: 1px solid #111;
-        box-shadow: 4px 4px 2px darken($color-base, 20%);
+        border: 1px solid #bbb;
     }
 
     &:hover{
         @if(is-dark($color-base)){
-            background-color: lighten($color-primary, 5%);
-            box-shadow: none;
+            background-color: lighten($color-primary, 10%);
         }
         @else{
-            background-color: darken($color-primary, 5%);
-            box-shadow: none;
+            background-color: darken($color-primary, 10%);
         }
     }
 }
@@ -30,7 +27,7 @@
 .btn.btn-outline{
     @if(is-dark($color-base)){
         background-color: $color-dark;
-        color: lighten($color-primary, 60%);
+        color: lighten($color-primary, 50%);
     }
     @else{
         background-color: $color-white;
@@ -74,12 +71,12 @@
 }
 
 .btn-light{
+    -webkit-text-fill-color: $color-dark;
     color: $color-dark;
     background-color: $color-white;
 
     &:hover{
         background-color: darken($color-white, 6%);
-        // border: 1px solid black;
     }
 }
 
@@ -99,7 +96,7 @@
 .btn-secondary.btn-outline{
     @if(is-dark($color-base)){
         background-color: $color-dark;
-        color: lighten($color-secondary, 40%);
+        color: lighten($color-secondary, 30%);
     }
     @else{
         background-color: $color-white;
@@ -143,7 +140,7 @@
 .btn-accent.btn-outline{
     @if(is-dark($color-base)){
         background-color: $color-dark;
-        color: lighten($color-accent, 40%);
+        color: lighten($color-accent, 30%);
     }
     @else{
         background-color: $color-white;
@@ -179,4 +176,8 @@
 
 .btn-rounded{
     border-radius: 24px;
+}
+
+.btn-no-shadow{
+    box-shadow: none;
 }

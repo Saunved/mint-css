@@ -11,8 +11,7 @@
         z-index: 1000;
 
     a{
-        &:link{
-            all: unset;
+        &:link, &:visited{
             text-transform: uppercase;
             margin-left: 8px;
             font-size: $font-medium;
@@ -26,14 +25,14 @@
             padding: 8px;
         }
 
-        &:visited{
-            @if(is-dark($color-primary)){
-                color: darken($color-primary, 6%);
-            }
-            @else{
-                color: darken($color-primary, 10%);
-            }
-        }
+        // &:visited{
+        //     @if(is-dark($color-primary)){
+        //         color: darken($color-primary, 6%);
+        //     }
+        //     @else{
+        //         color: darken($color-primary, 10%);
+        //     }
+        // }
 
         &:hover{
             cursor: pointer;
