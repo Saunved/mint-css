@@ -2,14 +2,13 @@
     .dropdown {
         position: relative;
         display: inline-block;
-        margin-left: 16px;
         z-index: 1;
     
         .dropdown-title{
             text-transform: uppercase;
             font-size: $font-medium;
             display: inline-block;
-            padding: 8px;
+            padding: 16px 8px;
             @if(is-dark($color-primary)){
                 color: darken($color-primary, 6%);
             }
@@ -17,15 +16,14 @@
                 color: darken($color-primary, 10%);
             }
             background-color: $color-primary-text;
-            padding-left: 0px;
-            cursor: pointer;
-    
+
             &:hover{
-                @if(is-dark($color-base)){
-                    color: lighten($color-primary, 4%);
+                cursor: pointer;
+                @if(is-dark($color-primary-text)){
+                    background-color: lighten($color-primary-text, 8%);
                 }
                 @else{
-                    color: darken($color-primary, 4%);
+                    background-color: darken($color-primary-text, 5%);
                 }
             }
     
