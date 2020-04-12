@@ -37,22 +37,12 @@ class Modal{
         this.options.afterClose = () => {};
         this.options.afterOpen = () => {};
 
-        if(userOptions){
-            for(var key of Object.keys(userOptions)){
-                this.options[key] = userOptions[key];
-            }
-        }
+        Object.assign(this.options, userOptions);
     }
 
     _isVisible(){
         var _isVisible = !! this.modal && !!( this.modal.offsetWidth || this.modal.offsetHeight || this.modal.getClientRects().length )
         return _isVisible;
-    }
-
-    _setupListener(){
-        this.options.trigger.addEventListener('click', () => {
-            this.open();
-        })    
     }
 
     _bindEsc(){
@@ -102,6 +92,12 @@ class Modal{
                     });
             }
         }
+    }
+
+    _setupTriggerListener(){
+        this.options.trigger.addEventListener('click', () => {
+            this.open();
+        })    
     }
 
     _attachClickListener() {
