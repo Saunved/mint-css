@@ -9,17 +9,21 @@
     margin-bottom: 8px;
     @if(is-dark($color-base)){
         border: 1px solid #555;
+        box-shadow: 4px 4px 2px darken($color-base, 10%);
     }
     @else{
         border: 1px solid #bbb;
+        box-shadow: 4px 4px 2px darken($color-base, 20%);	
     }
 
     &:hover{
         @if(is-dark($color-base)){
             background-color: lighten($color-primary, 10%);
+            box-shadow: none;
         }
         @else{
             background-color: darken($color-primary, 10%);
+            box-shadow: none;
         }
     }
 }
@@ -140,11 +144,11 @@
 .btn-accent.btn-outline{
     @if(is-dark($color-base)){
         background-color: $color-dark;
-        color: lighten($color-accent, 30%);
+        color: lighten($color-accent, 40%);
     }
     @else{
         background-color: $color-white;
-        color: darken($color-accent, 30%);
+        color: darken($color-accent, 40%);
     }
     border: 1px solid $color-accent;
 
