@@ -216,7 +216,7 @@
 <&#8203;/nav>'></code-viewer>
     <nav class="space-medium">
         <div class="navigation left-align">
-               <span><img class="logo right" src="https://via.placeholder.com/150x30/FFFFFF/000000?text=LOGO" alt=""></span>
+               <span><img class="logo right" loading="lazy" src="https://via.placeholder.com/150x30/FFFFFF/000000?text=LOGO" alt=""></span>
             <a href="#" class="">Home</a>
             <a href="#">About us</a>
             <span class="dropdown">
@@ -925,7 +925,7 @@ sidenav.close(); // closes the sidenav</code></pre>
     <&#8203;img src="https://via.placeholder.com/150/bbaacc/ffffff" alt="">
 <&#8203;/div>'></code-viewer>
             <div class="center">
-                <img src="https://via.placeholder.com/150/bbaacc/ffffff" alt="">
+                <img loading="lazy" src="https://via.placeholder.com/150/bbaacc/ffffff" alt="">
             </div>
 
             <code-viewer title="Left align content" content='<&#8203;div class="left-align">
@@ -933,51 +933,36 @@ sidenav.close(); // closes the sidenav</code></pre>
 <&#8203;/div>'></code-viewer>
 
             <div class="left-align space">
-                <img src="https://via.placeholder.com/150/bbaacc/ffffff" alt="">
+                <img loading="lazy" src="https://via.placeholder.com/150/bbaacc/ffffff" alt="">
             </div>
 
             <code-viewer title="Right align content" content='<&#8203;div class="right-align">
     <&#8203;img src="https://via.placeholder.com/150/bbaacc/ffffff" alt="">
 <&#8203;/div>'></code-viewer>
             <div class="right-align space">
-                <img src="https://via.placeholder.com/150/bbaacc/ffffff" alt="">
+                <img loading="lazy" src="https://via.placeholder.com/150/bbaacc/ffffff" alt="">
             </div>
 
             <code-viewer title="Right float" content='<&#8203;div class="clearfix">
     <&#8203;img class="right" src="https://via.placeholder.com/150/bbaacc/ffffff" alt="">
 <&#8203;/div>'></code-viewer>           
             <div class="clearfix">
-                <img class="right" src="https://via.placeholder.com/150/bbaacc/ffffff" alt="">
+                <img loading="lazy" class="right" src="https://via.placeholder.com/150/bbaacc/ffffff" alt="">
             </div>
 
             <code-viewer title="Left float" content='<&#8203;div class="clearfix">
     <&#8203;img class="left" src="https://via.placeholder.com/150/bbaacc/ffffff" alt="">
 <&#8203;/div>'></code-viewer>           
                         <div class="clearfix space">
-                            <img class="left" src="https://via.placeholder.com/150/bbaacc/ffffff" alt="">
+                            <img loading="lazy" class="left" src="https://via.placeholder.com/150/bbaacc/ffffff" alt="">
                         </div>
 
             <code-viewer title="Clearfix a float" content='<&#8203;div class="<b>clearfix</b>">
     <&#8203;img class="right" src="https://via.placeholder.com/150/bbaacc/ffffff" alt="">
 <&#8203;/div>'></code-viewer>
             <div class="clearfix space">
-                <img class="right" src="https://via.placeholder.com/150/bbaacc/ffffff" alt="">
+                <img loading="lazy" class="right" src="https://via.placeholder.com/150/bbaacc/ffffff" alt="">
             </div>
-
-
-            <!-- <code-viewer title="Small border radius" content='<&#8203;div>
-    <&#8203;img class="small-radius border" src="https://via.placeholder.com/150/bbaacc/ffffff" alt="">
-<&#8203;/div>'></code-viewer>
-            <div class="space">
-                <img class="small-radius border" src="https://via.placeholder.com/150/bbaacc/ffffff" alt="">
-            </div> -->
-
-            <!-- <code-viewer title="Large border radius" content='<&#8203;div class="">
-                <&#8203;img class="large-radius border" src="https://via.placeholder.com/150/bbaacc/ffffff" alt="">
-            <&#8203;/div>'></code-viewer>
-            <div class="space">
-                <img class="large-radius border" src="https://via.placeholder.com/150/bbaacc/ffffff" alt="">
-            </div> -->
 
         </section>
 
@@ -1117,7 +1102,7 @@ var sidenav1, sidenav2, sidenav3, sidenav4, sidenav5, modal, modal2;
             sidenav3 = new Sidenav('sidenav3', {enterFrom: 'right'});
             sidenav4 = new Sidenav('sidenav4', {enterFrom: 'top'});
             sidenav5 = new Overlay('overlay');
-            modal = new Modal('modal1', {canBeDismissed: false});
+            modal = new Modal('modal1');
             modal2 = new Modal('modal2');
             modal3 = new Modal('modal3');
         }

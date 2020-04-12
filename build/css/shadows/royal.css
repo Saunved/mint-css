@@ -723,9 +723,11 @@ table {
   margin-top: 8px;
   margin-right: 8px;
   margin-bottom: 8px;
-  border: 1px solid #bbb; }
+  border: 1px solid #bbb;
+  box-shadow: 4px 4px 2px #cac6b3; }
   .btn:hover {
-    background-color: #33012d; }
+    background-color: #33012d;
+    box-shadow: none; }
 
 .btn.btn-outline {
   background-color: #fff;
@@ -773,7 +775,7 @@ table {
 
 .btn-accent.btn-outline {
   background-color: #fff;
-  color: #312740;
+  color: #191420;
   border: 1px solid #7a629e; }
   .btn-accent.btn-outline:hover {
     background-color: whitesmoke; }
@@ -1105,33 +1107,29 @@ video.video-responsive {
 nav {
   background-color: #eee; }
   nav img.logo {
-    font-size: 20px; }
+    font-size: 20px;
+    padding: 8px; }
   nav :not(img).logo {
     line-height: 30px;
     font-size: 24px;
-    color: #33012d; }
+    color: #33012d;
+    padding: 8px 16px; }
   nav .navigation {
-    padding-top: 0.6rem;
-    padding-bottom: 0.4rem;
-    padding-right: 2rem;
-    padding-left: 2rem;
     z-index: 1000; }
     nav .navigation .dropdown {
       position: relative;
       display: inline-block;
-      margin-left: 16px;
       z-index: 1; }
       nav .navigation .dropdown .dropdown-title {
         text-transform: uppercase;
         font-size: 1rem;
         display: inline-block;
-        padding: 8px;
+        padding: 16px 8px;
         color: #48013f;
-        background-color: #eee;
-        padding-left: 0px;
-        cursor: pointer; }
+        background-color: #eee; }
         nav .navigation .dropdown .dropdown-title:hover {
-          color: #520147; }
+          cursor: pointer;
+          background-color: #e1e1e1; }
         nav .navigation .dropdown .dropdown-title i {
           border: solid #520147;
           border-width: 0 3px 3px 0;
@@ -1165,14 +1163,13 @@ nav {
         display: block; }
     nav .navigation a:link, nav .navigation a:visited {
       text-transform: uppercase;
-      margin-left: 8px;
       font-size: 1rem;
       color: #48013f;
       display: inline-block;
-      padding: 8px; }
+      padding: 16px 8px; }
     nav .navigation a:hover {
       cursor: pointer;
-      color: #7a016b; }
+      background-color: #e1e1e1; }
     nav .navigation a:first-child {
       margin-left: 0px; }
     nav .navigation a:last-child {

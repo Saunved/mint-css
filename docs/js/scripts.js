@@ -173,12 +173,7 @@ var Modal = /*#__PURE__*/function () {
 
       this.options.afterOpen = function () {};
 
-      if (userOptions) {
-        for (var _i = 0, _Object$keys = Object.keys(userOptions); _i < _Object$keys.length; _i++) {
-          var key = _Object$keys[_i];
-          this.options[key] = userOptions[key];
-        }
-      }
+      Object.assign(this.options, userOptions);
     }
   }, {
     key: "_isVisible",
@@ -188,22 +183,13 @@ var Modal = /*#__PURE__*/function () {
       return _isVisible;
     }
   }, {
-    key: "_setupListener",
-    value: function _setupListener() {
-      var _this2 = this;
-
-      this.options.trigger.addEventListener('click', function () {
-        _this2.open();
-      });
-    }
-  }, {
     key: "_bindEsc",
     value: function _bindEsc() {
-      var _this3 = this;
+      var _this2 = this;
 
       document.addEventListener('keyup', function (event) {
         if (event.key === 'Escape') {
-          _this3.close();
+          _this2.close();
         }
       });
     }
@@ -220,7 +206,7 @@ var Modal = /*#__PURE__*/function () {
   }, {
     key: "_toggleModal",
     value: function _toggleModal(show) {
-      var _this4 = this;
+      var _this3 = this;
 
       if (show) {
         Modal.overlay.classList.remove('hidden');
@@ -242,14 +228,23 @@ var Modal = /*#__PURE__*/function () {
 
         if (this.modal.classList.contains('modal-bottom')) {
           animateCSS("#".concat(this.id), 'slideOutDown', function () {
-            _this4.modal.style.visibility = 'hidden';
+            _this3.modal.style.visibility = 'hidden';
           });
         } else {
           animateCSS("#".concat(this.id), 'fadeOut zoomOut', function () {
-            _this4.modal.style.visibility = 'hidden';
+            _this3.modal.style.visibility = 'hidden';
           });
         }
       }
+    }
+  }, {
+    key: "_setupTriggerListener",
+    value: function _setupTriggerListener() {
+      var _this4 = this;
+
+      this.options.trigger.addEventListener('click', function () {
+        _this4.open();
+      });
     }
   }, {
     key: "_attachClickListener",
