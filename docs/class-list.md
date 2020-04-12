@@ -52,11 +52,6 @@ Class | Purpose
 .navbar-fixed | defines a navbar fixed to the top of the page
 .navbar-fixed-bottom | defines a navbar fixed to the bottom of the page
 .sidenav | defines sidenav content
-.sidenav.active | indicates an active sidenav
-.slide-left | defines sidenav that slides in from left
-.slide-right | defines sidenav that slides in from right
-.rise | defines a sidenav that slides up from below
-.drop | defines a sidenav that slides down from above
 .trigger | defines the trigger for a sidenav
 .close-trigger | defines the close trigger for a sidenav
 
@@ -158,8 +153,10 @@ Class | Purpose
 .modal  | defines a modal
 .modal-close | defines the close button for a modal
 .modal-header | defines a modal header
+.modal-header-fixed | defines a modal header stuck to the top
 .modal-content | defines a modal's content area
 .modal-footer | defines a modal's footer
+.modal-footer-fixed | defines a modal footer stuck to the bottom
 
 ## Media
 Class | Purpose
