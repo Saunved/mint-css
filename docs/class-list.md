@@ -52,6 +52,7 @@ Class | Purpose
 .navbar-fixed | defines a navbar fixed to the top of the page
 .navbar-fixed-bottom | defines a navbar fixed to the bottom of the page
 .sidenav | defines sidenav content
+.click-close | if an element with this class is clicked inside a sidenav, the sidenav closes
 .trigger | defines the trigger for a sidenav
 .close-trigger | defines the close trigger for a sidenav
 
