@@ -10,8 +10,12 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "xo": "xo --ignore=node_modules",
     "dev": "babel ./src/components ./docs/js/CodeViewer -d ./build/es5&&gulp demo&&gulp clean",
-    "build": "babel ./src/components ./docs/js/CodeViewer -d ./build/es5&&gulp&&gulp clean",
-    "watch:dev": "onchange 'src/**/*.*' -- npm run dev"
+    "dev:js": "babel ./src/components ./docs/js/CodeViewer -d ./build/es5&&gulp js&&gulp clean",
+    "dev:css": "gulp css",
+    "watch:dev": "onchange 'src/**/*.*' -- npm run dev",
+    "watch:css": "onchange 'src/**/*.scss' -- npm run dev:css",
+    "watch:js": "onchange 'src/**/*.js' -- npm run dev:js",
+    "build": "babel ./src/components ./docs/js/CodeViewer -d ./build/es5&&gulp&&gulp clean"
   },
   "repository": {
     "type": "git",
