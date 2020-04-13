@@ -98,3 +98,12 @@ code{
 .border{
     border: 1px solid #888;
 }
+
+a.highlight{
+    // font-weight: bold;
+    border-bottom: 2px solid $color-primary-text;
+}
+
+a.sidenav-highlight{
+    font-weight: bold;
+}

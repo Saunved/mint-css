@@ -31,24 +31,26 @@
 
     </template>
 
+<header class="header">
     <nav>
-        <div class="navigation right-align navbar-fixed shadow above-tablet-landscape">
+        <div id="main-menu" class="navigation right-align navbar-fixed shadow above-tablet-landscape">
             <!-- <span><img class="logo left" src="https://via.placeholder.com/150x30/FFFFFF/000000?text=LOGO" alt=""></span> -->
             <span class="logo left">mint-css</span>
-            <a href="#" class="">Home</a>
-            <a href="#">Hello</a>
-            <a href="#">About us</a>
-            <a href="#">Contact us</a>
+            <a href="#about">About</a>
+            <a href="#navbars">Navigation</a>
+            <a href="#buttons">Buttons</a>
+            <a href="#tables">Tables</a>
             <span class="dropdown">
-                <span class="dropdown-title">Dropdown<i class="icon arrow down"></i></span>
+                <span class="dropdown-title">More<i class="icon arrow down"></i></span>
                 <div class="dropdown-content">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
+                    <a href="#cards">Cards</a>
+                    <a href="#forms">Forms</a>
+                    <a href="#utility">Utility</a>
                 </div>
             </span>
         </div>
     </nav>
+</header>
 
     <nav>
         <div class="navigation center navbar-fixed shadow below-tablet-landscape">
@@ -62,7 +64,7 @@
 
         </div>
 
-                    <section>
+                    <section id="about" class="section">
                         <h1>mint-css</h1>
                         <!-- <a href="https://github.com/Saunved/mint-css/releases" target="_blank"><img alt="GitHub tag (latest by date)" src="https://img.shields.io/github/v/tag/saunved/mint-css?label=release"></a> -->
                         <section>
@@ -196,7 +198,7 @@
         </section>
 <hr>
 
-<section>
+<section id="navbars" class="section">
     <h4>Navbars</h4>
 
     <code-viewer title="Standard navbar" content='<&#8203;nav>
@@ -233,7 +235,6 @@
     <p>You can also have <code class="inline-block" style="padding: 0px !important">class="navigation right-align"</code> or <code class="inline" style="padding: 0px !important">class="navigation center"</code> instead of the current <code class="inline" style="padding: 0px !important">class="navigation left-align"</code> to align the items right or center respectively.</p>
     <p>To fix the navbar to the top of the page, just add <code class="inline-block" style="padding: 0px !important">class="navigation navbar-fixed"</code></p>
     
-</section>
         <section>
 
             <h4>Sidenav/Overlay</h4>
@@ -272,11 +273,11 @@ sidenav.close(); // closes the sidenav</code></pre>
 
             <div id="sidenav1">
                 <button class="trigger btn btn-light btn-small" style="display: inline-block; margin-top: 8px">Tap to open</button>
-                    <div class="sidenav slide-left">
-                    <a class="center" href="#">Link 1</a>
-                    <a class="center" href="#">Link 1</a>
-                    <a class="center" href="#">Link 1</a>
-                    <a class="center" href="#">Link 1</a>
+                    <div id="side-menu" class="sidenav slide-left">
+                    <a class="center click-close" href="#about">About</a>
+                    <a class="center click-close" href="#navbars">Navbars</a>
+                    <a class="center click-close" href="#buttons">Buttons</a>
+                    <a class="center click-close" href="#tables">Tables</a>
                         <div class="center">
                         <button class="close-trigger btn btn-rounded btn-small btn-light"><h6>Close</h6></button>  
                     </div>
@@ -396,7 +397,9 @@ sidenav.close(); // closes the sidenav</code></pre>
                             </div>
                         </div>
         </section>
+    </section>
 <hr>
+<section id="buttons" class="section">
         <section>
             <h4>Buttons</h4>
             <code-viewer title="Small button" content='<&#8203;button class="btn btn-small">Register<&#8203;/button>'></code-viewer>
@@ -475,7 +478,7 @@ sidenav.close(); // closes the sidenav</code></pre>
                 <button class="btn btn-accent btn-outline">Accent outline</button>
             </div>
         </section>
-
+    </section>
 
         <section>
             <h4>Code block</h4>
@@ -491,7 +494,7 @@ sidenav.close(); // closes the sidenav</code></pre>
             </div>
         </section>
 
-        <section>
+        <section id="tables" class="section">
             <h4>Tables</h4>
 
             <p>Wrap the table class with a &lt;div class="responsive"&gt; to make the table scrollable horizontally on
@@ -713,7 +716,7 @@ sidenav.close(); // closes the sidenav</code></pre>
             </div>
         </section>
 <hr>
-        <section>
+        <section id="cards" class="section">
             <code-viewer title="Cards" content='<&#8203;div class="card">
     This is a card
 <&#8203;/div>'></code-viewer>
@@ -749,7 +752,7 @@ sidenav.close(); // closes the sidenav</code></pre>
             </div>
         </section>
 <hr>
-        <section>
+        <section id="forms" class="section">
             <h4>Form elements</h4>
             <code-viewer title="Normal label" content='<&#8203;label for="name">First name<&#8203;/label>
 <&#8203;input type="text" id="name">'></code-viewer>
@@ -918,7 +921,7 @@ sidenav.close(); // closes the sidenav</code></pre>
 
         </section>
 <hr>
-        <section>
+        <section id="utility" class="section">
             <h4>Utility classes</h4>
 
             <code-viewer title="Center some content" content='<&#8203;div class="center">
@@ -1052,12 +1055,16 @@ sidenav.close(); // closes the sidenav</code></pre>
 
 </div>
 <script src="./js/scripts.js"></script>
+<script src="https://unpkg.com/@three11/scrollspy/dist/scrollspy.min.js"></script>
+
     <script>
 var sidenav1, sidenav2, sidenav3, sidenav4, sidenav5, modal, modal2;
+
         //https://stephanwagner.me/auto-resizing-textarea-with-vanilla-javascript
         document.addEventListener('DOMContentLoaded', (event) => {
             addAutoResize();
             setupElems();
+            attachScroll();
         })
         function addAutoResize() {
             document.querySelectorAll('[data-autoresize]').forEach(function (element) {
@@ -1107,12 +1114,16 @@ var sidenav1, sidenav2, sidenav3, sidenav4, sidenav5, modal, modal2;
             modal3 = new Modal('modal3');
         }
 
+        function attachScroll(){
+            new Scrollspy();
+            new Scrollspy({selector: '#side-menu a', activeClass: 'sidenav-highlight'});
+        }
+
     </script>
     <script>hljs.initHighlightingOnLoad();</script>
     <script>
     </script>
 <script async defer src="https://buttons.github.io/buttons.js"></script>
-
 </body>
 
 </html>
