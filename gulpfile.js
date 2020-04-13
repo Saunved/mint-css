@@ -81,16 +81,19 @@ function buildJsTask(cb){
 		cb();
 }
 
-function demoTask(cb) {
+function demoJsTask(cb){
+	gulp.src(['./build/es5/*.js'])
+	.pipe(concat('scripts.js'))
+	.pipe(gulp.dest('./docs/js'));
+	cb();
+}
+
+function demoCssTask(cb) {
 	/*
 	* This gulp task creates the following files:
 	* docs/flavor-name/assets/css/theme-name.css
 	* for each flavor-theme combination
 	*/
-
-	gulp.src(['./build/es5/*.js'])
-	.pipe(concat('scripts.js'))
-	.pipe(gulp.dest('./docs/js'));
 
 	flavors.forEach(flavor => {
 		themes.forEach(theme => {
@@ -116,17 +119,13 @@ function demoTask(cb) {
 	
 }
 
-function watchTask(cb) {
-	gulp.watch(['./**/*.scss', './**/*_.scss', './src/components/*.js'], gulp.series(demoTask));
-	cb();
-}
-
 async function cleanTask(){
 	gulp.src('./build/es5/*.js', {read: false})
 	.pipe(clean());
 }
 
-exports.default = gulp.series(buildTask, minifyTask, buildJsTask, demoTask);
-exports.demo = gulp.series(demoTask);
+exports.default = gulp.series(buildTask, minifyTask, buildJsTask, demoCssTask, demoJsTask);
+exports.demo = gulp.series(demoCssTask, demoJsTask);
+exports.js = gulp.series(demoJsTask);
+exports.css = gulp.series(demoCssTask);
 exports.clean = gulp.series(cleanTask);
-exports.watch = gulp.series(watchTask);
