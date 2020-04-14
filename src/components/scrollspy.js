@@ -11,6 +11,7 @@ class Scrollspy{
         this.options.activeClass = 'highlight';
         this.options.selector = '#main-menu a';
         this.options.throttle = 250;
+        this.options.offsetHeight = 0;
         Object.assign(this.options, userOptions);
     }
 
@@ -61,7 +62,7 @@ class Scrollspy{
         return (
             rect.bottom >= 0 && 
             rect.right >= 0 && 
-            rect.top <= (window.innerHeight || document.documentElement.clientHeight) && 
+            (rect.top - this.options.offsetHeight) <= (window.innerHeight || document.documentElement.clientHeight) && 
             rect.left <= (window.innerWidth || document.documentElement.clientWidth));
     }
 }
