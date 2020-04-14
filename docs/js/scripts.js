@@ -499,6 +499,8 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 var Sidenav = /*#__PURE__*/function () {
   // OpenTrigger;
   // closeTrigger;
@@ -515,7 +517,7 @@ var Sidenav = /*#__PURE__*/function () {
 
     this._setupClickListeners();
 
-    Sidenav._bindEsc();
+    this._bindEsc();
   }
 
   _createClass(Sidenav, [{
@@ -563,6 +565,10 @@ var Sidenav = /*#__PURE__*/function () {
 
             case 'bottom':
               animateCSS("#".concat(_this.id, " .sidenav"), 'slideInUp');
+              break;
+
+            case 'grow':
+              animateCSS("#".concat(_this.id, " .sidenav"), 'zoomIn FadeIn');
               break;
 
             case 'plain':
@@ -620,6 +626,12 @@ var Sidenav = /*#__PURE__*/function () {
           });
           break;
 
+        case 'grow':
+          animateCSS("#".concat(this.id, " .sidenav"), 'zoomOut fadeOut', function () {
+            _this2._hideSidenav();
+          });
+          break;
+
         case 'plain':
           this._hideSidenav();
 
@@ -638,6 +650,17 @@ var Sidenav = /*#__PURE__*/function () {
       this.sidenav.style.visibility = 'hidden';
     }
   }, {
+    key: "_bindEsc",
+    value: function _bindEsc() {
+      var _this3 = this;
+
+      document.addEventListener('keyup', function (event) {
+        if (event.key === 'Escape') {
+          _this3._handleClosing();
+        }
+      });
+    }
+  }, {
     key: "close",
     value: function close() {
       this.sidenav.classList.remove('active');
@@ -647,22 +670,12 @@ var Sidenav = /*#__PURE__*/function () {
     value: function open() {
       this.sidenav.classList.add('active');
     }
-  }], [{
-    key: "_bindEsc",
-    value: function _bindEsc() {
-      document.addEventListener('keyup', function (event) {
-        if (event.key === 'Escape') {
-          var sidenavs = document.querySelectorAll('.sidenav');
-          sidenavs.forEach(function (sidenav) {
-            sidenav.classList.remove('active');
-          });
-        }
-      });
-    }
   }]);
 
   return Sidenav;
 }();
+
+_defineProperty(Sidenav, "sidenavs", []);
 
 var Overlay = /*#__PURE__*/function (_Sidenav) {
   _inherits(Overlay, _Sidenav);
@@ -670,13 +683,13 @@ var Overlay = /*#__PURE__*/function (_Sidenav) {
   var _super = _createSuper(Overlay);
 
   function Overlay(id, options) {
-    var _this3;
+    var _this4;
 
     _classCallCheck(this, Overlay);
 
-    _this3 = _super.call(this, id);
-    _this3.options.enterFrom = 'plain';
-    return _this3;
+    _this4 = _super.call(this, id);
+    _this4.options.enterFrom = 'plain';
+    return _this4;
   }
 
   return Overlay;

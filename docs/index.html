@@ -370,6 +370,34 @@ sidenav.close(); // closes the sidenav</code></pre>
                     </div>
 
                     <div class="space-large">
+                        <code-viewer title="Pop out sidenav" content='<&#8203;div id="growSidenav">
+                 <&#8203;button class="trigger" style="display: inline-block; margin-top: 8px">Tap to open (you can include an icon here)<&#8203;/button>
+                     <&#8203;div class="sidenav drop">
+                         <&#8203;a class="center" href="#">Link 1<&#8203;/a>
+                         <&#8203;a class="center" href="#">Link 1<&#8203;/a>
+                         <&#8203;a class="center" href="#">Link 1<&#8203;/a>
+                         <&#8203;a class="center" href="#">Link 1<&#8203;/a>
+                     <&#8203;div class="center">
+                             <&#8203;button class="close-trigger btn btn-rounded btn-small btn-light"><&#8203;h6>Close<&#8203;/h6><&#8203;/button>  
+                     <&#8203;/div>
+                 <&#8203;/div>
+                 <&#8203;/div>'></code-viewer>
+                 
+                                     <div id="growSidenav">
+                                         <button class="trigger btn btn-light btn-small" style="display: inline-block; margin-top: 8px">Tap to open</button>
+                                             <div class="sidenav drop">
+                                             <a class="center" href="#">Link 1</a>
+                                             <a class="center" href="#">Link 1</a>
+                                             <a class="center" href="#">Link 1</a>
+                                             <a class="center" href="#">Link 1</a>
+                                                 <div class="center">
+                                                 <button class="close-trigger btn btn-rounded btn-small btn-light"><h6>Close</h6></button>  
+                                             </div>
+                                         </div>
+                                         </div>
+                                     </div>
+
+                    <div class="space-large">
 
                         <code-viewer title="Overlay sidenav" content='<&#8203;div id="sidenav5">
 <&#8203;button class="trigger" style="display: inline-block; margin-top: 8px">Tap to open (you can include an icon here)<&#8203;/button>
@@ -1108,6 +1136,7 @@ var sidenav1, sidenav2, sidenav3, sidenav4, sidenav5, modal, modal2;
             sidenav2 = new Sidenav('sidenav2', {enterFrom: 'bottom'});
             sidenav3 = new Sidenav('sidenav3', {enterFrom: 'right'});
             sidenav4 = new Sidenav('sidenav4', {enterFrom: 'top'});
+            growSidenav = new Sidenav('growSidenav', {enterFrom: 'grow'});
             sidenav5 = new Overlay('overlay');
             modal = new Modal('modal1');
             modal2 = new Modal('modal2');

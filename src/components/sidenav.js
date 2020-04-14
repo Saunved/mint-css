@@ -4,11 +4,13 @@ class Sidenav {
 	// sidenav;
 	// id;
 
+	static sidenavs = [];
+
 	constructor(id, options = {}) {
 		this._setupOptions(options);
 		this._setupSelectors(id);
 		this._setupClickListeners();
-		Sidenav._bindEsc();
+		this._bindEsc();
 	}
 
 	_setupOptions(userOptions){
@@ -45,6 +47,9 @@ class Sidenav {
 						break;
 					case 'bottom':
 						animateCSS(`#${this.id} .sidenav`, 'slideInUp');
+						break;
+					case 'grow':
+						animateCSS(`#${this.id} .sidenav`, 'zoomIn FadeIn');
 						break;
 					case 'plain':
 						break;
@@ -84,6 +89,9 @@ class Sidenav {
 			case 'bottom':
 				animateCSS(`#${this.id} .sidenav`, 'slideOutDown', () => { this._hideSidenav() });
 				break;
+			case 'grow':
+				animateCSS(`#${this.id} .sidenav`, 'zoomOut fadeOut', () => { this._hideSidenav() });
+				break;
 			case 'plain':
 				this._hideSidenav();
 				break;
@@ -97,13 +105,10 @@ class Sidenav {
 		this.sidenav.style.visibility = 'hidden';
 	}
 
-	static _bindEsc() {
+	_bindEsc() {
 		document.addEventListener('keyup', event => {
 			if (event.key === 'Escape') {
-				const sidenavs = document.querySelectorAll('.sidenav');
-				sidenavs.forEach(sidenav => {
-					sidenav.classList.remove('active');
-				});
+				this._handleClosing();
 			}
 		});
 	}
