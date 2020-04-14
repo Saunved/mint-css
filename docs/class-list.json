@@ -1,0 +1,23 @@
+[
+    {
+      "component": "_button.scss",
+      "classes": [
+        {"name": "button", "nested": [{"name": "&:hover"}]},
+        {"name": ".btn", "nested": [{"name": "&:hover"}]},
+        {"name": ".btn-small", "nested": [{"name": "&:hover"}]},
+        {"name": ".btn-large", "nested": [{"name": "&:hover"}]},
+        {"name": ".btn-default", "nested": [{"name": "&:hover"}]},
+        {"name": ".btn-outline", "nested": [{"name": "&:hover"}]},
+        {"name": ".btn-float", "nested": [{"name": "&:hover"}]},
+        {"name": ".btn-raise", "nested": [{"name": "&:hover"}]},
+        {"name": ".btn-rounded", "nested": [{"name": "&:hover"}]},
+        {"name": ".btn-light", "nested": [{"name": "&:hover"}]},
+        {"name": ".btn-dark", "nested": [{"name": "&:hover"}]},
+        {"name": ".btn-secondary", "nested": [{"name": "&:hover"}]},
+        {"name": ".btn-accent", "nested": [{"name": "&:hover"}]},
+        {"name": ".btn-circle", "nested": [{"name": "&:hover"}]},
+        {"name": ".btn-disabled", "nested": [{"name": "&:hover"}]},
+        {"name": ".btn-group", "nested": [{"name": ".btn"}]}
+        ]
+    }
+  ]
