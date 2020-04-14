@@ -1,23 +1,32 @@
 [
     {
-      "component": "_button.scss",
+      "partial": "_button.scss",
       "classes": [
-        {"name": "button", "nested": [{"name": "&:hover"}]},
-        {"name": ".btn", "nested": [{"name": "&:hover"}]},
-        {"name": ".btn-small", "nested": [{"name": "&:hover"}]},
-        {"name": ".btn-large", "nested": [{"name": "&:hover"}]},
-        {"name": ".btn-default", "nested": [{"name": "&:hover"}]},
-        {"name": ".btn-outline", "nested": [{"name": "&:hover"}]},
-        {"name": ".btn-float", "nested": [{"name": "&:hover"}]},
-        {"name": ".btn-raise", "nested": [{"name": "&:hover"}]},
-        {"name": ".btn-rounded", "nested": [{"name": "&:hover"}]},
-        {"name": ".btn-light", "nested": [{"name": "&:hover"}]},
-        {"name": ".btn-dark", "nested": [{"name": "&:hover"}]},
-        {"name": ".btn-secondary", "nested": [{"name": "&:hover"}]},
-        {"name": ".btn-accent", "nested": [{"name": "&:hover"}]},
-        {"name": ".btn-circle", "nested": [{"name": "&:hover"}]},
-        {"name": ".btn-disabled", "nested": [{"name": "&:hover"}]},
-        {"name": ".btn-group", "nested": [{"name": ".btn"}]}
+            {"selector": "button", "nested": [{"selector": "&:hover"}]},
+            {"selector": ".btn", "nested": [{"selector": "&:hover"}]},
+            {"selector": ".btn-small", "nested": [{"selector": "&:hover"}]},
+            {"selector": ".btn-large", "nested": [{"selector": "&:hover"}]},
+            {"selector": ".btn-default", "nested": [{"selector": "&:hover"}]},
+            {"selector": ".btn-outline", "nested": [{"selector": "&:hover"}]},
+            {"selector": ".btn-float", "nested": [{"selector": "&:hover"}]},
+            {"selector": ".btn-raise", "nested": [{"selector": "&:hover"}]},
+            {"selector": ".btn-rounded", "nested": [{"selector": "&:hover"}]},
+            {"selector": ".btn-light", "nested": [{"selector": "&:hover"}]},
+            {"selector": ".btn-dark", "nested": [{"selector": "&:hover"}]},
+            {"selector": ".btn-secondary", "nested": [{"selector": "&:hover"}]},
+            {"selector": ".btn-accent", "nested": [{"selector": "&:hover"}]},
+            {"selector": ".btn-circle", "nested": [{"selector": "&:hover"}]},
+            {"selector": ".btn-disabled", "nested": [{"selector": "&:hover"}]},
+            {"selector": ".btn-group", "nested": [{"selector": ".btn"}]}
+        ]
+    },
+    {
+        "partial": "_base.scss",
+        "classes": [
+            {"selector": "*"},
+            {"selector": "html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video"},
+            {"selector": ".container" },
+            {"selector": "a", "nested": [{"selector": "&:link, &:visited"}, {"selector": "&link:hover, &:visited:hover"}]}
         ]
     }
   ]
