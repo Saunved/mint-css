@@ -420,13 +420,8 @@ var Scrollspy = /*#__PURE__*/function () {
 
     this._setOptions(userOptions);
 
-    this.elems = document.querySelectorAll(this.options.selector);
-    this.elems.forEach(function (elem) {
-      _this.trackIds.push({
-        id: elem.getAttribute("href"),
-        visible: 0
-      });
-    });
+    this._setTrackers();
+
     new Scroll(this._onScroll, {
       throttle: this.options.throttle
     });
@@ -439,6 +434,19 @@ var Scrollspy = /*#__PURE__*/function () {
       this.options.selector = '#main-menu a';
       this.options.throttle = 250;
       Object.assign(this.options, userOptions);
+    }
+  }, {
+    key: "_setTrackers",
+    value: function _setTrackers() {
+      var _this2 = this;
+
+      var elems = document.querySelectorAll(this.options.selector);
+      elems.forEach(function (elem) {
+        _this2.trackIds.push({
+          id: elem.getAttribute("href"),
+          visible: 0
+        });
+      });
     }
   }, {
     key: "_setupHighlights",
@@ -454,13 +462,13 @@ var Scrollspy = /*#__PURE__*/function () {
   }, {
     key: "_clearOldHighlights",
     value: function _clearOldHighlights(nav) {
-      var _this2 = this;
+      var _this3 = this;
 
       this.trackIds.forEach(function (tracker) {
-        var elem = document.querySelector("".concat(_this2.options.selector, "[href=\"").concat(tracker.id, "\"]"));
+        var elem = document.querySelector("".concat(_this3.options.selector, "[href=\"").concat(tracker.id, "\"]"));
 
         if (elem != nav) {
-          elem.classList.remove(_this2.options.activeClass);
+          elem.classList.remove(_this3.options.activeClass);
         }
       });
     }

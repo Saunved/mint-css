@@ -3,10 +3,7 @@ class Scrollspy{
         this.options = {};
         this.trackIds = [];
         this._setOptions(userOptions);
-        this.elems = document.querySelectorAll(this.options.selector);
-        this.elems.forEach((elem) => {
-            this.trackIds.push({id: elem.getAttribute("href"), visible: 0});
-        })
+        this._setTrackers();
         new Scroll(this._onScroll, {throttle: this.options.throttle});
     }
 
@@ -15,6 +12,13 @@ class Scrollspy{
         this.options.selector = '#main-menu a';
         this.options.throttle = 250;
         Object.assign(this.options, userOptions);
+    }
+
+    _setTrackers(){
+        let elems = document.querySelectorAll(this.options.selector);
+        elems.forEach((elem) => {
+            this.trackIds.push({id: elem.getAttribute("href"), visible: 0});
+        })
     }
 
     _onScroll = () => {
