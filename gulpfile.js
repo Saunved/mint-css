@@ -59,16 +59,6 @@ function minifyTask(cb){
 }
 
 function buildJsTask(cb){
-		// You can pass specific js files here to only keep those in the output
-		// gulp.src('./src/components/*.js')
-		// .pipe(concat('scripts.min.js'))
-		// .pipe(uglify())
-		// .pipe(gulp.dest('./build/js'));
-
-		// gulp.src('./src/components/*.js')
-		// .pipe(concat('scripts.js'))
-		// .pipe(gulp.dest('./build/js'));
-
 		gulp.src(['./build/es5/*.js'])
 		.pipe(concat('scripts.js'))
 		.pipe(uglify())
@@ -124,8 +114,25 @@ async function cleanTask(){
 	.pipe(clean());
 }
 
+async function customTask(cb){
+	gulp.src('./src/flavors/custom/custom.scss')
+	.pipe(inject(gulp.src(`src/themes/mint.scss`, { read: false, cwd: './' }), {
+		starttag: '// inject:{{ext}}',
+		endtag: '// endinject',
+		transform(filepath) {
+			return `@import "${filepath}";`;
+		}
+	}))
+	.pipe(sass().on('error', sass.logError))
+	.pipe(postcss([autoprefixer()]))
+	.pipe(rename('custom.css'))
+	.pipe(gulp.dest(`.`))
+	cb();
+}
+
 exports.default = gulp.series(buildTask, minifyTask, buildJsTask, demoCssTask, demoJsTask);
 exports.demo = gulp.series(demoCssTask, demoJsTask);
 exports.js = gulp.series(demoJsTask);
 exports.css = gulp.series(demoCssTask);
 exports.clean = gulp.series(cleanTask);
+exports.custom = gulp.series(customTask);
