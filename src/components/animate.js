@@ -1,7 +1,7 @@
 function animateCSS(element, animations, callback) {
     const node = document.querySelector(element)
-    node.classList.add('animated');
     const cssClasses = animations.split(' ');
+    node.classList.add('animated');
     cssClasses.forEach(cssClass => {
         node.classList.add(cssClass);
     });

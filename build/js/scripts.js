@@ -2,8 +2,8 @@
 
 function animateCSS(element, animations, callback) {
   var node = document.querySelector(element);
-  node.classList.add('animated');
   var cssClasses = animations.split(' ');
+  node.classList.add('animated');
   cssClasses.forEach(function (cssClass) {
     node.classList.add(cssClass);
   });
@@ -174,8 +174,7 @@ var Modal = /*#__PURE__*/function () {
         this.modal.style.marginLeft = "-".concat((this.modal.offsetWidth / 2).toString(), "px");
         this.modal.style.marginTop = "-".concat((this.modal.offsetHeight / 2).toString(), "px");
       }
-    } // Use Object.extend here
-
+    }
   }, {
     key: "_setOptions",
     value: function _setOptions(userOptions) {
@@ -363,8 +362,7 @@ var Scroll = /*#__PURE__*/function () {
 
     this._setOptions(userOptions);
 
-    this._attachScrollListener(); // this._throttledScroll = this._throttle(this._scrollListener, this.options.throttle);
-
+    this._attachScrollListener();
   }
 
   _createClass(Scroll, [{
@@ -373,8 +371,6 @@ var Scroll = /*#__PURE__*/function () {
       this.options.throttle = 100;
       Object.assign(this.options, userOptions);
     }
-    /* Wheel event is also possible, but Safari does not support it */
-
   }]);
 
   return Scroll;
@@ -534,13 +530,7 @@ var Sidenav = /*#__PURE__*/function () {
     value: function _setupOptions(userOptions) {
       this.options = {};
       this.options.enterFrom = 'left';
-
-      if (userOptions) {
-        for (var _i = 0, _Object$keys = Object.keys(userOptions); _i < _Object$keys.length; _i++) {
-          var key = _Object$keys[_i];
-          this.options[key] = userOptions[key];
-        }
-      }
+      Object.assign(this.options, userOptions);
     }
   }, {
     key: "_setupSelectors",

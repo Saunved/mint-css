@@ -16,12 +16,7 @@ class Sidenav {
 	_setupOptions(userOptions){
 		this.options = {};
 		this.options.enterFrom = 'left';
-
-		if(userOptions){
-            for(var key of Object.keys(userOptions)){
-                this.options[key] = userOptions[key];
-            }
-		}
+		Object.assign(this.options, userOptions);
 	}
 
 	_setupSelectors(id) {

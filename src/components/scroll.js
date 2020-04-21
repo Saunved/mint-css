@@ -4,7 +4,6 @@ class Scroll{
         this.options = {};
         this._setOptions(userOptions);
         this._attachScrollListener();
-        // this._throttledScroll = this._throttle(this._scrollListener, this.options.throttle);
     }
 
     _setOptions(userOptions){
@@ -12,7 +11,6 @@ class Scroll{
         Object.assign(this.options, userOptions);
     }
 
-    /* Wheel event is also possible, but Safari does not support it */
     _attachScrollListener = () => {
         document.addEventListener( 'wheel', throttle(this._scrollListener, this.options.throttle));
     }

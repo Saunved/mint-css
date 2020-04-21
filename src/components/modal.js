@@ -25,7 +25,6 @@ class Modal{
         }
     }
 
-    // Use Object.extend here
     _setOptions(userOptions){
         this.options = {};
         this.options.closeOnEsc = true;
